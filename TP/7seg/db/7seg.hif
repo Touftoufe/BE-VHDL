@@ -1,0 +1,457 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+dec_7seg
+# storage
+db|7seg.(0).cnf
+db|7seg.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+dec_7seg.vhd
+fff9f3534878d8776360f9965f88d9fb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+dec_7seg:decoder1
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(2).cnf
+db|7seg.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+16
+PARAMETER_SIGNED_DEC
+USR
+preload
+0
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(3).cnf
+db|7seg.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+40
+PARAMETER_SIGNED_DEC
+USR
+preload
+49999999
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+39 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+DIVIDER:divider1|COUNTER:counter1
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(4).cnf
+db|7seg.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+4
+PARAMETER_SIGNED_DEC
+USR
+preload
+1
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(5).cnf
+db|7seg.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+40
+PARAMETER_SIGNED_DEC
+USR
+preload
+26999999
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+39 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(6).cnf
+db|7seg.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+40
+PARAMETER_SIGNED_DEC
+USR
+preload
+2699999
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+39 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+divider
+# storage
+db|7seg.(1).cnf
+db|7seg.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+divider.vhd
+5a412a41ab2276edbd4cae5275b7dc34
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+4
+PARAMETER_SIGNED_DEC
+DEF
+prescaler
+0
+PARAMETER_SIGNED_DEC
+DEF
+}
+# include_file {
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|7seg.(7).cnf
+db|7seg.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+4
+PARAMETER_SIGNED_DEC
+USR
+preload
+0
+PARAMETER_SIGNED_DEC
+USR
+ constraint(count)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+COUNTER:counter1
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+DIVIDER
+# storage
+db|7seg.(9).cnf
+db|7seg.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+divider.vhd
+5a412a41ab2276edbd4cae5275b7dc34
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+size
+40
+PARAMETER_SIGNED_DEC
+USR
+prescaler
+49999999
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+}
+# hierarchies {
+DIVIDER:divider1
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+disp
+# storage
+db|7seg.(8).cnf
+db|7seg.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+disp.vhd
+eae545aada4a984fd71dffb3a1bc9aa
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+counter.vhd
+4f38d0fc1b4c51c5b7f23cd74b9e710
+dec_7seg.vhd
+fff9f3534878d8776360f9965f88d9fb
+divider.vhd
+5a412a41ab2276edbd4cae5275b7dc34
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

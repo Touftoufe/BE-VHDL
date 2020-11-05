@@ -1,0 +1,469 @@
+Simulator report for 7seg
+Mon Sep 07 09:30:43 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 166 nodes    ;
+; Simulation Coverage         ;      15.76 % ;
+; Total Number of Transitions ; 31200        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                               ;
++--------------------------------------------------------------------------------------------+---------------------+---------------+
+; Option                                                                                     ; Setting             ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------+---------------+
+; Simulation mode                                                                            ; Functional          ; Timing        ;
+; Start time                                                                                 ; 0 ns                ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                ;               ;
+; Vector input source                                                                        ; 7seg_simulation.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                  ; On            ;
+; Check outputs                                                                              ; Off                 ; Off           ;
+; Report simulation coverage                                                                 ; On                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                 ; Off           ;
+; Detect glitches                                                                            ; Off                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      15.76 % ;
+; Total nodes checked                                 ; 166          ;
+; Total output ports checked                          ; 165          ;
+; Total output ports with complete 1/0-value coverage ; 26           ;
+; Total output ports with no 1/0-value coverage       ; 139          ;
+; Total output ports with no 1-value coverage         ; 139          ;
+; Total output ports with no 0-value coverage         ; 139          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |DIVIDER|divided_clock~0           ; |DIVIDER|divided_clock~0           ; out0             ;
+; |DIVIDER|clk                       ; |DIVIDER|clk                       ; out              ;
+; |DIVIDER|subCLK                    ; |DIVIDER|subCLK                    ; pin_out          ;
+; |DIVIDER|COUNTER:counter1|count[0] ; |DIVIDER|COUNTER:counter1|count[0] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count~34 ; |DIVIDER|COUNTER:counter1|count~34 ; out              ;
+; |DIVIDER|COUNTER:counter1|count~35 ; |DIVIDER|COUNTER:counter1|count~35 ; out              ;
+; |DIVIDER|COUNTER:counter1|count~36 ; |DIVIDER|COUNTER:counter1|count~36 ; out              ;
+; |DIVIDER|COUNTER:counter1|count~37 ; |DIVIDER|COUNTER:counter1|count~37 ; out              ;
+; |DIVIDER|COUNTER:counter1|count~38 ; |DIVIDER|COUNTER:counter1|count~38 ; out              ;
+; |DIVIDER|COUNTER:counter1|count~39 ; |DIVIDER|COUNTER:counter1|count~39 ; out              ;
+; |DIVIDER|COUNTER:counter1|count[4] ; |DIVIDER|COUNTER:counter1|count[4] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[3] ; |DIVIDER|COUNTER:counter1|count[3] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[2] ; |DIVIDER|COUNTER:counter1|count[2] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[1] ; |DIVIDER|COUNTER:counter1|count[1] ; regout           ;
+; |DIVIDER|COUNTER:counter1|Add0~0   ; |DIVIDER|COUNTER:counter1|Add0~0   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~1   ; |DIVIDER|COUNTER:counter1|Add0~1   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~2   ; |DIVIDER|COUNTER:counter1|Add0~2   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~3   ; |DIVIDER|COUNTER:counter1|Add0~3   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~4   ; |DIVIDER|COUNTER:counter1|Add0~4   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~5   ; |DIVIDER|COUNTER:counter1|Add0~5   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~6   ; |DIVIDER|COUNTER:counter1|Add0~6   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~7   ; |DIVIDER|COUNTER:counter1|Add0~7   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~8   ; |DIVIDER|COUNTER:counter1|Add0~8   ; out0             ;
+; |DIVIDER|Equal0~0                  ; |DIVIDER|Equal0~0                  ; out0             ;
+; |DIVIDER|Equal1~0                  ; |DIVIDER|Equal1~0                  ; out0             ;
+; |DIVIDER|COUNTER:counter1|Equal0~0 ; |DIVIDER|COUNTER:counter1|Equal0~0 ; out0             ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |DIVIDER|rst                        ; |DIVIDER|rst                        ; out              ;
+; |DIVIDER|A                          ; |DIVIDER|A                          ; pin_out          ;
+; |DIVIDER|COUNTER:counter1|count~0   ; |DIVIDER|COUNTER:counter1|count~0   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~1   ; |DIVIDER|COUNTER:counter1|count~1   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~2   ; |DIVIDER|COUNTER:counter1|count~2   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~3   ; |DIVIDER|COUNTER:counter1|count~3   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~4   ; |DIVIDER|COUNTER:counter1|count~4   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~5   ; |DIVIDER|COUNTER:counter1|count~5   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~6   ; |DIVIDER|COUNTER:counter1|count~6   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~7   ; |DIVIDER|COUNTER:counter1|count~7   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~8   ; |DIVIDER|COUNTER:counter1|count~8   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~9   ; |DIVIDER|COUNTER:counter1|count~9   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~10  ; |DIVIDER|COUNTER:counter1|count~10  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~11  ; |DIVIDER|COUNTER:counter1|count~11  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~12  ; |DIVIDER|COUNTER:counter1|count~12  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~13  ; |DIVIDER|COUNTER:counter1|count~13  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~14  ; |DIVIDER|COUNTER:counter1|count~14  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~15  ; |DIVIDER|COUNTER:counter1|count~15  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~16  ; |DIVIDER|COUNTER:counter1|count~16  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~17  ; |DIVIDER|COUNTER:counter1|count~17  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~18  ; |DIVIDER|COUNTER:counter1|count~18  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~19  ; |DIVIDER|COUNTER:counter1|count~19  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~20  ; |DIVIDER|COUNTER:counter1|count~20  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~21  ; |DIVIDER|COUNTER:counter1|count~21  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~22  ; |DIVIDER|COUNTER:counter1|count~22  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~23  ; |DIVIDER|COUNTER:counter1|count~23  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~24  ; |DIVIDER|COUNTER:counter1|count~24  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~25  ; |DIVIDER|COUNTER:counter1|count~25  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~26  ; |DIVIDER|COUNTER:counter1|count~26  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~27  ; |DIVIDER|COUNTER:counter1|count~27  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~28  ; |DIVIDER|COUNTER:counter1|count~28  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~29  ; |DIVIDER|COUNTER:counter1|count~29  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~30  ; |DIVIDER|COUNTER:counter1|count~30  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~31  ; |DIVIDER|COUNTER:counter1|count~31  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~32  ; |DIVIDER|COUNTER:counter1|count~32  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~33  ; |DIVIDER|COUNTER:counter1|count~33  ; out              ;
+; |DIVIDER|COUNTER:counter1|count[39] ; |DIVIDER|COUNTER:counter1|count[39] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[38] ; |DIVIDER|COUNTER:counter1|count[38] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[37] ; |DIVIDER|COUNTER:counter1|count[37] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[36] ; |DIVIDER|COUNTER:counter1|count[36] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[35] ; |DIVIDER|COUNTER:counter1|count[35] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[34] ; |DIVIDER|COUNTER:counter1|count[34] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[33] ; |DIVIDER|COUNTER:counter1|count[33] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[32] ; |DIVIDER|COUNTER:counter1|count[32] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[31] ; |DIVIDER|COUNTER:counter1|count[31] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[30] ; |DIVIDER|COUNTER:counter1|count[30] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[29] ; |DIVIDER|COUNTER:counter1|count[29] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[28] ; |DIVIDER|COUNTER:counter1|count[28] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[27] ; |DIVIDER|COUNTER:counter1|count[27] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[26] ; |DIVIDER|COUNTER:counter1|count[26] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[25] ; |DIVIDER|COUNTER:counter1|count[25] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[24] ; |DIVIDER|COUNTER:counter1|count[24] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[23] ; |DIVIDER|COUNTER:counter1|count[23] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[22] ; |DIVIDER|COUNTER:counter1|count[22] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[21] ; |DIVIDER|COUNTER:counter1|count[21] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[20] ; |DIVIDER|COUNTER:counter1|count[20] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[19] ; |DIVIDER|COUNTER:counter1|count[19] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[18] ; |DIVIDER|COUNTER:counter1|count[18] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[17] ; |DIVIDER|COUNTER:counter1|count[17] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[16] ; |DIVIDER|COUNTER:counter1|count[16] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[15] ; |DIVIDER|COUNTER:counter1|count[15] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[14] ; |DIVIDER|COUNTER:counter1|count[14] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[13] ; |DIVIDER|COUNTER:counter1|count[13] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[12] ; |DIVIDER|COUNTER:counter1|count[12] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[11] ; |DIVIDER|COUNTER:counter1|count[11] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[10] ; |DIVIDER|COUNTER:counter1|count[10] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[9]  ; |DIVIDER|COUNTER:counter1|count[9]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[8]  ; |DIVIDER|COUNTER:counter1|count[8]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[7]  ; |DIVIDER|COUNTER:counter1|count[7]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[6]  ; |DIVIDER|COUNTER:counter1|count[6]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[5]  ; |DIVIDER|COUNTER:counter1|count[5]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|Add0~9    ; |DIVIDER|COUNTER:counter1|Add0~9    ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~10   ; |DIVIDER|COUNTER:counter1|Add0~10   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~11   ; |DIVIDER|COUNTER:counter1|Add0~11   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~12   ; |DIVIDER|COUNTER:counter1|Add0~12   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~13   ; |DIVIDER|COUNTER:counter1|Add0~13   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~14   ; |DIVIDER|COUNTER:counter1|Add0~14   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~15   ; |DIVIDER|COUNTER:counter1|Add0~15   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~16   ; |DIVIDER|COUNTER:counter1|Add0~16   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~17   ; |DIVIDER|COUNTER:counter1|Add0~17   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~18   ; |DIVIDER|COUNTER:counter1|Add0~18   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~19   ; |DIVIDER|COUNTER:counter1|Add0~19   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~20   ; |DIVIDER|COUNTER:counter1|Add0~20   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~21   ; |DIVIDER|COUNTER:counter1|Add0~21   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~22   ; |DIVIDER|COUNTER:counter1|Add0~22   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~23   ; |DIVIDER|COUNTER:counter1|Add0~23   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~24   ; |DIVIDER|COUNTER:counter1|Add0~24   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~25   ; |DIVIDER|COUNTER:counter1|Add0~25   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~26   ; |DIVIDER|COUNTER:counter1|Add0~26   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~27   ; |DIVIDER|COUNTER:counter1|Add0~27   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~28   ; |DIVIDER|COUNTER:counter1|Add0~28   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~29   ; |DIVIDER|COUNTER:counter1|Add0~29   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~30   ; |DIVIDER|COUNTER:counter1|Add0~30   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~31   ; |DIVIDER|COUNTER:counter1|Add0~31   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~32   ; |DIVIDER|COUNTER:counter1|Add0~32   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~33   ; |DIVIDER|COUNTER:counter1|Add0~33   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~34   ; |DIVIDER|COUNTER:counter1|Add0~34   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~35   ; |DIVIDER|COUNTER:counter1|Add0~35   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~36   ; |DIVIDER|COUNTER:counter1|Add0~36   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~37   ; |DIVIDER|COUNTER:counter1|Add0~37   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~38   ; |DIVIDER|COUNTER:counter1|Add0~38   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~39   ; |DIVIDER|COUNTER:counter1|Add0~39   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~40   ; |DIVIDER|COUNTER:counter1|Add0~40   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~41   ; |DIVIDER|COUNTER:counter1|Add0~41   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~42   ; |DIVIDER|COUNTER:counter1|Add0~42   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~43   ; |DIVIDER|COUNTER:counter1|Add0~43   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~44   ; |DIVIDER|COUNTER:counter1|Add0~44   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~45   ; |DIVIDER|COUNTER:counter1|Add0~45   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~46   ; |DIVIDER|COUNTER:counter1|Add0~46   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~47   ; |DIVIDER|COUNTER:counter1|Add0~47   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~48   ; |DIVIDER|COUNTER:counter1|Add0~48   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~49   ; |DIVIDER|COUNTER:counter1|Add0~49   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~50   ; |DIVIDER|COUNTER:counter1|Add0~50   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~51   ; |DIVIDER|COUNTER:counter1|Add0~51   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~52   ; |DIVIDER|COUNTER:counter1|Add0~52   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~53   ; |DIVIDER|COUNTER:counter1|Add0~53   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~54   ; |DIVIDER|COUNTER:counter1|Add0~54   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~55   ; |DIVIDER|COUNTER:counter1|Add0~55   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~56   ; |DIVIDER|COUNTER:counter1|Add0~56   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~57   ; |DIVIDER|COUNTER:counter1|Add0~57   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~58   ; |DIVIDER|COUNTER:counter1|Add0~58   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~59   ; |DIVIDER|COUNTER:counter1|Add0~59   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~60   ; |DIVIDER|COUNTER:counter1|Add0~60   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~61   ; |DIVIDER|COUNTER:counter1|Add0~61   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~62   ; |DIVIDER|COUNTER:counter1|Add0~62   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~63   ; |DIVIDER|COUNTER:counter1|Add0~63   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~64   ; |DIVIDER|COUNTER:counter1|Add0~64   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~65   ; |DIVIDER|COUNTER:counter1|Add0~65   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~66   ; |DIVIDER|COUNTER:counter1|Add0~66   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~67   ; |DIVIDER|COUNTER:counter1|Add0~67   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~68   ; |DIVIDER|COUNTER:counter1|Add0~68   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~69   ; |DIVIDER|COUNTER:counter1|Add0~69   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~70   ; |DIVIDER|COUNTER:counter1|Add0~70   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~71   ; |DIVIDER|COUNTER:counter1|Add0~71   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~72   ; |DIVIDER|COUNTER:counter1|Add0~72   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~73   ; |DIVIDER|COUNTER:counter1|Add0~73   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~74   ; |DIVIDER|COUNTER:counter1|Add0~74   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~75   ; |DIVIDER|COUNTER:counter1|Add0~75   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~76   ; |DIVIDER|COUNTER:counter1|Add0~76   ; out0             ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |DIVIDER|rst                        ; |DIVIDER|rst                        ; out              ;
+; |DIVIDER|A                          ; |DIVIDER|A                          ; pin_out          ;
+; |DIVIDER|COUNTER:counter1|count~0   ; |DIVIDER|COUNTER:counter1|count~0   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~1   ; |DIVIDER|COUNTER:counter1|count~1   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~2   ; |DIVIDER|COUNTER:counter1|count~2   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~3   ; |DIVIDER|COUNTER:counter1|count~3   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~4   ; |DIVIDER|COUNTER:counter1|count~4   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~5   ; |DIVIDER|COUNTER:counter1|count~5   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~6   ; |DIVIDER|COUNTER:counter1|count~6   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~7   ; |DIVIDER|COUNTER:counter1|count~7   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~8   ; |DIVIDER|COUNTER:counter1|count~8   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~9   ; |DIVIDER|COUNTER:counter1|count~9   ; out              ;
+; |DIVIDER|COUNTER:counter1|count~10  ; |DIVIDER|COUNTER:counter1|count~10  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~11  ; |DIVIDER|COUNTER:counter1|count~11  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~12  ; |DIVIDER|COUNTER:counter1|count~12  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~13  ; |DIVIDER|COUNTER:counter1|count~13  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~14  ; |DIVIDER|COUNTER:counter1|count~14  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~15  ; |DIVIDER|COUNTER:counter1|count~15  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~16  ; |DIVIDER|COUNTER:counter1|count~16  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~17  ; |DIVIDER|COUNTER:counter1|count~17  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~18  ; |DIVIDER|COUNTER:counter1|count~18  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~19  ; |DIVIDER|COUNTER:counter1|count~19  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~20  ; |DIVIDER|COUNTER:counter1|count~20  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~21  ; |DIVIDER|COUNTER:counter1|count~21  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~22  ; |DIVIDER|COUNTER:counter1|count~22  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~23  ; |DIVIDER|COUNTER:counter1|count~23  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~24  ; |DIVIDER|COUNTER:counter1|count~24  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~25  ; |DIVIDER|COUNTER:counter1|count~25  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~26  ; |DIVIDER|COUNTER:counter1|count~26  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~27  ; |DIVIDER|COUNTER:counter1|count~27  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~28  ; |DIVIDER|COUNTER:counter1|count~28  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~29  ; |DIVIDER|COUNTER:counter1|count~29  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~30  ; |DIVIDER|COUNTER:counter1|count~30  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~31  ; |DIVIDER|COUNTER:counter1|count~31  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~32  ; |DIVIDER|COUNTER:counter1|count~32  ; out              ;
+; |DIVIDER|COUNTER:counter1|count~33  ; |DIVIDER|COUNTER:counter1|count~33  ; out              ;
+; |DIVIDER|COUNTER:counter1|count[39] ; |DIVIDER|COUNTER:counter1|count[39] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[38] ; |DIVIDER|COUNTER:counter1|count[38] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[37] ; |DIVIDER|COUNTER:counter1|count[37] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[36] ; |DIVIDER|COUNTER:counter1|count[36] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[35] ; |DIVIDER|COUNTER:counter1|count[35] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[34] ; |DIVIDER|COUNTER:counter1|count[34] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[33] ; |DIVIDER|COUNTER:counter1|count[33] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[32] ; |DIVIDER|COUNTER:counter1|count[32] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[31] ; |DIVIDER|COUNTER:counter1|count[31] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[30] ; |DIVIDER|COUNTER:counter1|count[30] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[29] ; |DIVIDER|COUNTER:counter1|count[29] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[28] ; |DIVIDER|COUNTER:counter1|count[28] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[27] ; |DIVIDER|COUNTER:counter1|count[27] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[26] ; |DIVIDER|COUNTER:counter1|count[26] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[25] ; |DIVIDER|COUNTER:counter1|count[25] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[24] ; |DIVIDER|COUNTER:counter1|count[24] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[23] ; |DIVIDER|COUNTER:counter1|count[23] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[22] ; |DIVIDER|COUNTER:counter1|count[22] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[21] ; |DIVIDER|COUNTER:counter1|count[21] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[20] ; |DIVIDER|COUNTER:counter1|count[20] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[19] ; |DIVIDER|COUNTER:counter1|count[19] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[18] ; |DIVIDER|COUNTER:counter1|count[18] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[17] ; |DIVIDER|COUNTER:counter1|count[17] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[16] ; |DIVIDER|COUNTER:counter1|count[16] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[15] ; |DIVIDER|COUNTER:counter1|count[15] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[14] ; |DIVIDER|COUNTER:counter1|count[14] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[13] ; |DIVIDER|COUNTER:counter1|count[13] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[12] ; |DIVIDER|COUNTER:counter1|count[12] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[11] ; |DIVIDER|COUNTER:counter1|count[11] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[10] ; |DIVIDER|COUNTER:counter1|count[10] ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[9]  ; |DIVIDER|COUNTER:counter1|count[9]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[8]  ; |DIVIDER|COUNTER:counter1|count[8]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[7]  ; |DIVIDER|COUNTER:counter1|count[7]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[6]  ; |DIVIDER|COUNTER:counter1|count[6]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|count[5]  ; |DIVIDER|COUNTER:counter1|count[5]  ; regout           ;
+; |DIVIDER|COUNTER:counter1|Add0~9    ; |DIVIDER|COUNTER:counter1|Add0~9    ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~10   ; |DIVIDER|COUNTER:counter1|Add0~10   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~11   ; |DIVIDER|COUNTER:counter1|Add0~11   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~12   ; |DIVIDER|COUNTER:counter1|Add0~12   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~13   ; |DIVIDER|COUNTER:counter1|Add0~13   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~14   ; |DIVIDER|COUNTER:counter1|Add0~14   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~15   ; |DIVIDER|COUNTER:counter1|Add0~15   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~16   ; |DIVIDER|COUNTER:counter1|Add0~16   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~17   ; |DIVIDER|COUNTER:counter1|Add0~17   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~18   ; |DIVIDER|COUNTER:counter1|Add0~18   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~19   ; |DIVIDER|COUNTER:counter1|Add0~19   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~20   ; |DIVIDER|COUNTER:counter1|Add0~20   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~21   ; |DIVIDER|COUNTER:counter1|Add0~21   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~22   ; |DIVIDER|COUNTER:counter1|Add0~22   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~23   ; |DIVIDER|COUNTER:counter1|Add0~23   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~24   ; |DIVIDER|COUNTER:counter1|Add0~24   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~25   ; |DIVIDER|COUNTER:counter1|Add0~25   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~26   ; |DIVIDER|COUNTER:counter1|Add0~26   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~27   ; |DIVIDER|COUNTER:counter1|Add0~27   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~28   ; |DIVIDER|COUNTER:counter1|Add0~28   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~29   ; |DIVIDER|COUNTER:counter1|Add0~29   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~30   ; |DIVIDER|COUNTER:counter1|Add0~30   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~31   ; |DIVIDER|COUNTER:counter1|Add0~31   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~32   ; |DIVIDER|COUNTER:counter1|Add0~32   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~33   ; |DIVIDER|COUNTER:counter1|Add0~33   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~34   ; |DIVIDER|COUNTER:counter1|Add0~34   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~35   ; |DIVIDER|COUNTER:counter1|Add0~35   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~36   ; |DIVIDER|COUNTER:counter1|Add0~36   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~37   ; |DIVIDER|COUNTER:counter1|Add0~37   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~38   ; |DIVIDER|COUNTER:counter1|Add0~38   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~39   ; |DIVIDER|COUNTER:counter1|Add0~39   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~40   ; |DIVIDER|COUNTER:counter1|Add0~40   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~41   ; |DIVIDER|COUNTER:counter1|Add0~41   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~42   ; |DIVIDER|COUNTER:counter1|Add0~42   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~43   ; |DIVIDER|COUNTER:counter1|Add0~43   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~44   ; |DIVIDER|COUNTER:counter1|Add0~44   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~45   ; |DIVIDER|COUNTER:counter1|Add0~45   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~46   ; |DIVIDER|COUNTER:counter1|Add0~46   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~47   ; |DIVIDER|COUNTER:counter1|Add0~47   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~48   ; |DIVIDER|COUNTER:counter1|Add0~48   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~49   ; |DIVIDER|COUNTER:counter1|Add0~49   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~50   ; |DIVIDER|COUNTER:counter1|Add0~50   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~51   ; |DIVIDER|COUNTER:counter1|Add0~51   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~52   ; |DIVIDER|COUNTER:counter1|Add0~52   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~53   ; |DIVIDER|COUNTER:counter1|Add0~53   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~54   ; |DIVIDER|COUNTER:counter1|Add0~54   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~55   ; |DIVIDER|COUNTER:counter1|Add0~55   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~56   ; |DIVIDER|COUNTER:counter1|Add0~56   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~57   ; |DIVIDER|COUNTER:counter1|Add0~57   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~58   ; |DIVIDER|COUNTER:counter1|Add0~58   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~59   ; |DIVIDER|COUNTER:counter1|Add0~59   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~60   ; |DIVIDER|COUNTER:counter1|Add0~60   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~61   ; |DIVIDER|COUNTER:counter1|Add0~61   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~62   ; |DIVIDER|COUNTER:counter1|Add0~62   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~63   ; |DIVIDER|COUNTER:counter1|Add0~63   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~64   ; |DIVIDER|COUNTER:counter1|Add0~64   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~65   ; |DIVIDER|COUNTER:counter1|Add0~65   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~66   ; |DIVIDER|COUNTER:counter1|Add0~66   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~67   ; |DIVIDER|COUNTER:counter1|Add0~67   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~68   ; |DIVIDER|COUNTER:counter1|Add0~68   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~69   ; |DIVIDER|COUNTER:counter1|Add0~69   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~70   ; |DIVIDER|COUNTER:counter1|Add0~70   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~71   ; |DIVIDER|COUNTER:counter1|Add0~71   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~72   ; |DIVIDER|COUNTER:counter1|Add0~72   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~73   ; |DIVIDER|COUNTER:counter1|Add0~73   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~74   ; |DIVIDER|COUNTER:counter1|Add0~74   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~75   ; |DIVIDER|COUNTER:counter1|Add0~75   ; out0             ;
+; |DIVIDER|COUNTER:counter1|Add0~76   ; |DIVIDER|COUNTER:counter1|Add0~76   ; out0             ;
++-------------------------------------+-------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Sep 07 09:30:43 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off 7seg -c 7seg
+Info: Using vector source file "C:/Users/Etudiant/Desktop/BE VHDL_AOUCI_BONHOURE/TP/7seg/7seg_simulation.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of 7seg_simulation.vwf called 7seg.sim_ori.vwf has been created in the db folder
+Warning: Can't find signal in vector source file for input pin "|DIVIDER|rst"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      15.76 %
+Info: Number of transitions in simulation is 31200
+Info: Vector file 7seg_simulation.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 148 megabytes
+    Info: Processing ended: Mon Sep 07 09:30:43 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

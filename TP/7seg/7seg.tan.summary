@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.636 ns
+From           : dec_7seg:decoder1|out_7seg[6]
+To             : out_7seg[6]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 220.51 MHz ( period = 4.535 ns )
+From           : DIVIDER:divider1|COUNTER:counter1|count[0]
+To             : DIVIDER:divider1|COUNTER:counter1|count[39]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

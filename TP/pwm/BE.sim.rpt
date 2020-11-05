@@ -1,0 +1,518 @@
+Simulator report for BE
+Mon Sep 07 11:49:01 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 4.0 ms       ;
+; Simulation Netlist Size     ; 259 nodes    ;
+; Simulation Coverage         ;      62.79 % ;
+; Total Number of Transitions ; 2306878      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                    ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+; Option                                                                                     ; Setting                  ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+; Simulation mode                                                                            ; Functional               ; Timing        ;
+; Start time                                                                                 ; 0 ns                     ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                     ;               ;
+; Vector input source                                                                        ; ../TP/PWM_simulation.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                       ; On            ;
+; Check outputs                                                                              ; Off                      ; Off           ;
+; Report simulation coverage                                                                 ; On                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                      ; Off           ;
+; Detect glitches                                                                            ; Off                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                     ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      62.79 % ;
+; Total nodes checked                                 ; 259          ;
+; Total output ports checked                          ; 258          ;
+; Total output ports with complete 1/0-value coverage ; 162          ;
+; Total output ports with no 1/0-value coverage       ; 96           ;
+; Total output ports with no 1-value coverage         ; 96           ;
+; Total output ports with no 0-value coverage         ; 96           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                            ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; |pwm|pwm_out~reg0                                ; |pwm|pwm_out~reg0                                ; regout           ;
+; |pwm|pwm_out~1                                   ; |pwm|pwm_out~1                                   ; out              ;
+; |pwm|reset_counter~0                             ; |pwm|reset_counter~0                             ; out              ;
+; |pwm|reset_counter~1                             ; |pwm|reset_counter~1                             ; out              ;
+; |pwm|reset_counter                               ; |pwm|reset_counter                               ; regout           ;
+; |pwm|clock                                       ; |pwm|clock                                       ; out              ;
+; |pwm|reset_n                                     ; |pwm|reset_n                                     ; out              ;
+; |pwm|pwm_out                                     ; |pwm|pwm_out                                     ; pin_out          ;
+; |pwm|COUNTER:freq_count|count[10]                ; |pwm|COUNTER:freq_count|count[10]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[9]                 ; |pwm|COUNTER:freq_count|count[9]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[8]                 ; |pwm|COUNTER:freq_count|count[8]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[7]                 ; |pwm|COUNTER:freq_count|count[7]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[6]                 ; |pwm|COUNTER:freq_count|count[6]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[5]                 ; |pwm|COUNTER:freq_count|count[5]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[4]                 ; |pwm|COUNTER:freq_count|count[4]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[3]                 ; |pwm|COUNTER:freq_count|count[3]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[2]                 ; |pwm|COUNTER:freq_count|count[2]                 ; regout           ;
+; |pwm|COUNTER:freq_count|count[1]                 ; |pwm|COUNTER:freq_count|count[1]                 ; regout           ;
+; |pwm|DIVIDER:clock_div|subCLK                    ; |pwm|DIVIDER:clock_div|subCLK                    ; regout           ;
+; |pwm|DIVIDER:clock_div|divided_clock~0           ; |pwm|DIVIDER:clock_div|divided_clock~0           ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[0] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[0] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~1  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~1  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~2  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~2  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~3  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~3  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~4  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~4  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~5  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~5  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~6  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~6  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~7  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~7  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[5] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[5] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[4] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[4] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[3] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[3] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[2] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[2] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[1] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[1] ; regout           ;
+; |pwm|LessThan0~3                                 ; |pwm|LessThan0~3                                 ; out0             ;
+; |pwm|LessThan0~5                                 ; |pwm|LessThan0~5                                 ; out0             ;
+; |pwm|LessThan0~6                                 ; |pwm|LessThan0~6                                 ; out0             ;
+; |pwm|LessThan0~7                                 ; |pwm|LessThan0~7                                 ; out0             ;
+; |pwm|LessThan0~10                                ; |pwm|LessThan0~10                                ; out0             ;
+; |pwm|LessThan0~11                                ; |pwm|LessThan0~11                                ; out0             ;
+; |pwm|LessThan0~12                                ; |pwm|LessThan0~12                                ; out0             ;
+; |pwm|LessThan0~13                                ; |pwm|LessThan0~13                                ; out0             ;
+; |pwm|LessThan0~14                                ; |pwm|LessThan0~14                                ; out0             ;
+; |pwm|LessThan0~15                                ; |pwm|LessThan0~15                                ; out0             ;
+; |pwm|LessThan0~16                                ; |pwm|LessThan0~16                                ; out0             ;
+; |pwm|LessThan0~17                                ; |pwm|LessThan0~17                                ; out0             ;
+; |pwm|LessThan0~18                                ; |pwm|LessThan0~18                                ; out0             ;
+; |pwm|LessThan0~19                                ; |pwm|LessThan0~19                                ; out0             ;
+; |pwm|LessThan0~20                                ; |pwm|LessThan0~20                                ; out0             ;
+; |pwm|LessThan0~21                                ; |pwm|LessThan0~21                                ; out0             ;
+; |pwm|LessThan0~22                                ; |pwm|LessThan0~22                                ; out0             ;
+; |pwm|LessThan0~23                                ; |pwm|LessThan0~23                                ; out0             ;
+; |pwm|LessThan0~24                                ; |pwm|LessThan0~24                                ; out0             ;
+; |pwm|LessThan0~25                                ; |pwm|LessThan0~25                                ; out0             ;
+; |pwm|LessThan0~26                                ; |pwm|LessThan0~26                                ; out0             ;
+; |pwm|LessThan0~27                                ; |pwm|LessThan0~27                                ; out0             ;
+; |pwm|LessThan0~28                                ; |pwm|LessThan0~28                                ; out0             ;
+; |pwm|LessThan0~29                                ; |pwm|LessThan0~29                                ; out0             ;
+; |pwm|LessThan0~30                                ; |pwm|LessThan0~30                                ; out0             ;
+; |pwm|LessThan0~31                                ; |pwm|LessThan0~31                                ; out0             ;
+; |pwm|LessThan0~32                                ; |pwm|LessThan0~32                                ; out0             ;
+; |pwm|LessThan0~34                                ; |pwm|LessThan0~34                                ; out0             ;
+; |pwm|LessThan0~35                                ; |pwm|LessThan0~35                                ; out0             ;
+; |pwm|LessThan0~36                                ; |pwm|LessThan0~36                                ; out0             ;
+; |pwm|LessThan0~38                                ; |pwm|LessThan0~38                                ; out0             ;
+; |pwm|LessThan0~39                                ; |pwm|LessThan0~39                                ; out0             ;
+; |pwm|LessThan0~40                                ; |pwm|LessThan0~40                                ; out0             ;
+; |pwm|LessThan0~42                                ; |pwm|LessThan0~42                                ; out0             ;
+; |pwm|LessThan0~44                                ; |pwm|LessThan0~44                                ; out0             ;
+; |pwm|LessThan0~46                                ; |pwm|LessThan0~46                                ; out0             ;
+; |pwm|LessThan0~48                                ; |pwm|LessThan0~48                                ; out0             ;
+; |pwm|LessThan0~50                                ; |pwm|LessThan0~50                                ; out0             ;
+; |pwm|LessThan0~52                                ; |pwm|LessThan0~52                                ; out0             ;
+; |pwm|LessThan0~54                                ; |pwm|LessThan0~54                                ; out0             ;
+; |pwm|LessThan0~56                                ; |pwm|LessThan0~56                                ; out0             ;
+; |pwm|LessThan0~58                                ; |pwm|LessThan0~58                                ; out0             ;
+; |pwm|LessThan0~60                                ; |pwm|LessThan0~60                                ; out0             ;
+; |pwm|LessThan1~3                                 ; |pwm|LessThan1~3                                 ; out0             ;
+; |pwm|LessThan1~7                                 ; |pwm|LessThan1~7                                 ; out0             ;
+; |pwm|LessThan1~11                                ; |pwm|LessThan1~11                                ; out0             ;
+; |pwm|LessThan1~13                                ; |pwm|LessThan1~13                                ; out0             ;
+; |pwm|LessThan1~14                                ; |pwm|LessThan1~14                                ; out0             ;
+; |pwm|LessThan1~15                                ; |pwm|LessThan1~15                                ; out0             ;
+; |pwm|LessThan1~18                                ; |pwm|LessThan1~18                                ; out0             ;
+; |pwm|LessThan1~19                                ; |pwm|LessThan1~19                                ; out0             ;
+; |pwm|LessThan1~20                                ; |pwm|LessThan1~20                                ; out0             ;
+; |pwm|LessThan1~21                                ; |pwm|LessThan1~21                                ; out0             ;
+; |pwm|LessThan1~22                                ; |pwm|LessThan1~22                                ; out0             ;
+; |pwm|LessThan1~23                                ; |pwm|LessThan1~23                                ; out0             ;
+; |pwm|LessThan1~24                                ; |pwm|LessThan1~24                                ; out0             ;
+; |pwm|LessThan1~25                                ; |pwm|LessThan1~25                                ; out0             ;
+; |pwm|LessThan1~26                                ; |pwm|LessThan1~26                                ; out0             ;
+; |pwm|LessThan1~27                                ; |pwm|LessThan1~27                                ; out0             ;
+; |pwm|LessThan1~28                                ; |pwm|LessThan1~28                                ; out0             ;
+; |pwm|LessThan1~29                                ; |pwm|LessThan1~29                                ; out0             ;
+; |pwm|LessThan1~30                                ; |pwm|LessThan1~30                                ; out0             ;
+; |pwm|LessThan1~31                                ; |pwm|LessThan1~31                                ; out0             ;
+; |pwm|LessThan1~32                                ; |pwm|LessThan1~32                                ; out0             ;
+; |pwm|LessThan1~33                                ; |pwm|LessThan1~33                                ; out0             ;
+; |pwm|LessThan1~34                                ; |pwm|LessThan1~34                                ; out0             ;
+; |pwm|LessThan1~35                                ; |pwm|LessThan1~35                                ; out0             ;
+; |pwm|LessThan1~36                                ; |pwm|LessThan1~36                                ; out0             ;
+; |pwm|LessThan1~37                                ; |pwm|LessThan1~37                                ; out0             ;
+; |pwm|LessThan1~38                                ; |pwm|LessThan1~38                                ; out0             ;
+; |pwm|LessThan1~39                                ; |pwm|LessThan1~39                                ; out0             ;
+; |pwm|LessThan1~40                                ; |pwm|LessThan1~40                                ; out0             ;
+; |pwm|LessThan1~42                                ; |pwm|LessThan1~42                                ; out0             ;
+; |pwm|LessThan1~44                                ; |pwm|LessThan1~44                                ; out0             ;
+; |pwm|LessThan1~46                                ; |pwm|LessThan1~46                                ; out0             ;
+; |pwm|LessThan1~48                                ; |pwm|LessThan1~48                                ; out0             ;
+; |pwm|LessThan1~50                                ; |pwm|LessThan1~50                                ; out0             ;
+; |pwm|LessThan1~52                                ; |pwm|LessThan1~52                                ; out0             ;
+; |pwm|LessThan1~54                                ; |pwm|LessThan1~54                                ; out0             ;
+; |pwm|LessThan1~56                                ; |pwm|LessThan1~56                                ; out0             ;
+; |pwm|LessThan1~58                                ; |pwm|LessThan1~58                                ; out0             ;
+; |pwm|LessThan1~60                                ; |pwm|LessThan1~60                                ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~0                   ; |pwm|COUNTER:freq_count|Add0~0                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~1                   ; |pwm|COUNTER:freq_count|Add0~1                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~2                   ; |pwm|COUNTER:freq_count|Add0~2                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~3                   ; |pwm|COUNTER:freq_count|Add0~3                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~4                   ; |pwm|COUNTER:freq_count|Add0~4                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~5                   ; |pwm|COUNTER:freq_count|Add0~5                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~6                   ; |pwm|COUNTER:freq_count|Add0~6                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~7                   ; |pwm|COUNTER:freq_count|Add0~7                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~8                   ; |pwm|COUNTER:freq_count|Add0~8                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~9                   ; |pwm|COUNTER:freq_count|Add0~9                   ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~10                  ; |pwm|COUNTER:freq_count|Add0~10                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~11                  ; |pwm|COUNTER:freq_count|Add0~11                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~12                  ; |pwm|COUNTER:freq_count|Add0~12                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~13                  ; |pwm|COUNTER:freq_count|Add0~13                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~14                  ; |pwm|COUNTER:freq_count|Add0~14                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~15                  ; |pwm|COUNTER:freq_count|Add0~15                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~16                  ; |pwm|COUNTER:freq_count|Add0~16                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~17                  ; |pwm|COUNTER:freq_count|Add0~17                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~18                  ; |pwm|COUNTER:freq_count|Add0~18                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~19                  ; |pwm|COUNTER:freq_count|Add0~19                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~20                  ; |pwm|COUNTER:freq_count|Add0~20                  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~0   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~0   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~1   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~1   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~2   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~2   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~3   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~3   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~4   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~4   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~5   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~5   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~6   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~6   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~7   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~7   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~8   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~8   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~9   ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~9   ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~10  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~10  ; out0             ;
+; |pwm|Equal0~0                                    ; |pwm|Equal0~0                                    ; out0             ;
+; |pwm|Equal0~1                                    ; |pwm|Equal0~1                                    ; out0             ;
+; |pwm|Equal0~2                                    ; |pwm|Equal0~2                                    ; out0             ;
+; |pwm|Equal0~3                                    ; |pwm|Equal0~3                                    ; out0             ;
+; |pwm|Equal0~4                                    ; |pwm|Equal0~4                                    ; out0             ;
+; |pwm|Equal0~5                                    ; |pwm|Equal0~5                                    ; out0             ;
+; |pwm|Equal0~6                                    ; |pwm|Equal0~6                                    ; out0             ;
+; |pwm|Equal0~7                                    ; |pwm|Equal0~7                                    ; out0             ;
+; |pwm|Equal0~8                                    ; |pwm|Equal0~8                                    ; out0             ;
+; |pwm|Equal0~9                                    ; |pwm|Equal0~9                                    ; out0             ;
+; |pwm|Equal0~10                                   ; |pwm|Equal0~10                                   ; out0             ;
+; |pwm|Equal0~16                                   ; |pwm|Equal0~16                                   ; out0             ;
+; |pwm|DIVIDER:clock_div|Equal0~0                  ; |pwm|DIVIDER:clock_div|Equal0~0                  ; out0             ;
+; |pwm|DIVIDER:clock_div|Equal1~0                  ; |pwm|DIVIDER:clock_div|Equal1~0                  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Equal0~0 ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Equal0~0 ; out0             ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                               ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; |pwm|pwm_out~0                                   ; |pwm|pwm_out~0                                   ; out              ;
+; |pwm|freq[0]                                     ; |pwm|freq[0]                                     ; out              ;
+; |pwm|freq[1]                                     ; |pwm|freq[1]                                     ; out              ;
+; |pwm|freq[2]                                     ; |pwm|freq[2]                                     ; out              ;
+; |pwm|freq[3]                                     ; |pwm|freq[3]                                     ; out              ;
+; |pwm|freq[4]                                     ; |pwm|freq[4]                                     ; out              ;
+; |pwm|freq[5]                                     ; |pwm|freq[5]                                     ; out              ;
+; |pwm|freq[6]                                     ; |pwm|freq[6]                                     ; out              ;
+; |pwm|freq[7]                                     ; |pwm|freq[7]                                     ; out              ;
+; |pwm|freq[8]                                     ; |pwm|freq[8]                                     ; out              ;
+; |pwm|freq[9]                                     ; |pwm|freq[9]                                     ; out              ;
+; |pwm|freq[10]                                    ; |pwm|freq[10]                                    ; out              ;
+; |pwm|freq[11]                                    ; |pwm|freq[11]                                    ; out              ;
+; |pwm|freq[12]                                    ; |pwm|freq[12]                                    ; out              ;
+; |pwm|freq[13]                                    ; |pwm|freq[13]                                    ; out              ;
+; |pwm|freq[14]                                    ; |pwm|freq[14]                                    ; out              ;
+; |pwm|freq[15]                                    ; |pwm|freq[15]                                    ; out              ;
+; |pwm|duty[0]                                     ; |pwm|duty[0]                                     ; out              ;
+; |pwm|duty[1]                                     ; |pwm|duty[1]                                     ; out              ;
+; |pwm|duty[2]                                     ; |pwm|duty[2]                                     ; out              ;
+; |pwm|duty[3]                                     ; |pwm|duty[3]                                     ; out              ;
+; |pwm|duty[4]                                     ; |pwm|duty[4]                                     ; out              ;
+; |pwm|duty[5]                                     ; |pwm|duty[5]                                     ; out              ;
+; |pwm|duty[6]                                     ; |pwm|duty[6]                                     ; out              ;
+; |pwm|duty[7]                                     ; |pwm|duty[7]                                     ; out              ;
+; |pwm|duty[8]                                     ; |pwm|duty[8]                                     ; out              ;
+; |pwm|duty[9]                                     ; |pwm|duty[9]                                     ; out              ;
+; |pwm|duty[10]                                    ; |pwm|duty[10]                                    ; out              ;
+; |pwm|duty[11]                                    ; |pwm|duty[11]                                    ; out              ;
+; |pwm|duty[12]                                    ; |pwm|duty[12]                                    ; out              ;
+; |pwm|duty[13]                                    ; |pwm|duty[13]                                    ; out              ;
+; |pwm|duty[14]                                    ; |pwm|duty[14]                                    ; out              ;
+; |pwm|duty[15]                                    ; |pwm|duty[15]                                    ; out              ;
+; |pwm|COUNTER:freq_count|count[15]                ; |pwm|COUNTER:freq_count|count[15]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[14]                ; |pwm|COUNTER:freq_count|count[14]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[13]                ; |pwm|COUNTER:freq_count|count[13]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[12]                ; |pwm|COUNTER:freq_count|count[12]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[11]                ; |pwm|COUNTER:freq_count|count[11]                ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~0  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~0  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[7] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[7] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[6] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[6] ; regout           ;
+; |pwm|LessThan0~0                                 ; |pwm|LessThan0~0                                 ; out0             ;
+; |pwm|LessThan0~1                                 ; |pwm|LessThan0~1                                 ; out0             ;
+; |pwm|LessThan0~2                                 ; |pwm|LessThan0~2                                 ; out0             ;
+; |pwm|LessThan0~4                                 ; |pwm|LessThan0~4                                 ; out0             ;
+; |pwm|LessThan0~8                                 ; |pwm|LessThan0~8                                 ; out0             ;
+; |pwm|LessThan0~9                                 ; |pwm|LessThan0~9                                 ; out0             ;
+; |pwm|LessThan0~33                                ; |pwm|LessThan0~33                                ; out0             ;
+; |pwm|LessThan0~37                                ; |pwm|LessThan0~37                                ; out0             ;
+; |pwm|LessThan0~41                                ; |pwm|LessThan0~41                                ; out0             ;
+; |pwm|LessThan0~43                                ; |pwm|LessThan0~43                                ; out0             ;
+; |pwm|LessThan0~45                                ; |pwm|LessThan0~45                                ; out0             ;
+; |pwm|LessThan0~47                                ; |pwm|LessThan0~47                                ; out0             ;
+; |pwm|LessThan0~49                                ; |pwm|LessThan0~49                                ; out0             ;
+; |pwm|LessThan0~51                                ; |pwm|LessThan0~51                                ; out0             ;
+; |pwm|LessThan0~53                                ; |pwm|LessThan0~53                                ; out0             ;
+; |pwm|LessThan0~55                                ; |pwm|LessThan0~55                                ; out0             ;
+; |pwm|LessThan0~57                                ; |pwm|LessThan0~57                                ; out0             ;
+; |pwm|LessThan0~59                                ; |pwm|LessThan0~59                                ; out0             ;
+; |pwm|LessThan1~0                                 ; |pwm|LessThan1~0                                 ; out0             ;
+; |pwm|LessThan1~1                                 ; |pwm|LessThan1~1                                 ; out0             ;
+; |pwm|LessThan1~2                                 ; |pwm|LessThan1~2                                 ; out0             ;
+; |pwm|LessThan1~4                                 ; |pwm|LessThan1~4                                 ; out0             ;
+; |pwm|LessThan1~5                                 ; |pwm|LessThan1~5                                 ; out0             ;
+; |pwm|LessThan1~6                                 ; |pwm|LessThan1~6                                 ; out0             ;
+; |pwm|LessThan1~8                                 ; |pwm|LessThan1~8                                 ; out0             ;
+; |pwm|LessThan1~9                                 ; |pwm|LessThan1~9                                 ; out0             ;
+; |pwm|LessThan1~10                                ; |pwm|LessThan1~10                                ; out0             ;
+; |pwm|LessThan1~12                                ; |pwm|LessThan1~12                                ; out0             ;
+; |pwm|LessThan1~16                                ; |pwm|LessThan1~16                                ; out0             ;
+; |pwm|LessThan1~17                                ; |pwm|LessThan1~17                                ; out0             ;
+; |pwm|LessThan1~41                                ; |pwm|LessThan1~41                                ; out0             ;
+; |pwm|LessThan1~43                                ; |pwm|LessThan1~43                                ; out0             ;
+; |pwm|LessThan1~45                                ; |pwm|LessThan1~45                                ; out0             ;
+; |pwm|LessThan1~47                                ; |pwm|LessThan1~47                                ; out0             ;
+; |pwm|LessThan1~49                                ; |pwm|LessThan1~49                                ; out0             ;
+; |pwm|LessThan1~51                                ; |pwm|LessThan1~51                                ; out0             ;
+; |pwm|LessThan1~53                                ; |pwm|LessThan1~53                                ; out0             ;
+; |pwm|LessThan1~55                                ; |pwm|LessThan1~55                                ; out0             ;
+; |pwm|LessThan1~57                                ; |pwm|LessThan1~57                                ; out0             ;
+; |pwm|LessThan1~59                                ; |pwm|LessThan1~59                                ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~21                  ; |pwm|COUNTER:freq_count|Add0~21                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~22                  ; |pwm|COUNTER:freq_count|Add0~22                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~23                  ; |pwm|COUNTER:freq_count|Add0~23                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~24                  ; |pwm|COUNTER:freq_count|Add0~24                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~25                  ; |pwm|COUNTER:freq_count|Add0~25                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~26                  ; |pwm|COUNTER:freq_count|Add0~26                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~27                  ; |pwm|COUNTER:freq_count|Add0~27                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~28                  ; |pwm|COUNTER:freq_count|Add0~28                  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~11  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~11  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~12  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~12  ; out0             ;
+; |pwm|Equal0~11                                   ; |pwm|Equal0~11                                   ; out0             ;
+; |pwm|Equal0~12                                   ; |pwm|Equal0~12                                   ; out0             ;
+; |pwm|Equal0~13                                   ; |pwm|Equal0~13                                   ; out0             ;
+; |pwm|Equal0~14                                   ; |pwm|Equal0~14                                   ; out0             ;
+; |pwm|Equal0~15                                   ; |pwm|Equal0~15                                   ; out0             ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                               ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+; |pwm|pwm_out~0                                   ; |pwm|pwm_out~0                                   ; out              ;
+; |pwm|freq[0]                                     ; |pwm|freq[0]                                     ; out              ;
+; |pwm|freq[1]                                     ; |pwm|freq[1]                                     ; out              ;
+; |pwm|freq[2]                                     ; |pwm|freq[2]                                     ; out              ;
+; |pwm|freq[3]                                     ; |pwm|freq[3]                                     ; out              ;
+; |pwm|freq[4]                                     ; |pwm|freq[4]                                     ; out              ;
+; |pwm|freq[5]                                     ; |pwm|freq[5]                                     ; out              ;
+; |pwm|freq[6]                                     ; |pwm|freq[6]                                     ; out              ;
+; |pwm|freq[7]                                     ; |pwm|freq[7]                                     ; out              ;
+; |pwm|freq[8]                                     ; |pwm|freq[8]                                     ; out              ;
+; |pwm|freq[9]                                     ; |pwm|freq[9]                                     ; out              ;
+; |pwm|freq[10]                                    ; |pwm|freq[10]                                    ; out              ;
+; |pwm|freq[11]                                    ; |pwm|freq[11]                                    ; out              ;
+; |pwm|freq[12]                                    ; |pwm|freq[12]                                    ; out              ;
+; |pwm|freq[13]                                    ; |pwm|freq[13]                                    ; out              ;
+; |pwm|freq[14]                                    ; |pwm|freq[14]                                    ; out              ;
+; |pwm|freq[15]                                    ; |pwm|freq[15]                                    ; out              ;
+; |pwm|duty[0]                                     ; |pwm|duty[0]                                     ; out              ;
+; |pwm|duty[1]                                     ; |pwm|duty[1]                                     ; out              ;
+; |pwm|duty[2]                                     ; |pwm|duty[2]                                     ; out              ;
+; |pwm|duty[3]                                     ; |pwm|duty[3]                                     ; out              ;
+; |pwm|duty[4]                                     ; |pwm|duty[4]                                     ; out              ;
+; |pwm|duty[5]                                     ; |pwm|duty[5]                                     ; out              ;
+; |pwm|duty[6]                                     ; |pwm|duty[6]                                     ; out              ;
+; |pwm|duty[7]                                     ; |pwm|duty[7]                                     ; out              ;
+; |pwm|duty[8]                                     ; |pwm|duty[8]                                     ; out              ;
+; |pwm|duty[9]                                     ; |pwm|duty[9]                                     ; out              ;
+; |pwm|duty[10]                                    ; |pwm|duty[10]                                    ; out              ;
+; |pwm|duty[11]                                    ; |pwm|duty[11]                                    ; out              ;
+; |pwm|duty[12]                                    ; |pwm|duty[12]                                    ; out              ;
+; |pwm|duty[13]                                    ; |pwm|duty[13]                                    ; out              ;
+; |pwm|duty[14]                                    ; |pwm|duty[14]                                    ; out              ;
+; |pwm|duty[15]                                    ; |pwm|duty[15]                                    ; out              ;
+; |pwm|COUNTER:freq_count|count[15]                ; |pwm|COUNTER:freq_count|count[15]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[14]                ; |pwm|COUNTER:freq_count|count[14]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[13]                ; |pwm|COUNTER:freq_count|count[13]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[12]                ; |pwm|COUNTER:freq_count|count[12]                ; regout           ;
+; |pwm|COUNTER:freq_count|count[11]                ; |pwm|COUNTER:freq_count|count[11]                ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~0  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count~0  ; out              ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[7] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[7] ; regout           ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[6] ; |pwm|DIVIDER:clock_div|COUNTER:counter1|count[6] ; regout           ;
+; |pwm|LessThan0~0                                 ; |pwm|LessThan0~0                                 ; out0             ;
+; |pwm|LessThan0~1                                 ; |pwm|LessThan0~1                                 ; out0             ;
+; |pwm|LessThan0~2                                 ; |pwm|LessThan0~2                                 ; out0             ;
+; |pwm|LessThan0~4                                 ; |pwm|LessThan0~4                                 ; out0             ;
+; |pwm|LessThan0~8                                 ; |pwm|LessThan0~8                                 ; out0             ;
+; |pwm|LessThan0~9                                 ; |pwm|LessThan0~9                                 ; out0             ;
+; |pwm|LessThan0~33                                ; |pwm|LessThan0~33                                ; out0             ;
+; |pwm|LessThan0~37                                ; |pwm|LessThan0~37                                ; out0             ;
+; |pwm|LessThan0~41                                ; |pwm|LessThan0~41                                ; out0             ;
+; |pwm|LessThan0~43                                ; |pwm|LessThan0~43                                ; out0             ;
+; |pwm|LessThan0~45                                ; |pwm|LessThan0~45                                ; out0             ;
+; |pwm|LessThan0~47                                ; |pwm|LessThan0~47                                ; out0             ;
+; |pwm|LessThan0~49                                ; |pwm|LessThan0~49                                ; out0             ;
+; |pwm|LessThan0~51                                ; |pwm|LessThan0~51                                ; out0             ;
+; |pwm|LessThan0~53                                ; |pwm|LessThan0~53                                ; out0             ;
+; |pwm|LessThan0~55                                ; |pwm|LessThan0~55                                ; out0             ;
+; |pwm|LessThan0~57                                ; |pwm|LessThan0~57                                ; out0             ;
+; |pwm|LessThan0~59                                ; |pwm|LessThan0~59                                ; out0             ;
+; |pwm|LessThan1~0                                 ; |pwm|LessThan1~0                                 ; out0             ;
+; |pwm|LessThan1~1                                 ; |pwm|LessThan1~1                                 ; out0             ;
+; |pwm|LessThan1~2                                 ; |pwm|LessThan1~2                                 ; out0             ;
+; |pwm|LessThan1~4                                 ; |pwm|LessThan1~4                                 ; out0             ;
+; |pwm|LessThan1~5                                 ; |pwm|LessThan1~5                                 ; out0             ;
+; |pwm|LessThan1~6                                 ; |pwm|LessThan1~6                                 ; out0             ;
+; |pwm|LessThan1~8                                 ; |pwm|LessThan1~8                                 ; out0             ;
+; |pwm|LessThan1~9                                 ; |pwm|LessThan1~9                                 ; out0             ;
+; |pwm|LessThan1~10                                ; |pwm|LessThan1~10                                ; out0             ;
+; |pwm|LessThan1~12                                ; |pwm|LessThan1~12                                ; out0             ;
+; |pwm|LessThan1~16                                ; |pwm|LessThan1~16                                ; out0             ;
+; |pwm|LessThan1~17                                ; |pwm|LessThan1~17                                ; out0             ;
+; |pwm|LessThan1~41                                ; |pwm|LessThan1~41                                ; out0             ;
+; |pwm|LessThan1~43                                ; |pwm|LessThan1~43                                ; out0             ;
+; |pwm|LessThan1~45                                ; |pwm|LessThan1~45                                ; out0             ;
+; |pwm|LessThan1~47                                ; |pwm|LessThan1~47                                ; out0             ;
+; |pwm|LessThan1~49                                ; |pwm|LessThan1~49                                ; out0             ;
+; |pwm|LessThan1~51                                ; |pwm|LessThan1~51                                ; out0             ;
+; |pwm|LessThan1~53                                ; |pwm|LessThan1~53                                ; out0             ;
+; |pwm|LessThan1~55                                ; |pwm|LessThan1~55                                ; out0             ;
+; |pwm|LessThan1~57                                ; |pwm|LessThan1~57                                ; out0             ;
+; |pwm|LessThan1~59                                ; |pwm|LessThan1~59                                ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~21                  ; |pwm|COUNTER:freq_count|Add0~21                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~22                  ; |pwm|COUNTER:freq_count|Add0~22                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~23                  ; |pwm|COUNTER:freq_count|Add0~23                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~24                  ; |pwm|COUNTER:freq_count|Add0~24                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~25                  ; |pwm|COUNTER:freq_count|Add0~25                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~26                  ; |pwm|COUNTER:freq_count|Add0~26                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~27                  ; |pwm|COUNTER:freq_count|Add0~27                  ; out0             ;
+; |pwm|COUNTER:freq_count|Add0~28                  ; |pwm|COUNTER:freq_count|Add0~28                  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~11  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~11  ; out0             ;
+; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~12  ; |pwm|DIVIDER:clock_div|COUNTER:counter1|Add0~12  ; out0             ;
+; |pwm|Equal0~11                                   ; |pwm|Equal0~11                                   ; out0             ;
+; |pwm|Equal0~12                                   ; |pwm|Equal0~12                                   ; out0             ;
+; |pwm|Equal0~13                                   ; |pwm|Equal0~13                                   ; out0             ;
+; |pwm|Equal0~14                                   ; |pwm|Equal0~14                                   ; out0             ;
+; |pwm|Equal0~15                                   ; |pwm|Equal0~15                                   ; out0             ;
++--------------------------------------------------+--------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Sep 07 11:48:52 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off BE -c BE
+Info: Using vector source file "../TP/PWM_simulation.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of PWM_simulation.vwf called BE.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      62.79 %
+Info: Number of transitions in simulation is 2306878
+Info: Vector file PWM_simulation.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 148 megabytes
+    Info: Processing ended: Mon Sep 07 11:49:01 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
+
+
