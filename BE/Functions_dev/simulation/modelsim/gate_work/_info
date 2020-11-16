@@ -1,0 +1,154 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/simulation/modelsim
+Eanemometre
+Z1 w1604599949
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8DFBF_6_1200mv_85c_slow.vho
+Z11 FDFBF_6_1200mv_85c_slow.vho
+l0
+L79
+VCRQMJFFkDz^cB:C=0PF312
+!s100 nzT;ZD:GDI>dIc16^BT4W1
+Z12 OV;C;10.5b;63
+31
+Z13 !s110 1604600287
+!i10b 1
+Z14 !s108 1604600286.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|DFBF_6_1200mv_85c_slow.vho|
+Z16 !s107 DFBF_6_1200mv_85c_slow.vho|
+!i113 1
+Z17 o-93 -work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+Z19 DEx4 work 10 anemometre 0 22 CRQMJFFkDz^cB:C=0PF312
+l286
+L108
+VQ2@[cR]N3bgFA2?jWEjNO2
+!s100 H=5Q:zhYCYJ?kN>jR4Ua71
+R12
+31
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+VF25TiLjh`DQcC8Z=zbJ?Y3
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R12
+31
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 F25TiLjh`DQcC8Z=zbJ?Y3
+l64
+L50
+VZ2P8e]:^NT<7Y7=;nM1Vi3
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R12
+31
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Etb_anemo
+Z20 w1604575406
+R7
+R8
+R0
+Z21 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Simulation_files/tb_anemo.vhd
+Z22 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Simulation_files/tb_anemo.vhd
+l0
+L4
+V6@o>=IX5CLTeX^zdkd9j90
+!s100 n02^^_<Z1MNBe7XaNN26<3
+R12
+32
+Z23 !s110 1604600572
+!i10b 1
+Z24 !s108 1604600572.000000
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Simulation_files/tb_anemo.vhd|
+Z26 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Simulation_files/tb_anemo.vhd|
+!i113 1
+Z27 o-work work
+R18
+Aarc_tb_anemo
+R2
+R3
+R4
+R5
+R6
+R9
+R19
+R7
+R8
+DEx4 work 8 tb_anemo 0 22 6@o>=IX5CLTeX^zdkd9j90
+l30
+L7
+Vj;C9C8RMH>W??:`E3::o61
+Z28 !s100 C^zB1i64Q[:]@OM;DiWcn2
+R12
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R27
+R18

@@ -1,0 +1,9 @@
+
+State Machine - |TB_ANEMO|ANEMOMETRE:anemo|present_State
+Name present_State.state5 present_State.state4 present_State.state3 present_State.state2 present_State.state1 present_State.state0 
+present_State.state0 0 0 0 0 0 0 
+present_State.state1 0 0 0 0 1 1 
+present_State.state2 0 0 0 1 0 1 
+present_State.state3 0 0 1 0 0 1 
+present_State.state4 0 1 0 0 0 1 
+present_State.state5 1 0 0 0 0 1 
