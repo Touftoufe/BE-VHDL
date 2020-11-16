@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Nov 16 21:01:51 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : SoC_BarreFranche
+Top-level Entity Name : HW
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 1,975 / 22,320 ( 9 % )
+    Total combinational functions : 1,824 / 22,320 ( 8 % )
+    Dedicated logic registers : 1,084 / 22,320 ( 5 % )
+Total registers : 1084
+Total pins : 11 / 154 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 338,944 / 608,256 ( 56 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
