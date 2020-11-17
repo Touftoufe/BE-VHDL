@@ -1,5 +1,5 @@
 
-State Machine - |HW|SoC:inst|SoC_NIOS_MCU:nios_mcu|SoC_NIOS_MCU_cpu:cpu|SoC_NIOS_MCU_cpu_nios2_oci:the_SoC_NIOS_MCU_cpu_nios2_oci|SoC_NIOS_MCU_cpu_debug_slave_wrapper:the_SoC_NIOS_MCU_cpu_debug_slave_wrapper|SoC_NIOS_MCU_cpu_debug_slave_tck:the_SoC_NIOS_MCU_cpu_debug_slave_tck|DRsize
+State Machine - |HW|SoC:inst1|SoC_NIOS_MCU:nios_mcu|SoC_NIOS_MCU_cpu:cpu|SoC_NIOS_MCU_cpu_nios2_oci:the_SoC_NIOS_MCU_cpu_nios2_oci|SoC_NIOS_MCU_cpu_debug_slave_wrapper:the_SoC_NIOS_MCU_cpu_debug_slave_wrapper|SoC_NIOS_MCU_cpu_debug_slave_tck:the_SoC_NIOS_MCU_cpu_debug_slave_tck|DRsize
 Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
 DRsize.000 0 0 0 0 0 0 
 DRsize.001 0 0 0 0 1 1 
@@ -8,7 +8,7 @@ DRsize.011 0 0 1 0 0 1
 DRsize.100 0 1 0 0 0 1 
 DRsize.101 1 0 0 0 0 1 
 
-State Machine - |HW|SoC:inst|anemometre_avalon:anemometer|ANEMOMETRE:pwm|present_State
+State Machine - |HW|SoC:inst1|anemometre_avalon:anemometer|ANEMOMETRE:pwm|present_State
 Name present_State.state5 present_State.state4 present_State.state3 present_State.state2 present_State.state1 present_State.state0 
 present_State.state0 0 0 0 0 0 0 
 present_State.state1 0 0 0 0 1 1 

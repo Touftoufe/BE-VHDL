@@ -1,5 +1,5 @@
 Flow report for SoC_BarreFranche
-Mon Nov 16 21:02:03 2020
+Tue Nov 17 00:47:04 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 16 21:01:57 2020       ;
+; Flow Status                        ; Successful - Tue Nov 17 00:46:57 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SoC_BarreFranche                            ;
 ; Top-level Entity Name              ; HW                                          ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,975 / 22,320 ( 9 % )                      ;
-;     Total combinational functions  ; 1,824 / 22,320 ( 8 % )                      ;
-;     Dedicated logic registers      ; 1,084 / 22,320 ( 5 % )                      ;
-; Total registers                    ; 1084                                        ;
+; Total logic elements               ; 2,056 / 22,320 ( 9 % )                      ;
+;     Total combinational functions  ; 1,926 / 22,320 ( 9 % )                      ;
+;     Dedicated logic registers      ; 1,098 / 22,320 ( 5 % )                      ;
+; Total registers                    ; 1098                                        ;
 ; Total pins                         ; 11 / 154 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 338,944 / 608,256 ( 56 % )                  ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2020 21:00:32 ;
+; Start date & time ; 11/17/2020 00:44:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SoC_BarreFranche    ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+------------------+-------------+------------+
 ; Assignment Name                     ; Value                                                 ; Default Value    ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------+------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 128534985390125.160555683108696                       ; --               ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 128534985390125.160557028619356                       ; --               ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --               ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --               ; --          ; --         ;
 ; MISC_FILE                           ; ../Qsys/SoC/synthesis/../SoC.cmp                      ; --               ; --          ; --         ;
@@ -89,7 +89,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                          ; --               ; --          ; --         ;
 ; SLD_FILE                            ; ../Qsys/SoC/synthesis/SoC.regmap                      ; --               ; --          ; --         ;
 ; SLD_FILE                            ; ../Qsys/SoC/synthesis/SoC.debuginfo                   ; --               ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1605540566 ; --               ; SoC         ; --         ;
+; SLD_INFO                            ; QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1605570207 ; --               ; SoC         ; --         ;
 ; SOPCINFO_FILE                       ; ../Qsys/SoC/synthesis/../../SoC.sopcinfo              ; --               ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --               ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; HW                                                    ; SoC_BarreFranche ; --          ; --         ;
@@ -101,11 +101,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 4897 MB             ; 00:01:32                           ;
-; Fitter               ; 00:00:17     ; 1.0                     ; 5278 MB             ; 00:00:18                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 4781 MB             ; 00:00:05                           ;
-; Total                ; 00:01:21     ; --                      ; --                  ; 00:01:58                           ;
+; Analysis & Synthesis ; 00:01:45     ; 1.0                     ; 4897 MB             ; 00:01:58                           ;
+; Fitter               ; 00:00:15     ; 1.0                     ; 5278 MB             ; 00:00:17                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4684 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 4779 MB             ; 00:00:05                           ;
+; Total                ; 00:02:08     ; --                      ; --                  ; 00:02:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -27,7 +27,7 @@ architecture rtl of SoC is
 			readdata           : out std_logic_vector(31 downto 0);                    -- readdata
 			write_n            : in  std_logic                     := 'X';             -- write_n
 			chipselect         : in  std_logic                     := 'X';             -- chipselect
-			reset_n            : in  std_logic                     := 'X';             -- reset
+			reset_n            : in  std_logic                     := 'X';             -- reset_n
 			clk_50M            : in  std_logic                     := 'X';             -- clk
 			in_freq_anemometre : in  std_logic                     := 'X';             -- new_signal
 			data_anemometre    : out std_logic_vector(7 downto 0);                     -- new_signal
@@ -95,7 +95,7 @@ architecture rtl of SoC is
 			duty_bus : integer := 16
 		);
 		port (
-			reset_n    : in  std_logic                     := 'X';             -- reset
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
 			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
 			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
@@ -390,7 +390,7 @@ architecture rtl of SoC is
 	signal mm_interconnect_0_keys_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:KEYs_s1_address -> KEYs:address
 	signal irq_mapper_receiver0_irq                                    : std_logic;                     -- jtag:av_irq -> irq_mapper:receiver0_irq
 	signal nios_mcu_irq_irq                                            : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> NIOS_MCU:irq
-	signal rst_controller_reset_out_reset                              : std_logic;                     -- rst_controller:reset_out -> [Anemometer:reset_n, PWM:reset_n, mm_interconnect_0:PWM_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in]
+	signal rst_controller_reset_out_reset                              : std_logic;                     -- rst_controller:reset_out -> [mm_interconnect_0:PWM_reset_reset_bridge_in_reset_reset, rst_controller_reset_out_reset:in]
 	signal rst_controller_001_reset_out_reset                          : std_logic;                     -- rst_controller_001:reset_out -> [SRAM:reset, irq_mapper:reset, mm_interconnect_0:NIOS_MCU_reset_reset_bridge_in_reset_reset, rst_controller_001_reset_out_reset:in, rst_translator:in_reset]
 	signal rst_controller_001_reset_out_reset_req                      : std_logic;                     -- rst_controller_001:reset_req -> [NIOS_MCU:reset_req, SRAM:reset_req, rst_translator:reset_req_in]
 	signal nios_mcu_debug_reset_request_reset                          : std_logic;                     -- NIOS_MCU:debug_reset_request -> rst_controller_001:reset_in1
@@ -400,7 +400,7 @@ architecture rtl of SoC is
 	signal mm_interconnect_0_pwm_avalon_slave_0_write_ports_inv        : std_logic;                     -- mm_interconnect_0_pwm_avalon_slave_0_write:inv -> PWM:write_n
 	signal mm_interconnect_0_anemometer_avalon_slave_0_write_ports_inv : std_logic;                     -- mm_interconnect_0_anemometer_avalon_slave_0_write:inv -> Anemometer:write_n
 	signal mm_interconnect_0_leds_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> LEDs:write_n
-	signal rst_controller_reset_out_reset_ports_inv                    : std_logic;                     -- rst_controller_reset_out_reset:inv -> [KEYs:reset_n, LEDs:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                    : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Anemometer:reset_n, KEYs:reset_n, LEDs:reset_n, PWM:reset_n]
 	signal rst_controller_001_reset_out_reset_ports_inv                : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [NIOS_MCU:reset_n, jtag:rst_n]
 
 begin
@@ -412,7 +412,7 @@ begin
 			readdata           => mm_interconnect_0_anemometer_avalon_slave_0_readdata,        --                   .readdata
 			write_n            => mm_interconnect_0_anemometer_avalon_slave_0_write_ports_inv, --                   .write_n
 			chipselect         => mm_interconnect_0_anemometer_avalon_slave_0_chipselect,      --                   .chipselect
-			reset_n            => rst_controller_reset_out_reset,                              --              reset.reset
+			reset_n            => rst_controller_reset_out_reset_ports_inv,                    --              reset.reset_n
 			clk_50M            => clk_clk,                                                     --              clock.clk
 			in_freq_anemometre => anemometer_in_freq_anemometre_new_signal,                    -- in_freq_anemometre.new_signal
 			data_anemometre    => anemometer_data_anemometre_new_signal,                       --    data_anemometre.new_signal
@@ -476,7 +476,7 @@ begin
 			duty_bus => 16
 		)
 		port map (
-			reset_n    => rst_controller_reset_out_reset,                       --          reset.reset
+			reset_n    => rst_controller_reset_out_reset_ports_inv,             --          reset.reset_n
 			address    => mm_interconnect_0_pwm_avalon_slave_0_address,         -- avalon_slave_0.address
 			writedata  => mm_interconnect_0_pwm_avalon_slave_0_writedata,       --               .writedata
 			readdata   => mm_interconnect_0_pwm_avalon_slave_0_readdata,        --               .readdata
