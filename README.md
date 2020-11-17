@@ -17,6 +17,8 @@ On y trouve les premiers projets d'initiation au développement en VHDL
 On y trouve le projet du BE
 - Quartus 18.1
 - Cyclone IV carte DE0
+- Modelsim
+- Qsys
 
 Celui-ci est structuré comme ci-dessous :
 - __functions :__ toutes les fonctions et blocs de base du projet
