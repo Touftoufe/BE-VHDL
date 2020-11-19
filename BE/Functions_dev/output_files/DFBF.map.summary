@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Nov 16 11:31:50 2020
+Analysis & Synthesis Status : Successful - Thu Nov 19 18:53:43 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DFBF
-Top-level Entity Name : TB_ANEMO
+Top-level Entity Name : UART_RX
 Family : Cyclone IV E
-Total logic elements : 125
-    Total combinational functions : 116
-    Dedicated logic registers : 88
-Total registers : 88
-Total pins : 10
+Total logic elements : 86
+    Total combinational functions : 69
+    Dedicated logic registers : 49
+Total registers : 49
+Total pins : 28
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

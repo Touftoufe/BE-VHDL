@@ -3,219 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -2.519
-TNS   : -52.381
-
-Type  : Slow 1200mV 85C Model Setup 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -1.280
-TNS   : -13.569
-
-Type  : Slow 1200mV 85C Model Setup 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -1.260
-TNS   : -13.249
-
-Type  : Slow 1200mV 85C Model Setup 'pwm:pwm1|pwm_out'
-Slack : -0.810
-TNS   : -4.669
+Slack : -2.586
+TNS   : -44.010
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.345
+Slack : 0.358
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'pwm:pwm1|pwm_out'
-Slack : 0.523
+Type  : Slow 1200mV 85C Model Recovery 'RX'
+Slack : -0.982
+TNS   : -0.982
+
+Type  : Slow 1200mV 85C Model Recovery 'clock'
+Slack : -0.698
+TNS   : -4.171
+
+Type  : Slow 1200mV 85C Model Removal 'clock'
+Slack : 0.551
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.549
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.569
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -0.158
-TNS   : -2.528
-
-Type  : Slow 1200mV 85C Model Recovery 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -0.026
-TNS   : -0.416
-
-Type  : Slow 1200mV 85C Model Recovery 'pwm:pwm1|pwm_out'
-Slack : 0.141
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'pwm:pwm1|pwm_out'
-Slack : 0.329
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.485
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.604
+Type  : Slow 1200mV 85C Model Removal 'RX'
+Slack : 1.459
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
 TNS   : -51.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pwm:pwm1|pwm_out'
-Slack : -1.000
-TNS   : -8.000
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -2.138
-TNS   : -41.820
-
-Type  : Slow 1200mV 0C Model Setup 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -1.006
-TNS   : -10.182
-
-Type  : Slow 1200mV 0C Model Setup 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -0.988
-TNS   : -9.920
-
-Type  : Slow 1200mV 0C Model Setup 'pwm:pwm1|pwm_out'
-Slack : -0.601
-TNS   : -3.299
+Slack : -2.202
+TNS   : -34.786
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.305
+Slack : 0.311
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'pwm:pwm1|pwm_out'
-Slack : 0.472
+Type  : Slow 1200mV 0C Model Recovery 'RX'
+Slack : -0.803
+TNS   : -0.803
+
+Type  : Slow 1200mV 0C Model Recovery 'clock'
+Slack : -0.515
+TNS   : -2.630
+
+Type  : Slow 1200mV 0C Model Removal 'clock'
+Slack : 0.499
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.495
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.512
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -0.041
-TNS   : -0.656
-
-Type  : Slow 1200mV 0C Model Recovery 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.073
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'pwm:pwm1|pwm_out'
-Slack : 0.218
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'pwm:pwm1|pwm_out'
-Slack : 0.304
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.452
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.572
+Type  : Slow 1200mV 0C Model Removal 'RX'
+Slack : 1.366
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
 TNS   : -51.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pwm:pwm1|pwm_out'
-Slack : -1.000
-TNS   : -8.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.015
-TNS   : -10.464
-
-Type  : Fast 1200mV 0C Model Setup 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -0.295
-TNS   : -1.570
-
-Type  : Fast 1200mV 0C Model Setup 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -0.285
-TNS   : -1.470
-
-Type  : Fast 1200mV 0C Model Setup 'pwm:pwm1|pwm_out'
-Slack : -0.020
-TNS   : -0.036
+Slack : -1.012
+TNS   : -9.420
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.137
+Slack : 0.187
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'pwm:pwm1|pwm_out'
-Slack : 0.271
+Type  : Fast 1200mV 0C Model Recovery 'RX'
+Slack : -0.062
+TNS   : -0.062
+
+Type  : Fast 1200mV 0C Model Recovery 'clock'
+Slack : 0.019
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.293
+Type  : Fast 1200mV 0C Model Removal 'clock'
+Slack : 0.303
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.305
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.376
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.456
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'pwm:pwm1|pwm_out'
-Slack : 0.546
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'pwm:pwm1|pwm_out'
-Slack : 0.113
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : 0.194
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : 0.248
+Type  : Fast 1200mV 0C Model Removal 'RX'
+Slack : 0.703
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -53.670
+TNS   : -53.843
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ANEMOMETRE:anemo|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pwm:pwm1|DIVIDER:clock_div|subCLK'
-Slack : -1.000
-TNS   : -16.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pwm:pwm1|pwm_out'
-Slack : -1.000
-TNS   : -8.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.171
 
 ------------------------------------------------------------
