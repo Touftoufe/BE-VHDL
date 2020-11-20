@@ -4,39 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "RX_data[0]",
+					"name" : "freq_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[1]",
+					"name" : "freq_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[2]",
+					"name" : "freq_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[3]",
+					"name" : "freq_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[4]",
+					"name" : "freq_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[5]",
+					"name" : "freq_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[6]",
+					"name" : "freq_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "RX_data_valid",
+					"name" : "freq_out[7]",
 					"strict" : false
 				},
 				{
@@ -44,75 +40,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_n",
+					"name" : "tb_reset",
 					"strict" : false
 				},
 				{
 					"name" : "RX",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[15]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[14]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[13]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[12]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[11]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[10]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[9]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[8]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[7]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[6]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[5]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[4]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[3]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[2]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[1]",
-					"strict" : false
-				},
-				{
-					"name" : "TicBit[0]",
 					"strict" : false
 				}
 			]

@@ -1,4 +1,34 @@
-|UART_RX
+|tb_UART_RX
+clock => uart_rx:uart.clock
+clock => freq_out[0]~reg0.CLK
+clock => freq_out[1]~reg0.CLK
+clock => freq_out[2]~reg0.CLK
+clock => freq_out[3]~reg0.CLK
+clock => freq_out[4]~reg0.CLK
+clock => freq_out[5]~reg0.CLK
+clock => freq_out[6]~reg0.CLK
+clock => freq_out[7]~reg0.CLK
+tb_reset => uart_rx:uart.reset_n
+tb_reset => freq_out[0]~reg0.ACLR
+tb_reset => freq_out[1]~reg0.ACLR
+tb_reset => freq_out[2]~reg0.ACLR
+tb_reset => freq_out[3]~reg0.ACLR
+tb_reset => freq_out[4]~reg0.ACLR
+tb_reset => freq_out[5]~reg0.ACLR
+tb_reset => freq_out[6]~reg0.ACLR
+tb_reset => freq_out[7]~reg0.ACLR
+freq_out[0] << freq_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[1] << freq_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[2] << freq_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[3] << freq_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[4] << freq_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[5] << freq_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[6] << freq_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[7] << freq_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+RX => uart_rx:uart.RX
+
+
+|tb_UART_RX|UART_RX:uart
 clock => counter:freq_count.clk
 clock => RX_data_valid~reg0.CLK
 clock => RX_data_temp[0].CLK
@@ -95,7 +125,7 @@ RX_data[7] <= RX_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RX_data_valid <= RX_data_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_RX|COUNTER:freq_count
+|tb_UART_RX|UART_RX:uart|COUNTER:freq_count
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
 clk => count[2]~reg0.CLK

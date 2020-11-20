@@ -150,10 +150,10 @@ begin
 			when bit_read_State =>
 				reset_counter <= '1';
 				n_data_bits <= n_data_bits + 1;
-				RX_data_temp <= RX_data_temp(6 downto 0) & RX;
+				RX_data_temp <= RX & RX_data_temp(7 downto 1);
 			when stop_State =>
 				RX_data_valid <= '1';
-				RX_data <= RX_data_temp;
+				RX_data <=  RX_data_temp;
 				
 			when reset_State =>
 				RX_data_valid <= '0';

@@ -1,5 +1,5 @@
 
-State Machine - |UART_RX|present_State
+State Machine - |TB_UART_RX|UART_RX:uart|present_State
 Name present_State.stop_State present_State.bit_read_State present_State.bit_read_prep_State present_State.Rx_State present_State.start_State present_State.IDLE_State present_State.reset_State 
 present_State.reset_State 0 0 0 0 0 0 0 
 present_State.IDLE_State 0 0 0 0 0 1 1 
