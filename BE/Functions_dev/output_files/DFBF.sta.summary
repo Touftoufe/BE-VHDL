@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -1.470
-TNS   : -32.593
+Slack : -2.900
+TNS   : -81.546
+
+Type  : Slow 1200mV 85C Model Setup 'Baud[0]'
+Slack : -1.704
+TNS   : -17.071
+
+Type  : Slow 1200mV 85C Model Hold 'Baud[0]'
+Slack : 0.145
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.358
+Slack : 0.348
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'RX'
-Slack : -0.804
-TNS   : -0.804
 
 Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : -0.503
-TNS   : -6.611
+Slack : -0.837
+TNS   : -0.837
 
 Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 0.708
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'RX'
-Slack : 1.303
+Slack : 0.835
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -59.000
+TNS   : -34.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RX'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Baud[0]'
 Slack : -3.000
-TNS   : -4.000
+TNS   : -16.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -1.261
-TNS   : -23.556
+Slack : -2.589
+TNS   : -71.267
+
+Type  : Slow 1200mV 0C Model Setup 'Baud[0]'
+Slack : -1.564
+TNS   : -14.666
+
+Type  : Slow 1200mV 0C Model Hold 'Baud[0]'
+Slack : 0.155
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.312
+Slack : 0.308
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'RX'
-Slack : -0.645
-TNS   : -0.645
 
 Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : -0.334
-TNS   : -3.948
+Slack : -0.710
+TNS   : -0.710
 
 Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 0.651
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'RX'
-Slack : 1.205
+Slack : 0.751
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -59.000
+TNS   : -34.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RX'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Baud[0]'
 Slack : -3.000
-TNS   : -4.000
+TNS   : -16.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.086
-TNS   : -3.096
+Slack : -1.687
+TNS   : -39.194
+
+Type  : Fast 1200mV 0C Model Setup 'Baud[0]'
+Slack : -1.094
+TNS   : -3.570
+
+Type  : Fast 1200mV 0C Model Hold 'Baud[0]'
+Slack : -0.010
+TNS   : -0.042
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
 Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'RX'
-Slack : 0.090
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : 0.135
-TNS   : 0.000
+Slack : -0.542
+TNS   : -0.542
 
 Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'RX'
-Slack : 0.583
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -62.182
+TNS   : -35.694
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RX'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Baud[0]'
 Slack : -3.000
-TNS   : -4.472
+TNS   : -16.876
 
 ------------------------------------------------------------
