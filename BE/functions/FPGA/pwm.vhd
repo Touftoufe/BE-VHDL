@@ -41,12 +41,12 @@ begin
 	
 	comparator1 : process(clock, reset_n)
         begin
-			if(reset_n = '1') then
-				reset_counter <= '1';
+			if(reset_n = '0') then
+				reset_counter <= '0';
 				pwm_out <= '0';
             elsif (clock'event and clock='1') then
-					if(reset_counter = '1') then
-						reset_counter <= '0';
+					if(reset_counter = '0') then
+						reset_counter <= '1';
 					end if;
 						 
 					if (freq_compare < duty) then
@@ -54,7 +54,7 @@ begin
 					elsif (freq_compare < freq) then
 						pwm_out <= '0';
 					elsif (freq_compare = freq) then
-						reset_counter <= '1';	
+						reset_counter <= '0';	
                 end if;
                 
             end if;

@@ -42,7 +42,7 @@ begin
 comparator : process(clock, reset_counter)
 variable ticBit_temp : std_LOGIC_VECTOR(15 downto 0) := (others => '0');
 begin
-	if(reset_counter = '1') then
+	if(reset_counter = '0') then
 		read_data_signal <= '0';
 	elsif (clock'event and clock='1') then
 		if(X2 = '1') then
@@ -62,7 +62,7 @@ end process;
 
 start_bit_detect : process(RX, reset_start_bit)
 begin
-	if(reset_start_bit = '1') then
+	if(reset_start_bit = '0') then
 		start_bit <= '0';
 	elsif (RX'event and RX='0') then
 		start_bit <= '1';
@@ -73,7 +73,7 @@ end process;
 ------------------------- FSM ----------------------------
 Sequentiel_up_state : process (clock, reset_n)
 begin
-	if reset_n = '1' then
+	if reset_n = '0' then
 		present_State <= reset_State;
 	elsif clock'event and clock = '1' then
 		present_State <= next_State;
@@ -126,29 +126,29 @@ end process;
 
 Combinatory_outputs : process (clock, reset_n)
 begin
-	if(reset_n = '1') then
-		reset_counter <= '1';
-		reset_start_bit <= '1';
+	if(reset_n = '0') then
+		reset_counter <= '0';
+		reset_start_bit <= '0';
 		RX_data <= (others => '0');
 		
 	elsif(clock'event and clock = '1') then
 		case present_State is
 			when IDLE_State =>
-				reset_start_bit <= '0';
+				reset_start_bit <= '1';
 
 			when start_State =>
-				reset_counter <= '0';
+				reset_counter <= '1';
 				X2 <= '1';
 				
 			when Rx_State => 
-				reset_counter <= '1';
+				reset_counter <= '0';
 				X2 <= '0';
 				
 			when bit_read_prep_State =>
-				reset_counter <= '0';
+				reset_counter <= '1';
 				
 			when bit_read_State =>
-				reset_counter <= '1';
+				reset_counter <= '0';
 				n_data_bits <= n_data_bits + 1;
 				RX_data_temp <= RX & RX_data_temp(7 downto 1);
 			when stop_State =>
@@ -157,8 +157,8 @@ begin
 				
 			when reset_State =>
 				RX_data_valid <= '0';
-				reset_counter <= '1';
-				reset_start_bit <= '1';
+				reset_counter <= '0';
+				reset_start_bit <= '0';
 				n_data_bits <= (others => '0');
 			
 		end case;

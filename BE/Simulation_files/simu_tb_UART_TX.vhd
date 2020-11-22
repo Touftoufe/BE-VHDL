@@ -24,21 +24,21 @@ architecture ARC_SIMU_TB_UART_TX of SIMU_TB_UART_TX is
   end procedure;
 
 	signal clock, sub_clk : std_logic := '0';
-	signal sig_valid, TX : std_logic := '0';
-	signal reset_n : std_logic := '0';
+	signal sig_valid : std_logic := '0';
+	signal reset_n, TX : std_logic := '1';
 	signal tx_data: STD_LOGIC_VECTOR(7 downto 0) := "00110101";
 begin
 
   -- Clock generation with concurrent procedure call
   --clk_gen(clock, 50000000);  -- 50 MHz clock
-  clk_gen(clock, 9600);  -- 2400 Hz clock
+  clk_gen(clock, 4800);  -- 2400 Hz clock
 					
 	uart: entity work.UART_TX
         Port map( clock,
            reset_n,
 			  TX,
 			  
-			  X"0001", -- Baud = 4800, tics per bit : 10417 // 0x28b1
+			  X"0000", -- Baud = 4800, tics per bit : 10417 // 0x28b1
 			  tx_data,
            sig_valid
            );  

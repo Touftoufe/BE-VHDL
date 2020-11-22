@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/simulation/modelsim
 Ecounter
-Z1 w1604846850
+Z1 w1606067484
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
@@ -20,13 +20,13 @@ Z7 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/count
 Z8 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd
 l0
 L32
-Vi@PK`kKg[4j_Mk[dObEN40
-!s100 <>PlYGaSEJHh<OC0S:ARZ2
+VeI`QzJH`nlEh>A:m;?Xao2
+!s100 Q9R3?gB?^@QQ<9C34aG9Q1
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1605999310
+Z10 !s110 1606073301
 !i10b 1
-Z11 !s108 1605999310.000000
+Z11 !s108 1606073301.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd|
 Z13 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd|
 !i113 1
@@ -38,11 +38,11 @@ R3
 R4
 R5
 R6
-Z16 DEx4 work 7 counter 0 22 i@PK`kKg[4j_Mk[dObEN40
+Z16 DEx4 work 7 counter 0 22 eI`QzJH`nlEh>A:m;?Xao2
 l47
 L46
-VYZVXT1VJB97ajH1^2id`52
-!s100 C82VjdT_c^D[P_ChC3Ub>1
+Vi3d^;]LXaBac;Oo@05f3o3
+!s100 N:eB5A8VXg_zd9TH]h5=e0
 R9
 31
 R10
@@ -54,7 +54,7 @@ R13
 R14
 R15
 Edivider
-Z17 w1602061822
+Z17 w1606067507
 R2
 R5
 R6
@@ -63,15 +63,15 @@ Z18 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divi
 Z19 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd
 l0
 L6
-VUg^Z1eKXTiGD`6TkWSGV:0
-!s100 j`eV4]BbaL7icRU]DQZ1>0
+Vo;M=k3R>JWKIY@3W6KCM]3
+!s100 <e<>FLA4Wl^VfI=;>ohDZ2
 R9
 31
-R10
+Z20 !s110 1606073302
 !i10b 1
-R11
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd|
-Z21 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd|
+Z21 !s108 1606073302.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd|
+Z23 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd|
 !i113 1
 R14
 R15
@@ -82,39 +82,39 @@ R16
 R2
 R5
 R6
-Z22 DEx4 work 7 divider 0 22 Ug^Z1eKXTiGD`6TkWSGV:0
+Z24 DEx4 work 7 divider 0 22 o;M=k3R>JWKIY@3W6KCM]3
 l19
 L17
-VVSY8NeR7Dc1HdPQA`B^Dd3
-!s100 YE7z=baGo<cLlN@KPiKRU2
+VKg44zR0MJWL?W[b90FQ4Q0
+!s100 ldeVZ62STKbkl;^fm`H=:1
 R9
 31
-R10
-!i10b 1
-R11
 R20
+!i10b 1
 R21
+R22
+R23
 !i113 1
 R14
 R15
 Esimu_tb_uart_tx
-Z23 w1605999307
+Z25 w1606073296
 R5
 R6
 R0
-Z24 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd
-Z25 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd
+Z26 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd
+Z27 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd
 l0
 L4
 V>dhlN67VDR4<L7mE5LFnh3
 !s100 _^hPmJHb3VIADQj`LBek=1
 R9
 31
-R10
+R20
 !i10b 1
-R11
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd|
-Z27 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd|
+R21
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd|
+Z29 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/../Simulation_files/simu_tb_UART_TX.vhd|
 !i113 1
 R14
 R15
@@ -122,67 +122,67 @@ Aarc_simu_tb_uart_tx
 R3
 R4
 R2
-Z28 DEx4 work 7 uart_tx 0 22 QI4EJMM1[OUKngoc1hRhR1
+Z30 DEx4 work 7 uart_tx 0 22 QI4EJMM1[OUKngoc1hRhR1
 R5
 R6
 DEx4 work 15 simu_tb_uart_tx 0 22 >dhlN67VDR4<L7mE5LFnh3
 l30
 L7
-VK0@3BTlUX^HCVfXLa<3b=3
-!s100 k?dGd9W5zEniUl65d>^hQ0
+V_OP:Em977AQc`c0G?H_ck3
+!s100 LdlG3IifEUHZg?>i=JK;31
 R9
 31
-R10
+R20
 !i10b 1
-R11
-R26
-R27
+R21
+R28
+R29
 !i113 1
 R14
 R15
 Euart_tx
-Z29 w1605997201
+Z31 w1606067894
 R3
 R4
 R2
 R5
 R6
 R0
-Z30 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd
-Z31 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd
+Z32 8C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd
+Z33 FC:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd
 l0
 L7
 VQI4EJMM1[OUKngoc1hRhR1
 !s100 ]4Gkd2?XiE^iZ1?5lH;OO1
 R9
 31
-R10
+R20
 !i10b 1
-R11
-Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd|
-Z33 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd|
+R21
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd|
+Z35 !s107 C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd|
 !i113 1
 R14
 R15
 Aarc_uart_tx
-R22
+R24
 R3
 R4
 R2
 R5
 R6
-R28
+R30
 l24
 L21
-VIK0lXZ9PS=nlS1kYXDM5X3
-!s100 Y4`Q9FMlNi5=3[=F1:7k:2
+VIAFdanN]h:bPHB;VVEUjL0
+!s100 h8;M@W4[1ObM6RNRVJF@12
 R9
 31
-R10
+R20
 !i10b 1
-R11
-R32
-R33
+R21
+R34
+R35
 !i113 1
 R14
 R15

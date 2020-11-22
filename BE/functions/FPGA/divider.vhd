@@ -8,7 +8,7 @@ ENTITY DIVIDER IS
         size : integer := 4
     );
     PORT( clock : in std_logic;
-          rst : in std_logic;
+          rst_n : in std_logic;
           subCLK: buffer std_logic := '0';
 			 prescaler: in STD_LOGIC_VECTOR(size-1 downto 0) := (others => '0')
           );
@@ -20,14 +20,14 @@ begin
     counter1: entity work.COUNTER
         generic map (size)
         Port map ( clock,
-               rst,
+               rst_n,
                '0',
                '1',
                count,
 					prescaler); 
-    divided_clock: process(clock,rst)
+    divided_clock: process(clock,rst_n)
         begin
-            if (rst = '1') then 
+            if (rst_n = '0') then 
                 subCLK <= '0';
             elsif (unsigned(prescaler) = 0) then
 				subCLK <= clock;

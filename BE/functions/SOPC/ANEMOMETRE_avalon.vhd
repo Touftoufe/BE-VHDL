@@ -48,7 +48,7 @@ begin
 	process_write : process(clk_50M,reset_n)
 	begin
 		if(reset_n = '0') then
-			reset_anemometre <= '1';
+			reset_anemometre <= '0';
 			config <= (others => '0');
 			code <= (others => '0');
 			start_stop <= '0';

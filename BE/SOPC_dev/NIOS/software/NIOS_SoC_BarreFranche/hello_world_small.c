@@ -106,7 +106,7 @@ int main()
   PWM_set_freq(100-1); // 10 Hz
   PWM_set_duty(50-1);
   PWM_enable(1);
-  ANEMOMETRE_Config(0,1,0);
+  ANEMOMETRE_Config(1,1,0);
   while (1){
 	  IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 7);
 	  delay(500000);

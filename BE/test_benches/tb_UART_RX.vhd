@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity TB_UART_RX is
     Port (  clock : in STD_LOGIC;
-				tb_reset : in std_logic;
+				tb_reset_n : in std_logic;
 				freq_out : buffer STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 				RX : in std_logic := '0'
 			);
@@ -20,7 +20,7 @@ begin
 
 uart: entity work.UART_RX
         Port map( clock,
-        	not tb_reset,
+        	tb_reset_n,
 			RX,
 			X"28B1", -- tics per bit
   		    RX_out,
@@ -29,7 +29,7 @@ uart: entity work.UART_RX
 			 
 output : process(clock, sig_valid)
 begin
-	if(tb_reset = '0') then
+	if(tb_reset_n = '0') then
 		freq_out <= (others => '0');
 	elsif (clock'event and clock = '1' and sig_valid = '1') then
 		freq_out <= RX_out;

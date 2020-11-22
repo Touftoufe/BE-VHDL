@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DFBF
-Sat Nov 21 23:54:00 2020
+Sun Nov 22 20:24:48 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 21 23:54:00 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 22 20:24:48 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DFBF                                        ;
 ; Top-level Entity Name              ; UART_TX                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 72                                          ;
-;     Total combinational functions  ; 72                                          ;
+; Total logic elements               ; 73                                          ;
+;     Total combinational functions  ; 73                                          ;
 ;     Dedicated logic registers      ; 31                                          ;
 ; Total registers                    ; 31                                          ;
 ; Total pins                         ; 28                                          ;
@@ -184,16 +184,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 72            ;
+; Estimated Total logic elements              ; 73            ;
 ;                                             ;               ;
-; Total combinational functions               ; 72            ;
+; Total combinational functions               ; 73            ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 42            ;
-;     -- 3 input functions                    ; 9             ;
-;     -- <=2 input functions                  ; 21            ;
+;     -- 4 input functions                    ; 43            ;
+;     -- 3 input functions                    ; 10            ;
+;     -- <=2 input functions                  ; 20            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 58            ;
+;     -- normal mode                          ; 59            ;
 ;     -- arithmetic mode                      ; 14            ;
 ;                                             ;               ;
 ; Total registers                             ; 31            ;
@@ -206,8 +206,8 @@ refer to the applicable agreement for further details.
 ;                                             ;               ;
 ; Maximum fan-out node                        ; reset_n~input ;
 ; Maximum fan-out                             ; 27            ;
-; Total fan-out                               ; 374           ;
-; Average fan-out                             ; 2.35          ;
+; Total fan-out                               ; 379           ;
+; Average fan-out                             ; 2.37          ;
 +---------------------------------------------+---------------+
 
 
@@ -216,7 +216,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------+--------------+
-; |UART_TX                   ; 72 (19)             ; 31 (14)                   ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |UART_TX                                       ; UART_TX     ; work         ;
+; |UART_TX                   ; 73 (20)             ; 31 (14)                   ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |UART_TX                                       ; UART_TX     ; work         ;
 ;    |DIVIDER:data_Tx_freq|  ; 53 (31)             ; 17 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART_TX|DIVIDER:data_Tx_freq                  ; DIVIDER     ; work         ;
 ;       |COUNTER:counter1|   ; 22 (22)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART_TX|DIVIDER:data_Tx_freq|COUNTER:counter1 ; COUNTER     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------+--------------+
@@ -307,17 +307,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 8                           ;
 ;     CLR SCLR          ; 15                          ;
 ;     ENA               ; 8                           ;
-; cycloneiii_lcell_comb ; 73                          ;
+; cycloneiii_lcell_comb ; 74                          ;
 ;     arith             ; 14                          ;
 ;         2 data inputs ; 14                          ;
-;     normal            ; 59                          ;
+;     normal            ; 60                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 42                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 43                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.12                        ;
+; Average LUT depth     ; 3.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -336,7 +336,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 23:53:38 2020
+    Info: Processing started: Sun Nov 22 20:24:26 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_fonctions_barreFranche -c DFBF
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -361,14 +361,14 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 26 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 72 logic cells
+    Info (21061): Implemented 73 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Sat Nov 21 23:54:00 2020
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Sun Nov 22 20:24:48 2020
     Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Total CPU time (on all processors): 00:00:42
 
 

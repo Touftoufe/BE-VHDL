@@ -7,14 +7,14 @@ use IEEE.NUMERIC_STD.ALL;
 entity GIROUETTE is
     Port ( clock : in STD_LOGIC;
            pwm : in std_logic;
-			  reset : in std_logic;
+			  reset_n : in std_logic;
            angle : out STD_LOGIC_VECTOR(9 downto 0) := (others => '0')
            );
 end GIROUETTE;
 
 architecture arc_girouette of GIROUETTE is 
 	signal int_subclk : std_logic := '0';
-	signal reset_counter : std_logic := '0';
+	signal reset_n_counter : std_logic := '0';
 	signal Etat_haut : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 begin
 clock_div: entity work.DIVIDER
@@ -27,24 +27,24 @@ clock_div: entity work.DIVIDER
 freq_count: entity work.COUNTER
         generic map (16)
         Port map ( int_subclk,
-               reset_counter,
+               reset_n_counter,
                '0',
                '0',
                Etat_haut); 
 
 
-calcul_angle : process(clock, reset)
+calcul_angle : process(clock, reset_n)
 begin
-	if(reset = '1') then
-		reset_counter <= '1';
+	if(reset_n = '0') then
+		reset_n_counter <= '0';
 		angle <= (others => '0');
 	else
 		if(clock'event and clock = '1') then
 			if(pwm = '1') then
-				reset_counter <= '0';
-			elsif(reset_counter = '0') then 
+				reset_n_counter <= '1';
+			elsif(reset_n_counter = '1') then 
 				angle <= std_logic_vector(resize(25*((unsigned(Etat_haut)) - 1000)/1000, 10));
-				reset_counter <= '1';
+				reset_n_counter <= '0';
 			end if;
 		end if;
 	end if;

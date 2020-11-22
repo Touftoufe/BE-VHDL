@@ -33,7 +33,7 @@ begin
 	transmit : Process(sub_clk, reset_n)
 		variable TX_data_temp : std_LOGIC_VECTOR(7 downto 0) := (others => '0');
 	begin
-		if(reset_n = '1') then
+		if(reset_n = '0') then
 			TX <= '1';
 			count := (others => '0');
 			
@@ -60,7 +60,7 @@ begin
 	
 	TX_end: process(clock, reset_n)
 	begin
-		if(reset_n = '1') then
+		if(reset_n = '0') then
 			TX_data_valid <= '0';
 		elsif(clock'event and clock = '1') then
 			if(count = 9 and TX_data_valid = '0') then

@@ -51,7 +51,7 @@ freq_count: entity work.COUNTER
 					
 Sequentiel_up_state : process (clk_50M, reset_n)
 begin
-	if reset_n = '1' then
+	if reset_n = '0' then
 		present_State <= state0;
 	elsif clk_50M'event and clk_50M = '1' then
 		present_State <= next_State;
@@ -104,18 +104,18 @@ end process;
 
 Combinatory_outputs : process (clk_50M, reset_n)
 begin
-	if(reset_n = '1') then
+	if(reset_n = '0') then
 		data_anemometre <= (others => '0');
 		data_valid <= '0';
-		reset_counter <= '1';
+		reset_counter <= '0';
 	elsif(clk_50M'event and clk_50M = '1') then
 		if(present_State = state1) then
-			reset_counter <= '0';
+			reset_counter <= '1';
 		elsif(present_State = state2) then
 			data_valid <= '1';
 			data_anemometre <= int_freq;
 		elsif(present_State = state3 or present_State = state5) then
-			reset_counter <= '1';
+			reset_counter <= '0';
 			data_valid <= '0';
 		end if;
 	end if;

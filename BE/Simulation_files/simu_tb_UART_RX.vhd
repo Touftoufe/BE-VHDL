@@ -25,7 +25,7 @@ architecture ARC_SIMU_TB_UART_RX of SIMU_TB_UART_RX is
 
 	signal clock : std_logic := '0';
 	signal sig_valid, RX : std_logic := '0';
-	signal reset_n : std_logic := '0';
+	signal reset_n : std_logic := '1';
 	signal rx_out: STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 begin
 
