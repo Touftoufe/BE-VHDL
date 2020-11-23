@@ -4,15 +4,55 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "TX",
+					"name" : "readdata[0]",
 					"strict" : false
 				},
 				{
-					"name" : "TX_data_valid",
+					"name" : "readdata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "reset_n",
+					"name" : "readdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_out",
+					"strict" : false
+				},
+				{
+					"name" : "address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[0]",
 					"strict" : false
 				},
 				{
@@ -20,99 +60,43 @@
 					"strict" : false
 				},
 				{
-					"name" : "TX_data[0]",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{
-					"name" : "TX_data[1]",
+					"name" : "chipselect",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[1]",
+					"name" : "write_n",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[2]",
+					"name" : "writedata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[3]",
+					"name" : "writedata[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[4]",
+					"name" : "writedata[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[5]",
+					"name" : "writedata[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[6]",
+					"name" : "writedata[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[7]",
+					"name" : "writedata[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Baud[8]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[9]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[10]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[12]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[13]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[14]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[15]",
-					"strict" : false
-				},
-				{
-					"name" : "Baud[0]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "TX_data[7]",
+					"name" : "writedata[7]",
 					"strict" : false
 				}
 			]

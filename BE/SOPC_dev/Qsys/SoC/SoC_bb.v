@@ -7,7 +7,8 @@ module SoC (
 	keys_in_export,
 	leds_out_export,
 	pwm_out_new_signal,
-	reset_reset_n);	
+	reset_reset_n,
+	nmea_tx_new_signal);	
 
 	output	[7:0]	anemometer_data_anemometre_new_signal;
 	output		anemometer_data_valid_new_signal;
@@ -17,4 +18,5 @@ module SoC (
 	output	[7:0]	leds_out_export;
 	output		pwm_out_new_signal;
 	input		reset_reset_n;
+	output		nmea_tx_new_signal;
 endmodule

@@ -90,23 +90,40 @@
 #define PWM_set_precaler(n) *prescaler = n
 #define PWM_set_freq(n) *freq = n
 #define PWM_set_duty(n) *duty = n
-#define PWM_enable(n) *start_pwm_n = !n
+#define PWM_enable(n) *start_pwm_n = n
 
-#define conf (unsigned int *) ANEMOMETER_BASE
-#define data (unsigned int *) (ANEMOMETER_BASE + 4)
-#define ANEMOMETRE_Config(ST, continu, reset) (*conf = (ST << 2) | (continu << 1) | reset)
-#define ANEMOMETRE_get_freq() *data & 0xFF
+#define ANEMOMETRE_conf (unsigned int *) ANEMOMETER_BASE
+#define ANEMOMETRE_data (unsigned int *) (ANEMOMETER_BASE + 4)
+#define ANEMOMETRE_Config(ST, continu, reset) (*ANEMOMETRE_conf = (ST << 2) | (continu << 1) | reset)
+#define ANEMOMETRE_get_freq() *ANEMOMETRE_data & 0xFF
+
+#define NMEA_TX_conf (unsigned int *) NMEA_TX_0_BASE
+#define NMEA_TX_synchro (unsigned int *) (NMEA_TX_0_BASE + 4)
+#define NMEA_TX_centaine (unsigned int *) (NMEA_TX_0_BASE + 8)
+#define NMEA_TX_dizaine (unsigned int *) (NMEA_TX_0_BASE + 12)
+#define NMEA_TX_unite (unsigned int *) (NMEA_TX_0_BASE + 16)
+#define NMEA_TX_Config(ST, reset_n) (*NMEA_TX_conf = (ST << 1) | reset_n)
+
+void NMEA_TX_Data(unsigned int sync, unsigned cent, unsigned diz, unsigned unit){
+	 *NMEA_TX_synchro = sync;
+	 *NMEA_TX_centaine = cent;
+	 *NMEA_TX_dizaine = diz;
+	 *NMEA_TX_unite = unit;
+}
 
 void delay(volatile long unsigned t);
 int main()
 { 
   alt_putstr("Hello Toufoufe from Nios II!\n");
   IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 7);
-  PWM_set_precaler(50000-1);
-  PWM_set_freq(100-1); // 10 Hz
-  PWM_set_duty(50-1);
+  PWM_set_precaler(5000-1);
+  PWM_set_freq(1000-1); // 10 Hz
+  PWM_set_duty(500-1);
   PWM_enable(1);
-  ANEMOMETRE_Config(1,1,0);
+  ANEMOMETRE_Config(0,1,1);
+
+  NMEA_TX_Data(0x23,0x98,0x02,0x11);
+  NMEA_TX_Config(1,1);
   while (1){
 	  IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 7);
 	  delay(500000);

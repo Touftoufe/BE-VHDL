@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS_MCU' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Qsys/SoC.sopcinfo
  *
- * Generated: Tue Nov 17 00:54:20 CET 2020
+ * Generated: Mon Nov 23 00:32:46 CET 2020
  */
 
 /*
@@ -61,7 +61,7 @@
  */
 
 #define ALT_MODULE_CLASS_Anemometer Anemometer
-#define ANEMOMETER_BASE 0x21030
+#define ANEMOMETER_BASE 0x21088
 #define ANEMOMETER_IRQ -1
 #define ANEMOMETER_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define ANEMOMETER_NAME "/dev/Anemometer"
@@ -152,6 +152,7 @@
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_NIOS2_GEN2
 #define __ANEMOMETER
+#define __NMEA_TX
 #define __PWM
 
 
@@ -161,7 +162,7 @@
  */
 
 #define ALT_MODULE_CLASS_KEYs altera_avalon_pio
-#define KEYS_BASE 0x21000
+#define KEYS_BASE 0x21050
 #define KEYS_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYS_CAPTURE 0
@@ -188,7 +189,7 @@
  */
 
 #define ALT_MODULE_CLASS_LEDs altera_avalon_pio
-#define LEDS_BASE 0x21010
+#define LEDS_BASE 0x21060
 #define LEDS_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_CAPTURE 0
@@ -210,12 +211,26 @@
 
 
 /*
+ * NMEA_TX_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_NMEA_TX_0 NMEA_TX
+#define NMEA_TX_0_BASE 0x21020
+#define NMEA_TX_0_IRQ -1
+#define NMEA_TX_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define NMEA_TX_0_NAME "/dev/NMEA_TX_0"
+#define NMEA_TX_0_SPAN 32
+#define NMEA_TX_0_TYPE "NMEA_TX"
+
+
+/*
  * PWM configuration
  *
  */
 
 #define ALT_MODULE_CLASS_PWM PWM
-#define PWM_BASE 0x21020
+#define PWM_BASE 0x21070
 #define PWM_IRQ -1
 #define PWM_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PWM_NAME "/dev/PWM"
@@ -268,19 +283,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag"
-#define ALT_STDERR_BASE 0x21038
+#define ALT_STDERR_BASE 0x21090
 #define ALT_STDERR_DEV jtag
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag"
-#define ALT_STDIN_BASE 0x21038
+#define ALT_STDIN_BASE 0x21090
 #define ALT_STDIN_DEV jtag
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag"
-#define ALT_STDOUT_BASE 0x21038
+#define ALT_STDOUT_BASE 0x21090
 #define ALT_STDOUT_DEV jtag
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -305,7 +320,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag altera_avalon_jtag_uart
-#define JTAG_BASE 0x21038
+#define JTAG_BASE 0x21090
 #define JTAG_IRQ 8
 #define JTAG_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_NAME "/dev/jtag"

@@ -14,6 +14,7 @@ entity SoC is
 		clk_clk                                  : in  std_logic                    := '0';             --                           clk.clk
 		keys_in_export                           : in  std_logic_vector(1 downto 0) := (others => '0'); --                       keys_in.export
 		leds_out_export                          : out std_logic_vector(7 downto 0);                    --                      leds_out.export
+		nmea_tx_new_signal                       : out std_logic;                                       --                       nmea_tx.new_signal
 		pwm_out_new_signal                       : out std_logic;                                       --                       pwm_out.new_signal
 		reset_reset_n                            : in  std_logic                    := '0'              --                         reset.reset_n
 	);
@@ -88,6 +89,19 @@ architecture rtl of SoC is
 			dummy_ci_port                       : out std_logic                                         -- readra
 		);
 	end component SoC_NIOS_MCU;
+
+	component NMEA_TX_avalon is
+		port (
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			clock      : in  std_logic                     := 'X';             -- clk
+			tx_out     : out std_logic                                         -- new_signal
+		);
+	end component NMEA_TX_avalon;
 
 	component pwm_avalon is
 		generic (
@@ -181,6 +195,11 @@ architecture rtl of SoC is
 			NIOS_MCU_debug_mem_slave_byteenable        : out std_logic_vector(3 downto 0);                     -- byteenable
 			NIOS_MCU_debug_mem_slave_waitrequest       : in  std_logic                     := 'X';             -- waitrequest
 			NIOS_MCU_debug_mem_slave_debugaccess       : out std_logic;                                        -- debugaccess
+			NMEA_TX_0_avalon_slave_0_address           : out std_logic_vector(2 downto 0);                     -- address
+			NMEA_TX_0_avalon_slave_0_write             : out std_logic;                                        -- write
+			NMEA_TX_0_avalon_slave_0_readdata          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			NMEA_TX_0_avalon_slave_0_writedata         : out std_logic_vector(31 downto 0);                    -- writedata
+			NMEA_TX_0_avalon_slave_0_chipselect        : out std_logic;                                        -- chipselect
 			PWM_avalon_slave_0_address                 : out std_logic_vector(1 downto 0);                     -- address
 			PWM_avalon_slave_0_write                   : out std_logic;                                        -- write
 			PWM_avalon_slave_0_readdata                : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -366,6 +385,11 @@ architecture rtl of SoC is
 	signal mm_interconnect_0_anemometer_avalon_slave_0_address         : std_logic_vector(0 downto 0);  -- mm_interconnect_0:Anemometer_avalon_slave_0_address -> Anemometer:address
 	signal mm_interconnect_0_anemometer_avalon_slave_0_write           : std_logic;                     -- mm_interconnect_0:Anemometer_avalon_slave_0_write -> mm_interconnect_0_anemometer_avalon_slave_0_write:in
 	signal mm_interconnect_0_anemometer_avalon_slave_0_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:Anemometer_avalon_slave_0_writedata -> Anemometer:writedata
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_chipselect       : std_logic;                     -- mm_interconnect_0:NMEA_TX_0_avalon_slave_0_chipselect -> NMEA_TX_0:chipselect
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_readdata         : std_logic_vector(31 downto 0); -- NMEA_TX_0:readdata -> mm_interconnect_0:NMEA_TX_0_avalon_slave_0_readdata
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_address          : std_logic_vector(2 downto 0);  -- mm_interconnect_0:NMEA_TX_0_avalon_slave_0_address -> NMEA_TX_0:address
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_write            : std_logic;                     -- mm_interconnect_0:NMEA_TX_0_avalon_slave_0_write -> mm_interconnect_0_nmea_tx_0_avalon_slave_0_write:in
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_writedata        : std_logic_vector(31 downto 0); -- mm_interconnect_0:NMEA_TX_0_avalon_slave_0_writedata -> NMEA_TX_0:writedata
 	signal mm_interconnect_0_nios_mcu_debug_mem_slave_readdata         : std_logic_vector(31 downto 0); -- NIOS_MCU:debug_mem_slave_readdata -> mm_interconnect_0:NIOS_MCU_debug_mem_slave_readdata
 	signal mm_interconnect_0_nios_mcu_debug_mem_slave_waitrequest      : std_logic;                     -- NIOS_MCU:debug_mem_slave_waitrequest -> mm_interconnect_0:NIOS_MCU_debug_mem_slave_waitrequest
 	signal mm_interconnect_0_nios_mcu_debug_mem_slave_debugaccess      : std_logic;                     -- mm_interconnect_0:NIOS_MCU_debug_mem_slave_debugaccess -> NIOS_MCU:debug_mem_slave_debugaccess
@@ -399,8 +423,9 @@ architecture rtl of SoC is
 	signal mm_interconnect_0_jtag_avalon_jtag_slave_write_ports_inv    : std_logic;                     -- mm_interconnect_0_jtag_avalon_jtag_slave_write:inv -> jtag:av_write_n
 	signal mm_interconnect_0_pwm_avalon_slave_0_write_ports_inv        : std_logic;                     -- mm_interconnect_0_pwm_avalon_slave_0_write:inv -> PWM:write_n
 	signal mm_interconnect_0_anemometer_avalon_slave_0_write_ports_inv : std_logic;                     -- mm_interconnect_0_anemometer_avalon_slave_0_write:inv -> Anemometer:write_n
+	signal mm_interconnect_0_nmea_tx_0_avalon_slave_0_write_ports_inv  : std_logic;                     -- mm_interconnect_0_nmea_tx_0_avalon_slave_0_write:inv -> NMEA_TX_0:write_n
 	signal mm_interconnect_0_leds_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> LEDs:write_n
-	signal rst_controller_reset_out_reset_ports_inv                    : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Anemometer:reset_n, KEYs:reset_n, LEDs:reset_n, PWM:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                    : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Anemometer:reset_n, KEYs:reset_n, LEDs:reset_n, NMEA_TX_0:reset_n, PWM:reset_n]
 	signal rst_controller_001_reset_out_reset_ports_inv                : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [NIOS_MCU:reset_n, jtag:rst_n]
 
 begin
@@ -468,6 +493,18 @@ begin
 			debug_mem_slave_write               => mm_interconnect_0_nios_mcu_debug_mem_slave_write,       --                          .write
 			debug_mem_slave_writedata           => mm_interconnect_0_nios_mcu_debug_mem_slave_writedata,   --                          .writedata
 			dummy_ci_port                       => open                                                    -- custom_instruction_master.readra
+		);
+
+	nmea_tx_0 : component NMEA_TX_avalon
+		port map (
+			reset_n    => rst_controller_reset_out_reset_ports_inv,                   --          reset.reset_n
+			address    => mm_interconnect_0_nmea_tx_0_avalon_slave_0_address,         -- avalon_slave_0.address
+			writedata  => mm_interconnect_0_nmea_tx_0_avalon_slave_0_writedata,       --               .writedata
+			readdata   => mm_interconnect_0_nmea_tx_0_avalon_slave_0_readdata,        --               .readdata
+			write_n    => mm_interconnect_0_nmea_tx_0_avalon_slave_0_write_ports_inv, --               .write_n
+			chipselect => mm_interconnect_0_nmea_tx_0_avalon_slave_0_chipselect,      --               .chipselect
+			clock      => clk_clk,                                                    --          clock.clk
+			tx_out     => nmea_tx_new_signal                                          --        UART_TX.new_signal
 		);
 
 	pwm : component pwm_avalon
@@ -559,6 +596,11 @@ begin
 			NIOS_MCU_debug_mem_slave_byteenable        => mm_interconnect_0_nios_mcu_debug_mem_slave_byteenable,  --                                     .byteenable
 			NIOS_MCU_debug_mem_slave_waitrequest       => mm_interconnect_0_nios_mcu_debug_mem_slave_waitrequest, --                                     .waitrequest
 			NIOS_MCU_debug_mem_slave_debugaccess       => mm_interconnect_0_nios_mcu_debug_mem_slave_debugaccess, --                                     .debugaccess
+			NMEA_TX_0_avalon_slave_0_address           => mm_interconnect_0_nmea_tx_0_avalon_slave_0_address,     --             NMEA_TX_0_avalon_slave_0.address
+			NMEA_TX_0_avalon_slave_0_write             => mm_interconnect_0_nmea_tx_0_avalon_slave_0_write,       --                                     .write
+			NMEA_TX_0_avalon_slave_0_readdata          => mm_interconnect_0_nmea_tx_0_avalon_slave_0_readdata,    --                                     .readdata
+			NMEA_TX_0_avalon_slave_0_writedata         => mm_interconnect_0_nmea_tx_0_avalon_slave_0_writedata,   --                                     .writedata
+			NMEA_TX_0_avalon_slave_0_chipselect        => mm_interconnect_0_nmea_tx_0_avalon_slave_0_chipselect,  --                                     .chipselect
 			PWM_avalon_slave_0_address                 => mm_interconnect_0_pwm_avalon_slave_0_address,           --                   PWM_avalon_slave_0.address
 			PWM_avalon_slave_0_write                   => mm_interconnect_0_pwm_avalon_slave_0_write,             --                                     .write
 			PWM_avalon_slave_0_readdata                => mm_interconnect_0_pwm_avalon_slave_0_readdata,          --                                     .readdata
@@ -720,6 +762,8 @@ begin
 	mm_interconnect_0_pwm_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_pwm_avalon_slave_0_write;
 
 	mm_interconnect_0_anemometer_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_anemometer_avalon_slave_0_write;
+
+	mm_interconnect_0_nmea_tx_0_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_nmea_tx_0_avalon_slave_0_write;
 
 	mm_interconnect_0_leds_s1_write_ports_inv <= not mm_interconnect_0_leds_s1_write;
 

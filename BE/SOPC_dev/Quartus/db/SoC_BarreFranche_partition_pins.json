@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "TX",
+					"strict" : false
+				},
+				{
 					"name" : "LED[7]",
 					"strict" : false
 				},

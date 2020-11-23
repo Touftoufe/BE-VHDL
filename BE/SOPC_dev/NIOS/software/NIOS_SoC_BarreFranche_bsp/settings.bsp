@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 17, 2020 12:54:20 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1605570860048</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Nov 23, 2020 12:32:45 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1606087965022</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\SofianeAOUCI\Desktop\BE_VHDL_AOUCI_BONHOURE\BE\SOPC_dev\NIOS\software\NIOS_SoC_BarreFranche_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\SofianeAOUCI\Desktop\BE_VHDL_AOUCI_BONHOURE\BE\SOPC_dev\Qsys\SoC.sopcinfo</SopcDesignFile>
@@ -905,32 +905,38 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>NMEA_TX_0</slaveDescriptor>
+                <addressRange>0x00021020 - 0x0002103F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>KEYs</slaveDescriptor>
-                <addressRange>0x00021000 - 0x0002100F</addressRange>
+                <addressRange>0x00021050 - 0x0002105F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>LEDs</slaveDescriptor>
-                <addressRange>0x00021010 - 0x0002101F</addressRange>
+                <addressRange>0x00021060 - 0x0002106F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>PWM</slaveDescriptor>
-                <addressRange>0x00021020 - 0x0002102F</addressRange>
+                <addressRange>0x00021070 - 0x0002107F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>Anemometer</slaveDescriptor>
-                <addressRange>0x00021030 - 0x00021037</addressRange>
+                <addressRange>0x00021088 - 0x0002108F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag</slaveDescriptor>
-                <addressRange>0x00021038 - 0x0002103F</addressRange>
+                <addressRange>0x00021090 - 0x00021097</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

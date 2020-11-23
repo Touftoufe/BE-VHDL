@@ -40,7 +40,7 @@ begin
 	process_write : process(clock,reset_n)
 	begin
 		if(reset_n = '0') then
-			reset_pwm <= '1';
+			reset_pwm <= '0';
 			freq <= (others => '0');
 			duty <= (others => '0');
 		elsif(clock'event and clock = '1') then

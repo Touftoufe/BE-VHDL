@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.11.22.19:02:41 -->
+ <!-- 2020.11.23.00:30:29 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>979ab8132e40609466f5</value>
+   <value>362656c32c05257c2559</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {SoC:inst1|SoC_NIOS_MCU:nios_mcu|SoC_NIOS_MCU_cpu:cpu|SoC_NIOS_MCU_cpu_nios2_oci:the_SoC_NIOS_MCU_cpu_nios2_oci|SoC_NIOS_MCU_cpu_debug_slave_wrapper:the_SoC_NIOS_MCU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:SoC_NIOS_MCU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {SoC:inst1|SoC_jtag:jtag|alt_jtag_atlantic:SoC_jtag_alt_jtag_atlantic} } </value>
+   <value>{hpath {SoC:inst|SoC_NIOS_MCU:nios_mcu|SoC_NIOS_MCU_cpu:cpu|SoC_NIOS_MCU_cpu_nios2_oci:the_SoC_NIOS_MCU_cpu_nios2_oci|SoC_NIOS_MCU_cpu_debug_slave_wrapper:the_SoC_NIOS_MCU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:SoC_NIOS_MCU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } {hpath {SoC:inst|SoC_jtag:jtag|alt_jtag_atlantic:SoC_jtag_alt_jtag_atlantic} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2181,7 +2181,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>979ab8132e40609466f5</value>
+   <value>362656c32c05257c2559</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

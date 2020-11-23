@@ -47,14 +47,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name BDF_FILE ../../functions/SOPC/HW.bdf
-set_global_assignment -name QIP_FILE ../Qsys/SoC/synthesis/SoC.qip
-set_global_assignment -name VHDL_FILE ../../functions/SOPC/PWM_avalon.vhd
-set_global_assignment -name VHDL_FILE ../../functions/SOPC/ANEMOMETRE_avalon.vhd
-set_global_assignment -name VHDL_FILE ../../functions/FPGA/pwm.vhd
-set_global_assignment -name VHDL_FILE ../../functions/FPGA/divider.vhd
-set_global_assignment -name VHDL_FILE ../../functions/FPGA/counter.vhd
-set_global_assignment -name VHDL_FILE ../../functions/FPGA/anemometre.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -71,4 +63,16 @@ set_location_assignment PIN_A11 -to LED[3]
 set_location_assignment PIN_B13 -to LED[2]
 set_location_assignment PIN_A13 -to LED[1]
 set_location_assignment PIN_A15 -to LED[0]
+set_global_assignment -name VHDL_FILE ../../functions/FPGA/UART_TX.vhd
+set_global_assignment -name VHDL_FILE ../../functions/SOPC/NMEA_TX_avalon.vhd
+set_global_assignment -name BDF_FILE ../../functions/SOPC/HW.bdf
+set_global_assignment -name QIP_FILE ../Qsys/SoC/synthesis/SoC.qip
+set_global_assignment -name VHDL_FILE ../../functions/SOPC/PWM_avalon.vhd
+set_global_assignment -name VHDL_FILE ../../functions/SOPC/ANEMOMETRE_avalon.vhd
+set_global_assignment -name VHDL_FILE ../../functions/FPGA/pwm.vhd
+set_global_assignment -name VHDL_FILE ../../functions/FPGA/divider.vhd
+set_global_assignment -name VHDL_FILE ../../functions/FPGA/counter.vhd
+set_global_assignment -name VHDL_FILE ../../functions/FPGA/anemometre.vhd
+set_location_assignment PIN_F13 -to TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TX
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

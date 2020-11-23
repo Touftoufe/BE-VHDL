@@ -6,6 +6,7 @@
 		.keys_in_export                           (<connected-to-keys_in_export>),                           //                       keys_in.export
 		.leds_out_export                          (<connected-to-leds_out_export>),                          //                      leds_out.export
 		.pwm_out_new_signal                       (<connected-to-pwm_out_new_signal>),                       //                       pwm_out.new_signal
-		.reset_reset_n                            (<connected-to-reset_reset_n>)                             //                         reset.reset_n
+		.reset_reset_n                            (<connected-to-reset_reset_n>),                            //                         reset.reset_n
+		.nmea_tx_new_signal                       (<connected-to-nmea_tx_new_signal>)                        //                       nmea_tx.new_signal
 	);
 

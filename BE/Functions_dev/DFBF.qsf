@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY UART_TX
+set_global_assignment -name TOP_LEVEL_ENTITY NMEA_TX_avalon
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:52:30  NOVEMBER 05, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -76,6 +76,7 @@ set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ms" -section_id SIMU
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SIMU_TB_UART_TX -section_id SIMU_TB_UART_TX
 set_global_assignment -name EDA_TEST_BENCH_FILE ../Simulation_files/simu_tb_UART_TX.vhd -section_id SIMU_TB_UART_TX
 set_location_assignment PIN_T15 -to TX
+set_global_assignment -name VHDL_FILE ../functions/SOPC/NMEA_TX_avalon.vhd
 set_global_assignment -name VHDL_FILE ../functions/FPGA/UART_TX.vhd
 set_global_assignment -name VHDL_FILE ../functions/FPGA/divider.vhd
 set_global_assignment -name VHDL_FILE ../functions/FPGA/counter.vhd

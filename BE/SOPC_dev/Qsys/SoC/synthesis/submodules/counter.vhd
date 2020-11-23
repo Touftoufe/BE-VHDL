@@ -34,7 +34,7 @@ entity COUNTER is
         size : integer := 16
     );
     Port ( clk : in STD_LOGIC;
-           rst : in std_logic;
+           rst_n : in std_logic;
            direction : in std_logic := '0';
            faling_rising_edge : in std_logic := '0';
            count : buffer STD_LOGIC_VECTOR(size-1 downto 0);
@@ -45,9 +45,9 @@ end COUNTER;
 
 architecture arc_counter of counter is
 begin
-    process(clk,rst)
+    process(clk,rst_n)
     begin
-        if(rst = '1') then 
+        if(rst_n = '0') then 
             count <= (others => direction);
         elsif (clk'event and clk='1') then
             if(preload > 0 and count = preload) then
