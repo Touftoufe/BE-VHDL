@@ -4,55 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "readdata[0]",
+					"name" : "RX_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[1]",
+					"name" : "RX_data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[2]",
+					"name" : "RX_data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[3]",
+					"name" : "RX_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[4]",
+					"name" : "RX_data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[5]",
+					"name" : "RX_data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[6]",
+					"name" : "RX_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "readdata[7]",
+					"name" : "RX_data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "tx_out",
-					"strict" : false
-				},
-				{
-					"name" : "address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "writedata[0]",
+					"name" : "RX_data_valid",
 					"strict" : false
 				},
 				{
@@ -64,39 +48,71 @@
 					"strict" : false
 				},
 				{
-					"name" : "chipselect",
+					"name" : "RX",
 					"strict" : false
 				},
 				{
-					"name" : "write_n",
+					"name" : "TicBit[15]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[1]",
+					"name" : "TicBit[14]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[2]",
+					"name" : "TicBit[13]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[3]",
+					"name" : "TicBit[12]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[4]",
+					"name" : "TicBit[11]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[5]",
+					"name" : "TicBit[10]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[6]",
+					"name" : "TicBit[9]",
 					"strict" : false
 				},
 				{
-					"name" : "writedata[7]",
+					"name" : "TicBit[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TicBit[0]",
 					"strict" : false
 				}
 			]

@@ -5,7 +5,7 @@
 <stringAttribute key="byteStreamDeviceCableName" value="USB-Blaster on localhost [USB-0]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="56995"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="54360"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="C:\Users\SofianeAOUCI\Desktop\BE_VHDL_AOUCI_BONHOURE\BE\SOPC_dev\NIOS\software\NIOS_SoC_BarreFranche\NIOS_SoC_BarreFranche.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>

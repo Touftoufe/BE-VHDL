@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SoC_BarreFranche
-Mon Nov 23 00:30:50 2020
+Mon Nov 23 11:13:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -248,7 +248,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 23 00:30:50 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 23 11:13:36 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SoC_BarreFranche                            ;
 ; Top-level Entity Name              ; HW                                          ;
@@ -5208,7 +5208,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 23 00:29:27 2020
+    Info: Processing started: Mon Nov 23 11:12:17 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SoC_BarreFranche -c SoC_BarreFranche
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -5612,7 +5612,7 @@ Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "SoC:
 Info (12128): Elaborating entity "soc_rst_controller_001" for hierarchy "SoC:inst|soc_rst_controller_001:rst_controller_001" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Qsys/SoC/synthesis/SoC.vhd Line: 691
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "SoC:inst|soc_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Qsys/SoC/synthesis/soc_rst_controller_001.vhd Line: 144
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.11.23.00:30:24 Progress: Loading sld8b9e67d8/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.11.23.11:13:12 Progress: Loading sld8b9e67d8/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5654,10 +5654,10 @@ Info (21057): Implemented 2593 device resources after synthesis - the final reso
     Info (21061): Implemented 2400 logic cells
     Info (21064): Implemented 176 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4904 megabytes
-    Info: Processing ended: Mon Nov 23 00:30:50 2020
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:01:48
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Mon Nov 23 11:13:36 2020
+    Info: Elapsed time: 00:01:19
+    Info: Total CPU time (on all processors): 00:01:41
 
 
 +------------------------------------------+

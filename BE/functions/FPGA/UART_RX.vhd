@@ -82,46 +82,48 @@ end process;
 
 Combinatory_states : process (clock)
 begin
-	case present_State is
-		when IDLE_State => 
-			if (start_bit = '1') then
-				next_State <= start_State;
-			else
-				next_State <= present_State;
-			end if;
-		
-		when start_State => 
-			if (read_data_signal = '1') then
-				next_State <= Rx_State;
-			else
-				next_State <= present_State;
-			end if;
+	--if clock'event and clock = '1' then
+		case present_State is
+			when IDLE_State => 
+				if (start_bit = '1') then
+					next_State <= start_State;
+				else
+					next_State <= present_State;
+				end if;
 			
-		when Rx_State => 
-			next_State <= bit_read_prep_State;
-		
-		when bit_read_prep_State => 
-			if (read_data_signal = '1') then
-				next_State <= bit_read_State;
-			else
-				next_State <= present_State;
-			end if;
+			when start_State => 
+				if (read_data_signal = '1') then
+					next_State <= Rx_State;
+				else
+					next_State <= present_State;
+				end if;
 				
-		when bit_read_State => 
-			if (n_data_bits < 7) then 
+			when Rx_State => 
 				next_State <= bit_read_prep_State;
-			elsif (n_data_bits >= 7) then
-				next_State <= stop_State;
-			else
-				next_State <= present_State;
-			end if;
-		
-		when stop_State => 
-				next_State <= reset_State;
-		when reset_State => 
-				next_State <= IDLE_State;
-		
-	end case;
+			
+			when bit_read_prep_State => 
+				if (read_data_signal = '1') then
+					next_State <= bit_read_State;
+				else
+					next_State <= present_State;
+				end if;
+					
+			when bit_read_State => 
+				if (n_data_bits < 7) then 
+					next_State <= bit_read_prep_State;
+				elsif (n_data_bits >= 7) then
+					next_State <= stop_State;
+				else
+					next_State <= present_State;
+				end if;
+			
+			when stop_State => 
+					next_State <= reset_State;
+			when reset_State => 
+					next_State <= IDLE_State;
+			
+		end case;
+	--end if;
 end process;
 
 Combinatory_outputs : process (clock, reset_n)

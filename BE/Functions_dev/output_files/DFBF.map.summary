@@ -1,14 +1,14 @@
-Analysis & Elaboration Status : Successful - Mon Nov 23 00:10:35 2020
+Analysis & Synthesis Status : Successful - Mon Dec 14 02:42:48 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DFBF
-Top-level Entity Name : NMEA_TX_avalon
+Top-level Entity Name : UART_RX
 Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
+Total logic elements : 86
+    Total combinational functions : 69
+    Dedicated logic registers : 49
+Total registers : 49
+Total pins : 28
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

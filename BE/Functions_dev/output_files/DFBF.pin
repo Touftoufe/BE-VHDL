@@ -29,7 +29,7 @@
  --                  Bank 1:       2.5V
  --                  Bank 2:       2.5V
  --                  Bank 3:       2.5V
- --                  Bank 4:       3.3V
+ --                  Bank 4:       2.5V
  --                  Bank 5:       2.5V
  --                  Bank 6:       2.5V
  --                  Bank 7:       2.5V
@@ -110,7 +110,7 @@ VCCIO8                       : C7        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
+TicBit[10]                   : C11       : input  : 2.5 V             :         : 7         : N              
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
@@ -140,14 +140,14 @@ GNDA3                        : E5        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-Baud[2]                      : E9        : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 7         :                
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
-TX_data[3]                   : E15       : input  : 2.5 V             :         : 6         : N              
-TX_data[2]                   : E16       : input  : 2.5 V             :         : 6         : N              
+GND+                         : E15       :        :                   :         : 6         :                
+GND+                         : E16       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
@@ -235,7 +235,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :      
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
 VCCINT                       : L6        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 3         :                
-Baud[9]                      : L8        : input  : 2.5 V             :         : 3         : N              
+TicBit[3]                    : L8        : input  : 2.5 V             :         : 3         : N              
 GND                          : L9        : gnd    :                   :         :           :                
 GND                          : L10       : gnd    :                   :         :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -251,15 +251,15 @@ GND                          : M4        : gnd    :                   :         
 GNDA1                        : M5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3         :                
-Baud[10]                     : M8        : input  : 2.5 V             :         : 3         : N              
+TicBit[4]                    : M8        : input  : 2.5 V             :         : 3         : N              
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
-TX_data[7]                   : M10       : input  : 2.5 V             :         : 4         : N              
+RX_data[7]                   : M10       : output : 2.5 V             :         : 4         : N              
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
 GNDA4                        : M12       : gnd    :                   :         :           :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
-Baud[15]                     : M15       : input  : 2.5 V             :         : 5         : N              
-Baud[14]                     : M16       : input  : 2.5 V             :         : 5         : N              
+GND+                         : M15       :        :                   :         : 5         :                
+TicBit[0]                    : M16       : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 3         :                
@@ -267,11 +267,11 @@ VCCD_PLL1                    : N4        : power  :                   : 1.2V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3         :                
 GND                          : N7        : gnd    :                   :         :           :                
-Baud[8]                      : N8        : input  : 2.5 V             :         : 3         : N              
-Baud[0]                      : N9        : input  : 2.5 V             :         : 4         : N              
+RX_data[5]                   : N8        : output : 2.5 V             :         : 3         : N              
+TicBit[12]                   : N9        : input  : 2.5 V             :         : 4         : N              
 GND                          : N10       : gnd    :                   :         :           :                
-TX_data[0]                   : N11       : input  : 2.5 V             :         : 4         : N              
-TX_data[1]                   : N12       : input  : 2.5 V             :         : 4         : N              
+RX_data[1]                   : N11       : output : 2.5 V             :         : 4         : N              
+RX_data[2]                   : N12       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : N13       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
@@ -283,14 +283,14 @@ VCCIO3                       : P4        : power  :                   : 2.5V    
 GND                          : P5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3         :                
 VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-Baud[12]                     : P8        : input  : 2.5 V             :         : 3         : N              
-Baud[1]                      : P9        : input  : 2.5 V             :         : 4         : N              
-VCCIO4                       : P10       : power  :                   : 3.3V    : 4         :                
-Baud[3]                      : P11       : input  : 2.5 V             :         : 4         : N              
+TicBit[8]                    : P8        : input  : 2.5 V             :         : 3         : N              
+TicBit[2]                    : P9        : input  : 2.5 V             :         : 4         : N              
+VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
+TicBit[9]                    : P11       : input  : 2.5 V             :         : 4         : N              
 GND                          : P12       : gnd    :                   :         :           :                
-VCCIO4                       : P13       : power  :                   : 3.3V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4         :                
-TX_data_valid                : P15       : output : 2.5 V             :         : 5         : N              
+VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
+RX_data[3]                   : P14       : output : 2.5 V             :         : 4         : N              
+RX_data_valid                : P15       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
 GND                          : R2        : gnd    :                   :         :           :                
@@ -301,11 +301,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
 clock                        : R8        : input  : 2.5 V             :         : 3         : Y              
 GND+                         : R9        :        :                   :         : 4         :                
-Baud[4]                      : R10       : input  : 2.5 V             :         : 4         : N              
-Baud[5]                      : R11       : input  : 2.5 V             :         : 4         : N              
-Baud[7]                      : R12       : input  : 2.5 V             :         : 4         : N              
-TX_data[4]                   : R13       : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4         :                
+TicBit[6]                    : R10       : input  : 2.5 V             :         : 4         : N              
+TicBit[11]                   : R11       : input  : 2.5 V             :         : 4         : N              
+TicBit[15]                   : R12       : input  : 2.5 V             :         : 4         : N              
+RX_data[6]                   : R13       : output : 2.5 V             :         : 4         : N              
+RX_data[0]                   : R14       : output : 2.5 V             :         : 4         : N              
 GND                          : R15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
 VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
@@ -314,13 +314,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
+TicBit[7]                    : T7        : input  : 2.5 V             :         : 3         : N              
 reset_n                      : T8        : input  : 2.5 V             :         : 3         : N              
 GND+                         : T9        :        :                   :         : 4         :                
-Baud[13]                     : T10       : input  : 2.5 V             :         : 4         : N              
-Baud[6]                      : T11       : input  : 2.5 V             :         : 4         : N              
-Baud[11]                     : T12       : input  : 2.5 V             :         : 4         : N              
-TX_data[5]                   : T13       : input  : 2.5 V             :         : 4         : N              
-TX_data[6]                   : T14       : input  : 2.5 V             :         : 4         : N              
-TX                           : T15       : output : 3.3-V LVTTL       :         : 4         : Y              
-VCCIO4                       : T16       : power  :                   : 3.3V    : 4         :                
+TicBit[13]                   : T10       : input  : 2.5 V             :         : 4         : N              
+TicBit[14]                   : T11       : input  : 2.5 V             :         : 4         : N              
+TicBit[1]                    : T12       : input  : 2.5 V             :         : 4         : N              
+TicBit[5]                    : T13       : input  : 2.5 V             :         : 4         : N              
+RX_data[4]                   : T14       : output : 2.5 V             :         : 4         : N              
+RX                           : T15       : input  : 3.3-V LVTTL       :         : 4         : Y              
+VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                

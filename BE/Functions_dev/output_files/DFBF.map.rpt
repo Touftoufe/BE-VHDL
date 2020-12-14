@@ -1,5 +1,5 @@
-Analysis & Elaboration report for DFBF
-Mon Nov 23 00:10:35 2020
+Analysis & Synthesis report for DFBF
+Mon Dec 14 02:42:48 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,15 +7,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: UART_TX:uart
-  5. Parameter Settings for User Entity Instance: UART_TX:uart|DIVIDER:data_Tx_freq
-  6. Parameter Settings for User Entity Instance: UART_TX:uart|DIVIDER:data_Tx_freq|COUNTER:counter1
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "UART_TX:uart|DIVIDER:data_Tx_freq|COUNTER:counter1"
-  9. Port Connectivity Checks: "UART_TX:uart"
- 10. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |UART_RX|present_State
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |UART_RX
+ 11. Parameter Settings for User Entity Instance: COUNTER:freq_count
+ 12. Port Connectivity Checks: "COUNTER:freq_count"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -39,78 +44,32 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Nov 23 00:10:35 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 14 02:42:48 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DFBF                                        ;
-; Top-level Entity Name              ; NMEA_TX_avalon                              ;
+; Top-level Entity Name              ; UART_RX                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 86                                          ;
+;     Total combinational functions  ; 69                                          ;
+;     Dedicated logic registers      ; 49                                          ;
+; Total registers                    ; 49                                          ;
+; Total pins                         ; 28                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_TX:uart ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; freq_bus       ; 16    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_TX:uart|DIVIDER:data_Tx_freq ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; size           ; 16    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_TX:uart|DIVIDER:data_Tx_freq|COUNTER:counter1 ;
-+----------------+-------+------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                   ;
-+----------------+-------+------------------------------------------------------------------------+
-; size           ; 16    ; Signed Integer                                                         ;
-+----------------+-------+------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; NMEA_TX_avalon     ; DFBF               ;
+; Top-level entity name                                            ; UART_RX            ; DFBF               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -190,79 +149,218 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_TX:uart|DIVIDER:data_Tx_freq|COUNTER:counter1" ;
-+--------------------+-------+----------+----------------------------------------+
-; Port               ; Type  ; Severity ; Details                                ;
-+--------------------+-------+----------+----------------------------------------+
-; direction          ; Input ; Info     ; Stuck at GND                           ;
-; faling_rising_edge ; Input ; Info     ; Stuck at VCC                           ;
-+--------------------+-------+----------+----------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "UART_TX:uart"       ;
-+--------------+-------+----------+--------------+
-; Port         ; Type  ; Severity ; Details      ;
-+--------------+-------+----------+--------------+
-; baud[5..4]   ; Input ; Info     ; Stuck at VCC ;
-; baud[15..14] ; Input ; Info     ; Stuck at GND ;
-; baud[10..8]  ; Input ; Info     ; Stuck at GND ;
-; baud[3..0]   ; Input ; Info     ; Stuck at GND ;
-; baud[13]     ; Input ; Info     ; Stuck at VCC ;
-; baud[12]     ; Input ; Info     ; Stuck at GND ;
-; baud[11]     ; Input ; Info     ; Stuck at VCC ;
-; baud[7]      ; Input ; Info     ; Stuck at VCC ;
-; baud[6]      ; Input ; Info     ; Stuck at GND ;
-+--------------+-------+----------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; ../functions/FPGA/UART_RX.vhd    ; yes             ; User VHDL File  ; C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd ;         ;
+; ../functions/FPGA/counter.vhd    ; yes             ; User VHDL File  ; C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 86          ;
+;                                             ;             ;
+; Total combinational functions               ; 69          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 7           ;
+;     -- 3 input functions                    ; 38          ;
+;     -- <=2 input functions                  ; 24          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 39          ;
+;     -- arithmetic mode                      ; 30          ;
+;                                             ;             ;
+; Total registers                             ; 49          ;
+;     -- Dedicated logic registers            ; 49          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 28          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 48          ;
+; Total fan-out                               ; 378         ;
+; Average fan-out                             ; 2.17        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
+; |UART_RX                   ; 69 (53)             ; 49 (33)                   ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |UART_RX                    ; UART_RX     ; work         ;
+;    |COUNTER:freq_count|    ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UART_RX|COUNTER:freq_count ; COUNTER     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UART_RX|present_State                                                                                                                                                                                                      ;
++-----------------------------------+--------------------------+------------------------------+-----------------------------------+------------------------+---------------------------+--------------------------+---------------------------+
+; Name                              ; present_State.stop_State ; present_State.bit_read_State ; present_State.bit_read_prep_State ; present_State.Rx_State ; present_State.start_State ; present_State.IDLE_State ; present_State.reset_State ;
++-----------------------------------+--------------------------+------------------------------+-----------------------------------+------------------------+---------------------------+--------------------------+---------------------------+
+; present_State.reset_State         ; 0                        ; 0                            ; 0                                 ; 0                      ; 0                         ; 0                        ; 0                         ;
+; present_State.IDLE_State          ; 0                        ; 0                            ; 0                                 ; 0                      ; 0                         ; 1                        ; 1                         ;
+; present_State.start_State         ; 0                        ; 0                            ; 0                                 ; 0                      ; 1                         ; 0                        ; 1                         ;
+; present_State.Rx_State            ; 0                        ; 0                            ; 0                                 ; 1                      ; 0                         ; 0                        ; 1                         ;
+; present_State.bit_read_prep_State ; 0                        ; 0                            ; 1                                 ; 0                      ; 0                         ; 0                        ; 1                         ;
+; present_State.bit_read_State      ; 0                        ; 1                            ; 0                                 ; 0                      ; 0                         ; 0                        ; 1                         ;
+; present_State.stop_State          ; 1                        ; 0                            ; 0                                 ; 0                      ; 0                         ; 0                        ; 1                         ;
++-----------------------------------+--------------------------+------------------------------+-----------------------------------+------------------------+---------------------------+--------------------------+---------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |UART_RX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; freq_bus       ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: COUNTER:freq_count ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; size           ; 16    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER:freq_count"       ;
++--------------------+-------+----------+--------------+
+; Port               ; Type  ; Severity ; Details      ;
++--------------------+-------+----------+--------------+
+; direction          ; Input ; Info     ; Stuck at GND ;
+; faling_rising_edge ; Input ; Info     ; Stuck at VCC ;
+; preload            ; Input ; Info     ; Stuck at GND ;
++--------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 28                          ;
+; cycloneiii_ff         ; 49                          ;
+;     CLR               ; 27                          ;
+;     ENA               ; 14                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 69                          ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 39                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 7                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 2.43                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 23 00:10:15 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_fonctions_barreFranche -c DFBF --analysis_and_elaboration
+    Info: Processing started: Mon Dec 14 02:42:14 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_fonctions_barreFranche -c DFBF
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/sopc/nmea_tx_avalon.vhd
-    Info (12022): Found design unit 1: NMEA_TX_avalon-arc_NMEA_TX_avalon File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 20
-    Info (12023): Found entity 1: NMEA_TX_avalon File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/fpga/uart_tx.vhd
-    Info (12022): Found design unit 1: UART_TX-arc_UART_TX File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd Line: 21
-    Info (12023): Found entity 1: UART_TX File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/fpga/uart_rx.vhd
+    Info (12022): Found design unit 1: UART_RX-arc_UART_RX File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 21
+    Info (12023): Found entity 1: UART_RX File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/fpga/pwm.vhd
+    Info (12022): Found design unit 1: pwm-arc_pwm File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/pwm.vhd Line: 22
+    Info (12023): Found entity 1: pwm File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/pwm.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/fpga/divider.vhd
     Info (12022): Found design unit 1: divider-arc_divider File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd Line: 17
     Info (12023): Found entity 1: DIVIDER File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be_vhdl_aouci_bonhoure/be/functions/fpga/counter.vhd
     Info (12022): Found design unit 1: counter-arc_counter File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd Line: 46
     Info (12023): Found entity 1: COUNTER File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd Line: 32
-Info (12127): Elaborating entity "NMEA_TX_avalon" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at NMEA_TX_avalon.vhd(47): signal "config" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 47
-Warning (10492): VHDL Process Statement warning at NMEA_TX_avalon.vhd(57): signal "synchro" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at NMEA_TX_avalon.vhd(59): signal "centaine" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at NMEA_TX_avalon.vhd(61): signal "dizaine" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at NMEA_TX_avalon.vhd(63): signal "unite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 63
-Warning (10631): VHDL Process Statement warning at NMEA_TX_avalon.vhd(43): inferring latch(es) for signal or variable "TX_data", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[0]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[1]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[2]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[3]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[4]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[5]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[6]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (10041): Inferred latch for "TX_data[7]" at NMEA_TX_avalon.vhd(43) File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 43
-Info (12128): Elaborating entity "UART_TX" for hierarchy "UART_TX:uart" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/SOPC/NMEA_TX_avalon.vhd Line: 34
-Info (12128): Elaborating entity "DIVIDER" for hierarchy "UART_TX:uart|DIVIDER:data_Tx_freq" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_TX.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at divider.vhd(32): signal "prescaler" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd Line: 32
-Info (12128): Elaborating entity "COUNTER" for hierarchy "UART_TX:uart|DIVIDER:data_Tx_freq|COUNTER:counter1" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/divider.vhd Line: 20
+Info (12127): Elaborating entity "UART_RX" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(86): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(88): signal "start_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(91): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(95): signal "read_data_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(98): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(105): signal "read_data_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(108): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(112): signal "n_data_bits" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(114): signal "n_data_bits" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at UART_RX.vhd(117): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 117
+Info (12128): Elaborating entity "COUNTER" for hierarchy "COUNTER:freq_count" File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/UART_RX.vhd Line: 34
 Warning (10492): VHDL Process Statement warning at counter.vhd(51): signal "direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/functions/FPGA/counter.vhd Line: 51
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Mon Nov 23 00:10:35 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:39
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 86 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Mon Dec 14 02:42:48 2020
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:59
 
 
