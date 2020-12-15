@@ -26,7 +26,7 @@ architecture ARC_SIMU_TB_UART_TX of SIMU_TB_UART_TX is
 	signal clock, sub_clk : std_logic := '0';
 	signal sig_valid : std_logic := '0';
 	signal reset_n, TX : std_logic := '1';
-	signal tx_data: STD_LOGIC_VECTOR(7 downto 0) := "00110101";
+	signal tx_data: STD_LOGIC_VECTOR(63 downto 0) := X"7E570F1254FF9823";
 begin
 
   -- Clock generation with concurrent procedure call
@@ -39,8 +39,16 @@ begin
 			  TX,
 			  
 			  X"0000", -- Baud = 4800, tics per bit : 10417 // 0x28b1
-			  tx_data,
+			  tx_data(7 downto 0),
            sig_valid
            );  
 			  
+  DATA: process(sig_valid,reset_n)
+  begin
+    if(reset_n = '0') then
+      TX_data <= X"7E570F1254FF9823";
+    elsif(sig_valid'event and sig_valid = '1') then
+      TX_data <= X"00"&TX_data(63 downto 8);
+    end if;
+  end process;
 end ARC_SIMU_TB_UART_TX;

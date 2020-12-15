@@ -3,99 +3,111 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -2.005
-TNS   : -37.842
+Slack : -2.531
+TNS   : -21.580
+
+Type  : Slow 1200mV 85C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -1.119
+TNS   : -10.939
+
+Type  : Slow 1200mV 85C Model Setup 'UART_TX:uart|TX_data_valid'
+Slack : -0.295
+TNS   : -0.466
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'UART_TX:uart|TX_data_valid'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
 Slack : 0.358
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'RX'
-Slack : -1.173
-TNS   : -1.173
-
-Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : -0.532
-TNS   : -2.466
-
-Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 0.551
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'RX'
-Slack : 1.657
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -58.000
+TNS   : -21.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RX'
-Slack : -3.000
-TNS   : -4.000
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
+Slack : -1.000
+TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -1.673
-TNS   : -28.687
+Slack : -2.172
+TNS   : -17.252
+
+Type  : Slow 1200mV 0C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -0.931
+TNS   : -8.660
+
+Type  : Slow 1200mV 0C Model Setup 'UART_TX:uart|TX_data_valid'
+Slack : -0.158
+TNS   : -0.196
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
 Slack : 0.312
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'RX'
-Slack : -0.953
-TNS   : -0.953
-
-Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : -0.358
-TNS   : -1.415
-
-Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 0.499
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'RX'
-Slack : 1.521
+Type  : Slow 1200mV 0C Model Hold 'UART_TX:uart|TX_data_valid'
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -58.000
+TNS   : -21.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RX'
-Slack : -3.000
-TNS   : -4.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
+Slack : -1.000
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.064
-TNS   : -6.186
+Slack : -0.982
+TNS   : -4.712
+
+Type  : Fast 1200mV 0C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -0.175
+TNS   : -1.437
+
+Type  : Fast 1200mV 0C Model Setup 'UART_TX:uart|TX_data_valid'
+Slack : 0.274
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'UART_TX:uart|TX_data_valid'
 Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'RX'
-Slack : -0.129
-TNS   : -0.129
-
-Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : 0.121
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 0.303
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'RX'
-Slack : 0.774
+Type  : Fast 1200mV 0C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -61.297
+TNS   : -21.977
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RX'
-Slack : -3.000
-TNS   : -4.438
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
+Slack : -1.000
+TNS   : -3.000
 
 ------------------------------------------------------------
