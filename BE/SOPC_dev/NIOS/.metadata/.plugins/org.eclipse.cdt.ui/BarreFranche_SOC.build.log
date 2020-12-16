@@ -1,0 +1,9 @@
+07:36:39 **** Incremental Build of configuration Nios II for project BarreFranche_SOC ****
+make all 
+Info: Building C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/BarreFranche_SOC_bsp/
+C:/DevTools/Intel/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/BarreFranche_SOC_bsp/
+[BSP build complete]
+[BarreFranche_SOC build complete]
+
+07:36:40 Build Finished (took 1s.321ms)
+

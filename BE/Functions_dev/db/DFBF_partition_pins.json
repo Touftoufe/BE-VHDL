@@ -8,6 +8,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "freq_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "freq_out[7]",
+					"strict" : false
+				},
+				{
 					"name" : "reset_n",
 					"strict" : false
 				},

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DFBF
-Wed Dec 16 06:16:25 2020
+Wed Dec 16 17:04:37 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,16 +49,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 16 06:16:25 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 16 17:04:37 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DFBF                                        ;
 ; Top-level Entity Name              ; NMEA_RX                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 80                                          ;
-;     Total combinational functions  ; 61                                          ;
+; Total logic elements               ; 89                                          ;
+;     Total combinational functions  ; 70                                          ;
 ;     Dedicated logic registers      ; 56                                          ;
 ; Total registers                    ; 56                                          ;
-; Total pins                         ; 4                                           ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -185,30 +185,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 80          ;
+; Estimated Total logic elements              ; 89          ;
 ;                                             ;             ;
-; Total combinational functions               ; 61          ;
+; Total combinational functions               ; 70          ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 26          ;
-;     -- 3 input functions                    ; 12          ;
-;     -- <=2 input functions                  ; 23          ;
+;     -- 3 input functions                    ; 20          ;
+;     -- <=2 input functions                  ; 24          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 46          ;
+;     -- normal mode                          ; 55          ;
 ;     -- arithmetic mode                      ; 15          ;
 ;                                             ;             ;
 ; Total registers                             ; 56          ;
 ;     -- Dedicated logic registers            ; 56          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 4           ;
+; I/O pins                                    ; 12          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 55          ;
-; Total fan-out                               ; 365         ;
-; Average fan-out                             ; 2.92        ;
+; Total fan-out                               ; 407         ;
+; Average fan-out                             ; 2.71        ;
 +---------------------------------------------+-------------+
 
 
@@ -217,7 +217,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
-; |NMEA_RX                   ; 61 (17)             ; 56 (7)                    ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |NMEA_RX                                 ; NMEA_RX     ; work         ;
+; |NMEA_RX                   ; 70 (26)             ; 56 (7)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |NMEA_RX                                 ; NMEA_RX     ; work         ;
 ;    |UART_RX:uart|          ; 44 (28)             ; 49 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NMEA_RX|UART_RX:uart                    ; UART_RX     ; work         ;
 ;       |COUNTER:freq_count| ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NMEA_RX|UART_RX:uart|COUNTER:freq_count ; COUNTER     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
@@ -256,15 +256,23 @@ Encoding Type:  One-Hot
 +-----------------------------------+--------------------------+------------------------------+-----------------------------------+------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; data_valid                                         ; WideOr4             ; yes                    ;
-; reset_n_UART_RX                                    ; WideOr3             ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; data_valid                                          ; WideOr4             ; yes                    ;
+; freq_out[0]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[1]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[2]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[3]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[4]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[5]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[6]$latch                                   ; freq_out[7]         ; yes                    ;
+; freq_out[7]$latch                                   ; freq_out[7]         ; yes                    ;
+; reset_n_UART_RX                                     ; WideOr3             ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -336,22 +344,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
+; boundary_port         ; 12                          ;
 ; cycloneiii_ff         ; 56                          ;
 ;     CLR               ; 32                          ;
 ;     ENA               ; 14                          ;
 ;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 61                          ;
+; cycloneiii_lcell_comb ; 70                          ;
 ;     arith             ; 15                          ;
 ;         2 data inputs ; 15                          ;
-;     normal            ; 46                          ;
+;     normal            ; 55                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 12                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 20                          ;
 ;         4 data inputs ; 26                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.07                        ;
+; Average LUT depth     ; 2.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -370,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 16 06:16:04 2020
+    Info: Processing started: Wed Dec 16 17:04:19 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_fonctions_barreFranche -c DFBF
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -378,51 +386,61 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: UART_RX-arc_UART_RX File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 21
     Info (12023): Found entity 1: UART_RX File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be-vhdl/be/functions/fpga/nmea_rx.vhd
-    Info (12022): Found design unit 1: NMEA_RX-arc_NMEA_RX File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 16
+    Info (12022): Found design unit 1: NMEA_RX-arc_NMEA_RX File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 17
     Info (12023): Found entity 1: NMEA_RX File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/sofianeaouci/desktop/be-vhdl/be/functions/fpga/counter.vhd
     Info (12022): Found design unit 1: counter-arc_counter File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/counter.vhd Line: 46
     Info (12023): Found entity 1: COUNTER File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/counter.vhd Line: 32
 Info (12127): Elaborating entity "NMEA_RX" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(18): object "synchro" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(19): object "centaine" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 19
-Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(20): object "dizaine" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 20
-Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(21): object "unite" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 21
-Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(26): used explicit default value for signal "start_stop" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(26): used explicit default value for signal "mode" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(57): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(59): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(66): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(68): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(68): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(71): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(75): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(75): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(77): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(77): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(79): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(82): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(86): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(86): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(88): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(88): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(90): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(93): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(97): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(97): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(99): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(99): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(101): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(104): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(136): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(139): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(142): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 142
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(145): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 145
-Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(116): inferring latch(es) for signal or variable "reset_n_UART_RX", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 116
-Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(116): inferring latch(es) for signal or variable "data_valid", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 116
-Info (10041): Inferred latch for "data_valid" at NMEA_RX.vhd(116) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 116
-Info (10041): Inferred latch for "reset_n_UART_RX" at NMEA_RX.vhd(116) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 116
-Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(19): object "synchro" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(20): object "centaine" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(21): object "dizaine" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(22): object "unite" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(27): used explicit default value for signal "start_stop" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 27
+Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(27): used explicit default value for signal "mode" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(58): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(60): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(67): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(69): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(69): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(72): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(76): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(76): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(78): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(78): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(80): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(83): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(87): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(87): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(89): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(89): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(91): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(94): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(98): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(98): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(100): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(100): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(102): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(105): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(135): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(137): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(140): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 140
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(143): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(146): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 146
+Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "reset_n_UART_RX", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "data_valid", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "freq_out", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[0]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[1]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[2]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[3]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[4]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[5]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[6]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "freq_out[7]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "data_valid" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (10041): Inferred latch for "reset_n_UART_RX" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 34
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(86): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 86
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(88): signal "start_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 88
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(91): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 91
@@ -435,21 +453,21 @@ Warning (10492): VHDL Process Statement warning at UART_RX.vhd(114): signal "n_d
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(117): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 117
 Info (12128): Elaborating entity "COUNTER" for hierarchy "UART_RX:uart|COUNTER:freq_count" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 34
 Warning (10492): VHDL Process Statement warning at counter.vhd(51): signal "direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/counter.vhd Line: 51
-Warning (13012): Latch data_valid has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 116
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.ok_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 29
-Warning (13012): Latch reset_n_UART_RX has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.start_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 29
+Warning (13012): Latch data_valid has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.ok_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 30
+Warning (13012): Latch reset_n_UART_RX has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 26
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.start_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 80 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Wed Dec 16 06:16:25 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:39
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 89 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Wed Dec 16 17:04:37 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:38
 
 

@@ -58,7 +58,7 @@ begin
 
 	Combinatory_states : process (clock)
 	begin
-		if clock'event and clock = '1' then
+		--if clock'event and clock = '1' then
 			case present_State is
 			when IDLE_State => 
 			if (start_stop = '1' or mode = '1') then
@@ -79,6 +79,8 @@ begin
 			when S_State => 
 			if (end_RX = '1' and (RX_data >= X"30" and RX_data <= X"39")) then
 				next_State <= C_State;
+			elsif (end_RX = '1' and RX_data = X"40") then
+				next_State <= S_State;
 			elsif (end_RX = '1') then
 				next_State <= start_State;
 			else
@@ -88,6 +90,8 @@ begin
 			when C_State => 
 			if (end_RX = '1' and (RX_data >= X"30" and RX_data <= X"39")) then
 				next_State <= D_State;
+			elsif (end_RX = '1' and RX_data = X"40") then
+				next_State <= S_State;
 			elsif (end_RX = '1') then
 				next_State <= start_State;
 			else
@@ -97,6 +101,8 @@ begin
 			when D_State => 
 			if (end_RX = '1' and (RX_data >= X"30" and RX_data <= X"39")) then
 				next_State <= U_State;
+			elsif (end_RX = '1' and RX_data = X"40") then
+				next_State <= S_State;	
 			elsif (end_RX = '1') then
 				next_State <= start_State;
 			else
@@ -109,10 +115,10 @@ begin
 			next_State <= start_State;
 			
 		end case;
-	end if;
+	--end if;
 end process;
 
-Combinatory_outputs : process (clock, reset_n)
+Combinatory_outputs : process (present_State, reset_n)
 begin
 	if(reset_n = '0') then
 		reset_n_UART_RX <= '0';
@@ -122,7 +128,7 @@ begin
 		dizaine <= (others => '0');
 		unite <= (others => '0');
 		
-	elsif(clock'event and clock = '1') then
+	else
 		case present_State is
 			when IDLE_State =>
 				reset_n_UART_RX <= '0';
@@ -130,7 +136,7 @@ begin
 			when start_State =>
 				reset_n_UART_RX <= config(0);
 				data_valid <= '0';
-				
+				freq_out <= RX_data;
 			when S_State => 
 				synchro <= RX_data;
 				

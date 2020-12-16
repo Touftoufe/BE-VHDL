@@ -7,7 +7,8 @@ entity NMEA_RX is
 PORT( clock : in std_logic;
 	reset_n : in std_logic;
 	rx_in : in std_logic;
-	data_valid_out : out std_logic
+	data_valid_out : out std_logic;
+	freq_out : out std_LOGIC_VECTOR(7 downto 0) := (others => '0')
 	);
 
 end NMEA_RX;
@@ -131,7 +132,7 @@ begin
 			when start_State =>
 				reset_n_UART_RX <= '1';
 				data_valid <= '0';
-				
+				freq_out <= RX_data;
 			when S_State => 
 				synchro <= RX_data;
 				

@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+entity TB_NMEA_RX is
+    Port (  clock : in STD_LOGIC;
+				tb_reset_n : in std_logic;
+				freq_out : buffer STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+				RX : in std_logic := '0'
+			);
+end TB_NMEA_RX;
+
+architecture ARC_TB_NMEA_RX of TB_NMEA_RX is 
+	signal sig_valid : std_logic := '0';
+	signal int_seconde : STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+	signal RX_out : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+begin
+
+uart: entity work.NMEA_RX
+        Port map( clock,
+        	tb_reset_n,
+			RX,
+  		    sig_valid,
+  		    open,
+  		    open,
+  		    open,
+  		    RX_out
+           );
+			 
+output : process(clock, sig_valid)
+begin
+	if(tb_reset_n = '0') then
+		freq_out <= (others => '0');
+	elsif (clock'event and clock = '1' and sig_valid = '1') then
+		freq_out <= RX_out;
+	end if;
+end process; 
+
+
+
+end ARC_TB_NMEA_RX;
