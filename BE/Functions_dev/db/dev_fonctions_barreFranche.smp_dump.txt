@@ -1,5 +1,15 @@
 
-State Machine - |UART_RX|present_State
+State Machine - |NMEA_RX|present_State
+Name present_State.ok_State present_State.U_State present_State.D_State present_State.C_State present_State.S_State present_State.start_State present_State.IDLE_State 
+present_State.IDLE_State 0 0 0 0 0 0 0 
+present_State.start_State 0 0 0 0 0 1 1 
+present_State.S_State 0 0 0 0 1 0 1 
+present_State.C_State 0 0 0 1 0 0 1 
+present_State.D_State 0 0 1 0 0 0 1 
+present_State.U_State 0 1 0 0 0 0 1 
+present_State.ok_State 1 0 0 0 0 0 1 
+
+State Machine - |NMEA_RX|UART_RX:uart|present_State
 Name present_State.stop_State present_State.bit_read_State present_State.bit_read_prep_State present_State.Rx_State present_State.start_State present_State.IDLE_State present_State.reset_State 
 present_State.reset_State 0 0 0 0 0 0 0 
 present_State.IDLE_State 0 0 0 0 0 1 1 

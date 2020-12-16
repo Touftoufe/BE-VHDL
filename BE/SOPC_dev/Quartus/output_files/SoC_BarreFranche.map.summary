@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Nov 23 11:13:36 2020
+Analysis & Synthesis Status : Successful - Tue Dec 15 14:07:24 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : SoC_BarreFranche
 Top-level Entity Name : HW
 Family : Cyclone IV E
-Total logic elements : 2,333
-    Total combinational functions : 2,069
-    Dedicated logic registers : 1,198
-Total registers : 1198
-Total pins : 12
+Total logic elements : 2,547
+    Total combinational functions : 2,210
+    Dedicated logic registers : 1,329
+Total registers : 1329
+Total pins : 13
 Total virtual pins : 0
 Total memory bits : 338,944
 Embedded Multiplier 9-bit elements : 0

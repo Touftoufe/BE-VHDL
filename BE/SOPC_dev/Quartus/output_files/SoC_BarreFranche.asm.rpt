@@ -1,5 +1,5 @@
 Assembler report for SoC_BarreFranche
-Mon Nov 23 11:13:59 2020
+Tue Dec 15 14:07:50 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,7 +11,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof
+  6. Assembler Device Options: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 23 11:13:59 2020 ;
+; Assembler Status      ; Successful - Tue Dec 15 14:07:50 2020 ;
 ; Revision Name         ; SoC_BarreFranche                      ;
 ; Top-level Entity Name ; HW                                    ;
 ; Family                ; Cyclone IV E                          ;
@@ -63,23 +63,23 @@ refer to the applicable agreement for further details.
 +--------+------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+
-; C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof ;
-+------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                   ;
++---------------------------------------------------------------------------------------------+
+; File Name                                                                                   ;
++---------------------------------------------------------------------------------------------+
+; C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof ;
++---------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                             ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x002AADB7                                                                                                          ;
-; Checksum       ; 0x002AADB7                                                                                                          ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.sof ;
++----------------+------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                              ;
++----------------+------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x002CA15D                                                                                           ;
+; Checksum       ; 0x002CA15D                                                                                           ;
++----------------+------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -88,15 +88,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 23 11:13:56 2020
+    Info: Processing started: Tue Dec 15 14:07:47 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SoC_BarreFranche -c SoC_BarreFranche
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4682 megabytes
-    Info: Processing ended: Mon Nov 23 11:13:59 2020
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4688 megabytes
+    Info: Processing ended: Tue Dec 15 14:07:51 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -4,15 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "TX",
+					"name" : "data_valid_out",
 					"strict" : false
 				},
 				{
-					"name" : "tb_reset_n",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "rx_in",
 					"strict" : false
 				}
 			]
