@@ -2,7 +2,7 @@ set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "SoC" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../SoC.sopcinfo"]
-set_global_assignment -entity "SoC" -library "SoC" -name SLD_INFO "QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1608036438"
+set_global_assignment -entity "SoC" -library "SoC" -name SLD_INFO "QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1608152445"
 set_global_assignment -library "SoC" -name MISC_FILE [file join $::quartus(qip_path) "../SoC.cmp"]
 set_global_assignment -library "SoC" -name SLD_FILE [file join $::quartus(qip_path) "SoC.regmap"]
 set_global_assignment -library "SoC" -name SLD_FILE [file join $::quartus(qip_path) "SoC.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_DISPLAY_NA
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwODAzNjQzOA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwODE1MjQ0NQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UyMkYxN0M2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "SoC" -library "SoC" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -691,7 +691,7 @@ set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT
 set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
 set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT_AUTHOR "U29maWFuZSBBT1VDSQ=="
-set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "NMEA_RX_avalon" -library "SoC" -name IP_COMPONENT_VERSION "Mi4w"
 set_global_assignment -entity "SoC_NIOS_MCU" -library "SoC" -name IP_COMPONENT_NAME "U29DX05JT1NfTUNV"
 set_global_assignment -entity "SoC_NIOS_MCU" -library "SoC" -name IP_COMPONENT_DISPLAY_NAME "TmlvcyBJSSBQcm9jZXNzb3I="
 set_global_assignment -entity "SoC_NIOS_MCU" -library "SoC" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -1097,8 +1097,8 @@ set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_p
 set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/divider.vhd"]
 set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/NMEA_TX_avalon.vhd"]
 set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/UART_TX.vhd"]
-set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/NMEA_RX_avalon.vhd"]
 set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/UART_RX.vhd"]
+set_global_assignment -library "SoC" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/NMEA_RX_avalon.vhd"]
 set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_NIOS_MCU.v"]
 set_global_assignment -library "SoC" -name SDC_FILE [file join $::quartus(qip_path) "submodules/SoC_NIOS_MCU_cpu.sdc"]
 set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_NIOS_MCU_cpu.v"]

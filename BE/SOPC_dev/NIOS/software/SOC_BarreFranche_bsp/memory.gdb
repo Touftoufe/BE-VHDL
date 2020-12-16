@@ -3,7 +3,7 @@
 # Machine generated for CPU 'NIOS_MCU' in SOPC Builder design 'SoC'
 # SOPC Builder design path: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Qsys/SoC.sopcinfo
 #
-# Generated: Tue Dec 15 21:59:11 CET 2020
+# Generated: Wed Dec 16 22:36:08 CET 2020
 
 # DO NOT MODIFY THIS FILE
 #

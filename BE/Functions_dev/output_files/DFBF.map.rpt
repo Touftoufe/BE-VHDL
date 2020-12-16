@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DFBF
-Wed Dec 16 17:04:37 2020
+Wed Dec 16 20:48:12 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,17 +13,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |NMEA_RX|present_State
-  9. State Machine - |NMEA_RX|UART_RX:uart|present_State
- 10. User-Specified and Inferred Latches
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: UART_RX:uart
- 13. Parameter Settings for User Entity Instance: UART_RX:uart|COUNTER:freq_count
- 14. Port Connectivity Checks: "UART_RX:uart|COUNTER:freq_count"
- 15. Port Connectivity Checks: "UART_RX:uart"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. State Machine - |NMEA_RX|\Combinatory_states:present_State
+  9. State Machine - |NMEA_RX|\Combinatory_states:next_State
+ 10. State Machine - |NMEA_RX|UART_RX:uart|present_State
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: UART_RX:uart
+ 15. Parameter Settings for User Entity Instance: UART_RX:uart|COUNTER:freq_count
+ 16. Port Connectivity Checks: "UART_RX:uart|COUNTER:freq_count"
+ 17. Port Connectivity Checks: "UART_RX:uart"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +51,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 16 17:04:37 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 16 20:48:12 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; DFBF                                        ;
 ; Top-level Entity Name              ; NMEA_RX                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 89                                          ;
-;     Total combinational functions  ; 70                                          ;
-;     Dedicated logic registers      ; 56                                          ;
-; Total registers                    ; 56                                          ;
+; Total logic elements               ; 90                                          ;
+;     Total combinational functions  ; 65                                          ;
+;     Dedicated logic registers      ; 64                                          ;
+; Total registers                    ; 64                                          ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -185,20 +187,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 89          ;
+; Estimated Total logic elements              ; 90          ;
 ;                                             ;             ;
-; Total combinational functions               ; 70          ;
+; Total combinational functions               ; 65          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 26          ;
-;     -- 3 input functions                    ; 20          ;
+;     -- 4 input functions                    ; 31          ;
+;     -- 3 input functions                    ; 10          ;
 ;     -- <=2 input functions                  ; 24          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 55          ;
+;     -- normal mode                          ; 50          ;
 ;     -- arithmetic mode                      ; 15          ;
 ;                                             ;             ;
-; Total registers                             ; 56          ;
-;     -- Dedicated logic registers            ; 56          ;
+; Total registers                             ; 64          ;
+;     -- Dedicated logic registers            ; 64          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 12          ;
@@ -206,9 +208,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 55          ;
-; Total fan-out                               ; 407         ;
-; Average fan-out                             ; 2.71        ;
+; Maximum fan-out                             ; 63          ;
+; Total fan-out                               ; 417         ;
+; Average fan-out                             ; 2.73        ;
 +---------------------------------------------+-------------+
 
 
@@ -217,7 +219,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
-; |NMEA_RX                   ; 70 (26)             ; 56 (7)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |NMEA_RX                                 ; NMEA_RX     ; work         ;
+; |NMEA_RX                   ; 65 (21)             ; 64 (15)                   ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |NMEA_RX                                 ; NMEA_RX     ; work         ;
 ;    |UART_RX:uart|          ; 44 (28)             ; 49 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NMEA_RX|UART_RX:uart                    ; UART_RX     ; work         ;
 ;       |COUNTER:freq_count| ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NMEA_RX|UART_RX:uart|COUNTER:freq_count ; COUNTER     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
@@ -225,19 +227,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |NMEA_RX|present_State                                                                                                                                                                    ;
-+---------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+---------------------------+--------------------------+
-; Name                      ; present_State.ok_State ; present_State.U_State ; present_State.D_State ; present_State.C_State ; present_State.S_State ; present_State.start_State ; present_State.IDLE_State ;
-+---------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+---------------------------+--------------------------+
-; present_State.IDLE_State  ; 0                      ; 0                     ; 0                     ; 0                     ; 0                     ; 0                         ; 0                        ;
-; present_State.start_State ; 0                      ; 0                     ; 0                     ; 0                     ; 0                     ; 1                         ; 1                        ;
-; present_State.S_State     ; 0                      ; 0                     ; 0                     ; 0                     ; 1                     ; 0                         ; 1                        ;
-; present_State.C_State     ; 0                      ; 0                     ; 0                     ; 1                     ; 0                     ; 0                         ; 1                        ;
-; present_State.D_State     ; 0                      ; 0                     ; 1                     ; 0                     ; 0                     ; 0                         ; 1                        ;
-; present_State.U_State     ; 0                      ; 1                     ; 0                     ; 0                     ; 0                     ; 0                         ; 1                        ;
-; present_State.ok_State    ; 1                      ; 0                     ; 0                     ; 0                     ; 0                     ; 0                         ; 1                        ;
-+---------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+---------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |NMEA_RX|\Combinatory_states:present_State                                                                                                                                                                                                                                                                                                                ;
++-----------------------------------------------+--------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-----------------------------------------------+----------------------------------------------+
+; Name                                          ; \Combinatory_states:present_State.ok_State ; \Combinatory_states:present_State.U_State ; \Combinatory_states:present_State.D_State ; \Combinatory_states:present_State.C_State ; \Combinatory_states:present_State.S_State ; \Combinatory_states:present_State.start_State ; \Combinatory_states:present_State.IDLE_State ;
++-----------------------------------------------+--------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-----------------------------------------------+----------------------------------------------+
+; \Combinatory_states:present_State.IDLE_State  ; 0                                          ; 0                                         ; 0                                         ; 0                                         ; 0                                         ; 0                                             ; 0                                            ;
+; \Combinatory_states:present_State.start_State ; 0                                          ; 0                                         ; 0                                         ; 0                                         ; 0                                         ; 1                                             ; 1                                            ;
+; \Combinatory_states:present_State.S_State     ; 0                                          ; 0                                         ; 0                                         ; 0                                         ; 1                                         ; 0                                             ; 1                                            ;
+; \Combinatory_states:present_State.C_State     ; 0                                          ; 0                                         ; 0                                         ; 1                                         ; 0                                         ; 0                                             ; 1                                            ;
+; \Combinatory_states:present_State.D_State     ; 0                                          ; 0                                         ; 1                                         ; 0                                         ; 0                                         ; 0                                             ; 1                                            ;
+; \Combinatory_states:present_State.U_State     ; 0                                          ; 1                                         ; 0                                         ; 0                                         ; 0                                         ; 0                                             ; 1                                            ;
+; \Combinatory_states:present_State.ok_State    ; 1                                          ; 0                                         ; 0                                         ; 0                                         ; 0                                         ; 0                                             ; 1                                            ;
++-----------------------------------------------+--------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-----------------------------------------------+----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |NMEA_RX|\Combinatory_states:next_State                                                                                                                                                                                                                                                                                           ;
++--------------------------------------------+-----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+--------------------------------------------+-------------------------------------------+
+; Name                                       ; \Combinatory_states:next_State.ok_State ; \Combinatory_states:next_State.U_State ; \Combinatory_states:next_State.D_State ; \Combinatory_states:next_State.C_State ; \Combinatory_states:next_State.S_State ; \Combinatory_states:next_State.start_State ; \Combinatory_states:next_State.IDLE_State ;
++--------------------------------------------+-----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+--------------------------------------------+-------------------------------------------+
+; \Combinatory_states:next_State.IDLE_State  ; 0                                       ; 0                                      ; 0                                      ; 0                                      ; 0                                      ; 0                                          ; 0                                         ;
+; \Combinatory_states:next_State.start_State ; 0                                       ; 0                                      ; 0                                      ; 0                                      ; 0                                      ; 1                                          ; 1                                         ;
+; \Combinatory_states:next_State.S_State     ; 0                                       ; 0                                      ; 0                                      ; 0                                      ; 1                                      ; 0                                          ; 1                                         ;
+; \Combinatory_states:next_State.C_State     ; 0                                       ; 0                                      ; 0                                      ; 1                                      ; 0                                      ; 0                                          ; 1                                         ;
+; \Combinatory_states:next_State.D_State     ; 0                                       ; 0                                      ; 1                                      ; 0                                      ; 0                                      ; 0                                          ; 1                                         ;
+; \Combinatory_states:next_State.U_State     ; 0                                       ; 1                                      ; 0                                      ; 0                                      ; 0                                      ; 0                                          ; 1                                         ;
+; \Combinatory_states:next_State.ok_State    ; 1                                       ; 0                                      ; 0                                      ; 0                                      ; 0                                      ; 0                                          ; 1                                         ;
++--------------------------------------------+-----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+----------------------------------------+--------------------------------------------+-------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -256,24 +274,22 @@ Encoding Type:  One-Hot
 +-----------------------------------+--------------------------+------------------------------+-----------------------------------+------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; data_valid                                          ; WideOr4             ; yes                    ;
-; freq_out[0]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[1]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[2]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[3]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[4]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[5]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[6]$latch                                   ; freq_out[7]         ; yes                    ;
-; freq_out[7]$latch                                   ; freq_out[7]         ; yes                    ;
-; reset_n_UART_RX                                     ; WideOr3             ; yes                    ;
-; Number of user-specified and inferred latches = 10  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; freq_out[7]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; freq_out[0]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; \Combinatory_states:next_State.IDLE_State  ; Lost fanout                            ;
+; \Combinatory_states:next_State.start_State ; Lost fanout                            ;
+; \Combinatory_states:next_State.S_State     ; Lost fanout                            ;
+; \Combinatory_states:next_State.C_State     ; Lost fanout                            ;
+; \Combinatory_states:next_State.D_State     ; Lost fanout                            ;
+; \Combinatory_states:next_State.U_State     ; Lost fanout                            ;
+; \Combinatory_states:next_State.ok_State    ; Lost fanout                            ;
+; Total Number of Removed Registers = 9      ;                                        ;
++--------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -281,14 +297,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
+; Total registers                              ; 64    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 37    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 35    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NMEA_RX|Selector0         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |NMEA_RX|Selector1         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------------+
@@ -345,21 +371,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 56                          ;
-;     CLR               ; 32                          ;
-;     ENA               ; 14                          ;
-;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 70                          ;
+; cycloneiii_ff         ; 64                          ;
+;     CLR               ; 29                          ;
+;     ENA               ; 27                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 66                          ;
 ;     arith             ; 15                          ;
 ;         2 data inputs ; 15                          ;
-;     normal            ; 55                          ;
+;     normal            ; 51                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 7                           ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 26                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.02                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -378,7 +405,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 16 17:04:19 2020
+    Info: Processing started: Wed Dec 16 20:47:54 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_fonctions_barreFranche -c DFBF
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -398,49 +425,7 @@ Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(21): object "dizaine
 Warning (10036): Verilog HDL or VHDL warning at NMEA_RX.vhd(22): object "unite" assigned a value but never read File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 22
 Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(27): used explicit default value for signal "start_stop" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 27
 Warning (10540): VHDL Signal Declaration warning at NMEA_RX.vhd(27): used explicit default value for signal "mode" because signal was never assigned a value File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(58): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(60): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(67): signal "start_stop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(69): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(69): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(72): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 72
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(76): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(76): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(78): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(78): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(80): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(83): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(87): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(87): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(89): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(89): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(91): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(94): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(98): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(98): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(100): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(100): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(102): signal "end_RX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(105): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 105
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(135): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(137): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(140): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 140
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(143): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 143
-Warning (10492): VHDL Process Statement warning at NMEA_RX.vhd(146): signal "RX_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 146
-Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "reset_n_UART_RX", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "data_valid", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Warning (10631): VHDL Process Statement warning at NMEA_RX.vhd(117): inferring latch(es) for signal or variable "freq_out", which holds its previous value in one or more paths through the process File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[0]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[1]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[2]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[3]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[4]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[5]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[6]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "freq_out[7]" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "data_valid" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (10041): Inferred latch for "reset_n_UART_RX" at NMEA_RX.vhd(117) File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 34
+Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 31
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(86): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 86
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(88): signal "start_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 88
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(91): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 91
@@ -453,20 +438,22 @@ Warning (10492): VHDL Process Statement warning at UART_RX.vhd(114): signal "n_d
 Warning (10492): VHDL Process Statement warning at UART_RX.vhd(117): signal "present_State" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 117
 Info (12128): Elaborating entity "COUNTER" for hierarchy "UART_RX:uart|COUNTER:freq_count" File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/UART_RX.vhd Line: 34
 Warning (10492): VHDL Process Statement warning at counter.vhd(51): signal "direction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/counter.vhd Line: 51
-Warning (13012): Latch data_valid has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 117
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.ok_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 30
-Warning (13012): Latch reset_n_UART_RX has unsafe behavior File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 26
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal present_State.start_State File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 30
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "freq_out[0]" is stuck at GND File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 48
+    Warning (13410): Pin "freq_out[7]" is stuck at GND File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 48
 Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register reset_n_UART_RX will power up to Low File: C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/functions/FPGA/NMEA_RX.vhd Line: 26
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 89 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Wed Dec 16 17:04:37 2020
+    Info (21061): Implemented 95 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Wed Dec 16 20:48:12 2020
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:38
 

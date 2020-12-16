@@ -8,10 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "freq_out[0]",
-					"strict" : false
-				},
-				{
 					"name" : "freq_out[1]",
 					"strict" : false
 				},
@@ -36,15 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "freq_out[7]",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
 					"name" : "reset_n",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
 					"strict" : false
 				},
 				{

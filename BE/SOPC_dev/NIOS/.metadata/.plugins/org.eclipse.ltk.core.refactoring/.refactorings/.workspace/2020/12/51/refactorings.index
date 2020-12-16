@@ -1,2 +1,7 @@
 1608065316985	Delete resource 'NIOS_SoC_BarreFranche'
 1608065321374	Delete resource 'NIOS_SoC_BarreFranche_bsp'
+1608154461000	Delete resource 'barreFranche_SOC'
+1608154466503	Delete resource 'barreFranche_SOC_bsp'
+1608154470807	Delete resource 'SOC_BarreFranche'
+1608154473049	Delete resource 'SOC_BarreFranche_bsp'
+1608154475260	Delete resource 'SOPC_BarreFranche_bsp'

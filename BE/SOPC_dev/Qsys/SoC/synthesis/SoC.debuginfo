@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="SoC" kind="system" version="18.1" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.12.15.13:47:53 -->
+ <!-- 2020.12.16.22:01:20 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1608036438</value>
+  <value>1608152445</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -5473,7 +5473,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="NMEA_RX_0" kind="NMEA_RX" version="1.0" path="NMEA_RX_0">
+ <module name="NMEA_RX_0" kind="NMEA_RX" version="2.0" path="NMEA_RX_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -15849,7 +15849,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>NMEA_RX</displayName>
-  <version>1.0</version>
+  <version>2.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -16004,5 +16004,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <reportVersion>18.1 625</reportVersion>
- <uniqueIdentifier>2EBB583C6EDE000001766670EBF0</uniqueIdentifier>
+ <uniqueIdentifier>2EBB583C6EDE000001766D5B0BF0</uniqueIdentifier>
 </EnsembleReport>

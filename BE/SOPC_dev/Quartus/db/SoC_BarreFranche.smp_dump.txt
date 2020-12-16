@@ -1,23 +1,23 @@
 
-State Machine - |HW|SoC:inst|NMEA_RX_avalon:nmea_rx_0|next_State
-Name next_State.ok_State next_State.U_State next_State.D_State next_State.C_State next_State.S_State next_State.start_State next_State.IDLE_State 
-next_State.IDLE_State 0 0 0 0 0 0 0 
-next_State.start_State 0 0 0 0 0 1 1 
-next_State.S_State 0 0 0 0 1 0 1 
-next_State.C_State 0 0 0 1 0 0 1 
-next_State.D_State 0 0 1 0 0 0 1 
-next_State.U_State 0 1 0 0 0 0 1 
-next_State.ok_State 1 0 0 0 0 0 1 
+State Machine - |HW|SoC:inst|NMEA_RX_avalon:nmea_rx_0|\FSM:present_State
+Name \FSM:present_State.ok_State \FSM:present_State.U_State \FSM:present_State.D_State \FSM:present_State.C_State \FSM:present_State.S_State \FSM:present_State.start_State \FSM:present_State.IDLE_State 
+\FSM:present_State.IDLE_State 0 0 0 0 0 0 0 
+\FSM:present_State.start_State 0 0 0 0 0 1 1 
+\FSM:present_State.S_State 0 0 0 0 1 0 1 
+\FSM:present_State.C_State 0 0 0 1 0 0 1 
+\FSM:present_State.D_State 0 0 1 0 0 0 1 
+\FSM:present_State.U_State 0 1 0 0 0 0 1 
+\FSM:present_State.ok_State 1 0 0 0 0 0 1 
 
-State Machine - |HW|SoC:inst|NMEA_RX_avalon:nmea_rx_0|present_State
-Name present_State.ok_State present_State.U_State present_State.D_State present_State.C_State present_State.S_State present_State.start_State present_State.IDLE_State 
-present_State.IDLE_State 0 0 0 0 0 0 0 
-present_State.start_State 0 0 0 0 0 1 1 
-present_State.S_State 0 0 0 0 1 0 1 
-present_State.C_State 0 0 0 1 0 0 1 
-present_State.D_State 0 0 1 0 0 0 1 
-present_State.U_State 0 1 0 0 0 0 1 
-present_State.ok_State 1 0 0 0 0 0 1 
+State Machine - |HW|SoC:inst|NMEA_RX_avalon:nmea_rx_0|\FSM:next_State
+Name \FSM:next_State.ok_State \FSM:next_State.U_State \FSM:next_State.D_State \FSM:next_State.C_State \FSM:next_State.S_State \FSM:next_State.start_State \FSM:next_State.IDLE_State 
+\FSM:next_State.IDLE_State 0 0 0 0 0 0 0 
+\FSM:next_State.start_State 0 0 0 0 0 1 1 
+\FSM:next_State.S_State 0 0 0 0 1 0 1 
+\FSM:next_State.C_State 0 0 0 1 0 0 1 
+\FSM:next_State.D_State 0 0 1 0 0 0 1 
+\FSM:next_State.U_State 0 1 0 0 0 0 1 
+\FSM:next_State.ok_State 1 0 0 0 0 0 1 
 
 State Machine - |HW|SoC:inst|NMEA_RX_avalon:nmea_rx_0|UART_RX:uart|present_State
 Name present_State.stop_State present_State.bit_read_State present_State.bit_read_prep_State present_State.Rx_State present_State.start_State present_State.IDLE_State present_State.reset_State 

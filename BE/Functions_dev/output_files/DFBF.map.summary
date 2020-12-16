@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Dec 16 17:04:37 2020
+Analysis & Synthesis Status : Successful - Wed Dec 16 20:48:12 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DFBF
 Top-level Entity Name : NMEA_RX
 Family : Cyclone IV E
-Total logic elements : 89
-    Total combinational functions : 70
-    Dedicated logic registers : 56
-Total registers : 56
+Total logic elements : 90
+    Total combinational functions : 65
+    Dedicated logic registers : 64
+Total registers : 64
 Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0

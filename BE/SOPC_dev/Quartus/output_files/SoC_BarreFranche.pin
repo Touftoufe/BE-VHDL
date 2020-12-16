@@ -320,7 +320,7 @@ GND+                         : T9        :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4         :                
+RX_VALID                     : T13       : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
 RX                           : T15       : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : T16       : power  :                   : 3.3V    : 4         :                

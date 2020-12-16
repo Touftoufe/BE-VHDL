@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "RX_VALID",
+					"strict" : false
+				},
+				{
 					"name" : "LED[7]",
 					"strict" : false
 				},

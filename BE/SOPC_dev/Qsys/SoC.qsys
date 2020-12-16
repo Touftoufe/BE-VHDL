@@ -153,6 +153,14 @@
          type = "String";
       }
    }
+   element SoC
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
@@ -225,6 +233,11 @@
    type="conduit"
    dir="end" />
  <interface name="nmea_rx" internal="NMEA_RX_0.RX_IN" type="conduit" dir="end" />
+ <interface
+   name="nmea_rx_0_data_valid_out"
+   internal="NMEA_RX_0.data_valid_out"
+   type="conduit"
+   dir="end" />
  <interface name="nmea_tx" internal="NMEA_TX_0.UART_TX" type="conduit" dir="end" />
  <interface name="pwm_out" internal="PWM.pwm_out" type="conduit" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
@@ -435,7 +448,7 @@
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
  </module>
- <module name="NMEA_RX_0" kind="NMEA_RX" version="1.0" enabled="1" />
+ <module name="NMEA_RX_0" kind="NMEA_RX" version="1.2" enabled="1" />
  <module name="NMEA_TX_0" kind="NMEA_TX" version="1.0" enabled="1" />
  <module name="PWM" kind="PWM" version="1.0" enabled="1">
   <parameter name="duty_bus" value="16" />

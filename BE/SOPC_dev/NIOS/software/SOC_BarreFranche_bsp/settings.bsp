@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Dec 15, 2020 9:59:09 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1608065949365</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 16, 2020 10:36:08 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1608154568123</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\SofianeAOUCI\Desktop\BE-VHDL\BE\SOPC_dev\NIOS\software\SOC_BarreFranche_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\SofianeAOUCI\Desktop\BE-VHDL\BE\SOPC_dev\Qsys\SoC.sopcinfo</SopcDesignFile>

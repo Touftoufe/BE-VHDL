@@ -15,6 +15,7 @@ entity SoC is
 		keys_in_export                           : in  std_logic_vector(1 downto 0) := (others => '0'); --                       keys_in.export
 		leds_out_export                          : out std_logic_vector(7 downto 0);                    --                      leds_out.export
 		nmea_rx_new_signal                       : in  std_logic                    := '0';             --                       nmea_rx.new_signal
+		nmea_rx_0_data_valid_out_new_signal      : out std_logic;                                       --      nmea_rx_0_data_valid_out.new_signal
 		nmea_tx_new_signal                       : out std_logic;                                       --                       nmea_tx.new_signal
 		pwm_out_new_signal                       : out std_logic;                                       --                       pwm_out.new_signal
 		reset_reset_n                            : in  std_logic                    := '0'              --                         reset.reset_n
@@ -530,7 +531,7 @@ begin
 			write_n        => mm_interconnect_0_nmea_rx_0_avalon_slave_0_write_ports_inv, --               .write_n
 			chipselect     => mm_interconnect_0_nmea_rx_0_avalon_slave_0_chipselect,      --               .chipselect
 			rx_in          => nmea_rx_new_signal,                                         --          RX_IN.new_signal
-			data_valid_out => open,                                                       -- data_valid_out.new_signal
+			data_valid_out => nmea_rx_0_data_valid_out_new_signal,                        -- data_valid_out.new_signal
 			clock          => clk_clk                                                     --          clock.clk
 		);
 

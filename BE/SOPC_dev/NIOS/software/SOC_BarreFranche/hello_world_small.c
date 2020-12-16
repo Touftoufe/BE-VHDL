@@ -135,10 +135,10 @@ int main()
   PWM_set_freq(1000-1); // 10 Hz
   PWM_set_duty(500-1);
   PWM_enable(1);
-  ANEMOMETRE_Config(0,1,1);
+  ANEMOMETRE_Config(0,0,0);
 
   NMEA_TX_Data('@','0','2','3');
-  NMEA_TX_Config(1,1);
+  NMEA_TX_Config(1,0);
 
   NMEA_RX_Config(1,0,1);
   char data[5] = "@FFF";
@@ -148,8 +148,9 @@ int main()
 	  delay(500000);
 	  IOWR_ALTERA_AVALON_PIO_DATA(LEDS_BASE, 0);
 	  delay(500000);
+//	  printf("Freq = %d\n", ANEMOMETRE_get_freq());
 	  NMEA_RX_Data(data);
-	  printf("Freq = %d\t%s\n", ANEMOMETRE_get_freq(),data);
+	  printf("NMEA : %s\n",data);
   }
 
   return 0;
