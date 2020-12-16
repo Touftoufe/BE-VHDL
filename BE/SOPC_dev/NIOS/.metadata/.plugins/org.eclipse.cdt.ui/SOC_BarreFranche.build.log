@@ -1,0 +1,24 @@
+00:07:05 **** Incremental Build of configuration Nios II for project SOC_BarreFranche ****
+make all 
+Info: Building C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp/
+C:/DevTools/Intel/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp//HAL/inc -IC:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp/ -IC:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:145:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("%d",*NMEA_RX_conf);
+   ^
+hello_world_small.c:145:3: warning: incompatible implicit declaration of built-in function 'printf'
+hello_world_small.c:145:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Linking SOC_BarreFranche.elf
+nios2-elf-g++  -T'C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp//linker.x' -msys-crt0='C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/NIOS/software/SOC_BarreFranche_bsp/  -msmallc  -Wl,-Map=SOC_BarreFranche.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o SOC_BarreFranche.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert SOC_BarreFranche.elf --thread_model hal --cpu_name NIOS_MCU --qsys true --simulation_enabled false --stderr_dev jtag --stdin_dev jtag --stdout_dev jtag --sopc_system_name SoC --quartus_project_dir "c:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Qsys" --sopcinfo C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Qsys/SoC.sopcinfo
+Info: (SOC_BarreFranche.elf) 3736 Bytes program size (code + initialized data).
+Info:                        36 KBytes free for stack + heap.
+Info: Creating SOC_BarreFranche.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source SOC_BarreFranche.elf >SOC_BarreFranche.objdump
+[SOC_BarreFranche build complete]
+
+00:07:08 Build Finished (took 2s.651ms)
+

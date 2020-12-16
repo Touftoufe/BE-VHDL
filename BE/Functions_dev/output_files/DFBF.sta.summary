@@ -3,111 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -2.531
-TNS   : -21.580
-
-Type  : Slow 1200mV 85C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -1.119
-TNS   : -10.939
-
-Type  : Slow 1200mV 85C Model Setup 'UART_TX:uart|TX_data_valid'
-Slack : -0.295
-TNS   : -0.466
+Slack : -2.138
+TNS   : -54.789
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.323
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'UART_TX:uart|TX_data_valid'
-Slack : 0.357
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
 Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rx_in'
+Slack : -1.022
+TNS   : -1.022
+
+Type  : Slow 1200mV 85C Model Recovery 'clock'
+Slack : -0.729
+TNS   : -13.100
+
+Type  : Slow 1200mV 85C Model Removal 'clock'
+Slack : 0.560
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'rx_in'
+Slack : 1.525
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -21.000
+TNS   : -66.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -1.000
-TNS   : -13.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
-Slack : -1.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rx_in'
+Slack : -3.000
+TNS   : -4.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -2.172
-TNS   : -17.252
-
-Type  : Slow 1200mV 0C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -0.931
-TNS   : -8.660
-
-Type  : Slow 1200mV 0C Model Setup 'UART_TX:uart|TX_data_valid'
-Slack : -0.158
-TNS   : -0.196
+Slack : -1.783
+TNS   : -42.779
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.278
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
 Slack : 0.312
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'UART_TX:uart|TX_data_valid'
-Slack : 0.312
+Type  : Slow 1200mV 0C Model Recovery 'rx_in'
+Slack : -0.847
+TNS   : -0.847
+
+Type  : Slow 1200mV 0C Model Recovery 'clock'
+Slack : -0.547
+TNS   : -8.037
+
+Type  : Slow 1200mV 0C Model Removal 'clock'
+Slack : 0.506
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'rx_in'
+Slack : 1.411
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -21.000
+TNS   : -66.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -1.000
-TNS   : -13.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
-Slack : -1.000
-TNS   : -3.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rx_in'
+Slack : -3.000
+TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -0.982
-TNS   : -4.712
-
-Type  : Fast 1200mV 0C Model Setup 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -0.175
-TNS   : -1.437
-
-Type  : Fast 1200mV 0C Model Setup 'UART_TX:uart|TX_data_valid'
-Slack : 0.274
-TNS   : 0.000
+Slack : -1.032
+TNS   : -9.871
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.138
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'UART_TX:uart|TX_data_valid'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
 Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rx_in'
+Slack : -0.094
+TNS   : -0.094
+
+Type  : Fast 1200mV 0C Model Recovery 'clock'
+Slack : -0.005
+TNS   : -0.005
+
+Type  : Fast 1200mV 0C Model Removal 'clock'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rx_in'
+Slack : 0.769
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -21.977
+TNS   : -69.887
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|DIVIDER:data_Tx_freq|subCLK'
-Slack : -1.000
-TNS   : -13.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_TX:uart|TX_data_valid'
-Slack : -1.000
-TNS   : -3.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rx_in'
+Slack : -3.000
+TNS   : -4.133
 
 ------------------------------------------------------------

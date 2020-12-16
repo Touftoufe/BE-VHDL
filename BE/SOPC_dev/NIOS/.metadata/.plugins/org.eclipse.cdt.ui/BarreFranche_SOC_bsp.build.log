@@ -1,0 +1,6 @@
+17:57:38 **** Clean-only build of configuration Nios II for project barreFranche_SOC_bsp ****
+make clean 
+[BSP clean complete]
+
+17:57:40 Build Finished (took 2s.141ms)
+

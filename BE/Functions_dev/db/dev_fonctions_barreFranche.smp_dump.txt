@@ -1,5 +1,25 @@
 
-State Machine - |UART_RX|present_State
+State Machine - |NMEA_RX|\Combinatory_states:present_State
+Name \Combinatory_states:present_State.ok_State \Combinatory_states:present_State.U_State \Combinatory_states:present_State.D_State \Combinatory_states:present_State.C_State \Combinatory_states:present_State.S_State \Combinatory_states:present_State.start_State \Combinatory_states:present_State.IDLE_State 
+\Combinatory_states:present_State.IDLE_State 0 0 0 0 0 0 0 
+\Combinatory_states:present_State.start_State 0 0 0 0 0 1 1 
+\Combinatory_states:present_State.S_State 0 0 0 0 1 0 1 
+\Combinatory_states:present_State.C_State 0 0 0 1 0 0 1 
+\Combinatory_states:present_State.D_State 0 0 1 0 0 0 1 
+\Combinatory_states:present_State.U_State 0 1 0 0 0 0 1 
+\Combinatory_states:present_State.ok_State 1 0 0 0 0 0 1 
+
+State Machine - |NMEA_RX|\Combinatory_states:next_State
+Name \Combinatory_states:next_State.ok_State \Combinatory_states:next_State.U_State \Combinatory_states:next_State.D_State \Combinatory_states:next_State.C_State \Combinatory_states:next_State.S_State \Combinatory_states:next_State.start_State \Combinatory_states:next_State.IDLE_State 
+\Combinatory_states:next_State.IDLE_State 0 0 0 0 0 0 0 
+\Combinatory_states:next_State.start_State 0 0 0 0 0 1 1 
+\Combinatory_states:next_State.S_State 0 0 0 0 1 0 1 
+\Combinatory_states:next_State.C_State 0 0 0 1 0 0 1 
+\Combinatory_states:next_State.D_State 0 0 1 0 0 0 1 
+\Combinatory_states:next_State.U_State 0 1 0 0 0 0 1 
+\Combinatory_states:next_State.ok_State 1 0 0 0 0 0 1 
+
+State Machine - |NMEA_RX|UART_RX:uart|present_State
 Name present_State.stop_State present_State.bit_read_State present_State.bit_read_prep_State present_State.Rx_State present_State.start_State present_State.IDLE_State present_State.reset_State 
 present_State.reset_State 0 0 0 0 0 0 0 
 present_State.IDLE_State 0 0 0 0 0 1 1 

@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="362656c32c05257c2559"/>
+    <hash md5_digest_80b="265fa25121cce0bab82a"/>
   </project>
   <file_info>
     <file device="EP4CE22F17C6" path="SoC_BarreFranche.sof" usercode="0xFFFFFFFF"/>
@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="SoC:inst" name="inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1606087107"/>
+        <assignment_value text="QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1608152445"/>
       </assignment_values>
       <parameters/>
     </sld_info>

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/SofianeAOUCI/Desktop/BE_VHDL_AOUCI_BONHOURE/BE/Functions_dev/output_files/") File("DFBF.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/Functions_dev/output_files/") File("DFBF.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
