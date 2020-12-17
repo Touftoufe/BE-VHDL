@@ -1,5 +1,5 @@
 Fitter report for SoC_BarreFranche
-Wed Dec 16 22:28:31 2020
+Thu Dec 17 05:00:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 16 22:28:30 2020       ;
+; Fitter Status                      ; Successful - Thu Dec 17 05:00:36 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SoC_BarreFranche                            ;
 ; Top-level Entity Name              ; HW                                          ;
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.7%      ;
+;     Processor 2            ;   4.3%      ;
 +----------------------------+-------------+
 
 
@@ -2873,15 +2873,15 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 4% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 20% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.74 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2892,10 +2892,10 @@ Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin RX uses I/O standard 3.3-V LVTTL at T15
 Info (144001): Generated suppressed messages file C:/Users/SofianeAOUCI/Desktop/BE-VHDL/BE/SOPC_dev/Quartus/output_files/SoC_BarreFranche.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 5301 megabytes
-    Info: Processing ended: Wed Dec 16 22:28:32 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 5287 megabytes
+    Info: Processing ended: Thu Dec 17 05:00:38 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +----------------------------+
