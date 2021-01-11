@@ -6,7 +6,7 @@ Le projet consiste à développer un pilote de barre franche sur FPGA
 
 ## Structure du répertoire
 ### docs
-On y trouve les documents liés au BE
+On y trouve les documents liés au BE ainsi qu'un [lien vers le rapport sur Notion.so](https://www.notion.so/CR-BE-VHDL-e001d234fc8b464ba2df7287854d232a)
 
 ### TP
 On y trouve les premiers projets d'initiation au développement en VHDL
